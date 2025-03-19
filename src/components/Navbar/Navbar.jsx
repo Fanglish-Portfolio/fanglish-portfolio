@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { IoMenuSharp } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
-import logo from "./../../assets/image/logo.svg";
-import { FaFacebookMessenger } from "react-icons/fa";
+import logo from "./../../assets/image/logo/logo.png";
+import { TfiWorld } from "react-icons/tfi";
+import { FaPhoneVolume } from "react-icons/fa6";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,11 +14,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="">
-      <div className="md:mx-10 bg-white mx-auto flex items-center justify-between py-5 md:py-4 px-5 md:px-8 lg:px-10 md:rounded-full">
+    <nav className="py-7 bg-sub">
+      <div className="lg:w-[1000px] mx-auto flex items-center justify-between ">
         {/* Logo */}
         <Link to="/" className="">
-          <img src={logo} alt="Logo" className="w-20 md:w-14" />
+          <img src={logo} alt="Logo" className="w-24 md:w-20" />
         </Link>
 
         {/* Desktop Nav Links */}
@@ -26,8 +27,8 @@ const Navbar = () => {
             to="/"
             className={({ isActive }) =>
               isActive
-                ? "text-primary text-[14px] lg:text-[18px] font-semibold text-gray-800 hover:text-green-600"
-                : "text-[14px] lg:text-[18px] font-semibold text-gray-400 hover:text-green-600"
+                ? "text-[14px] lg:text-[18px] font-semibold text-primary"
+                : "text-[14px] lg:text-[18px] text-white hover:text-primary"
             }
           >
             Home
@@ -36,8 +37,8 @@ const Navbar = () => {
             to="/about"
             className={({ isActive }) =>
               isActive
-                ? "text-primary text-[14px] lg:text-[18px] font-semibold text-gray-800 hover:text-green-600"
-                : "text-[14px] lg:text-[18px] font-semibold text-gray-400 hover:text-green-600"
+                ? "text-[14px] lg:text-[18px] font-semibold text-primary"
+                : "text-[14px] lg:text-[18px] text-white hover:text-primary"
             }
           >
             About Us
@@ -46,8 +47,8 @@ const Navbar = () => {
             to="/service"
             className={({ isActive }) =>
               isActive
-                ? "text-primary text-[14px] lg:text-[18px] font-semibold text-gray-800 hover:text-green-600"
-                : "text-[14px] lg:text-[18px] font-semibold text-gray-400 hover:text-green-600"
+                ? "text-[14px] lg:text-[18px] font-semibold text-primary"
+                : "text-[14px] lg:text-[18px] text-white hover:text-primary"
             }
           >
             Services
@@ -56,8 +57,8 @@ const Navbar = () => {
             to="/contact"
             className={({ isActive }) =>
               isActive
-                ? "text-primary text-[14px] lg:text-[18px] font-semibold text-gray-800 hover:text-green-600"
-                : "text-[14px] lg:text-[18px] font-semibold text-gray-400 hover:text-green-600"
+                ? "text-[14px] lg:text-[18px] font-semibold text-primary"
+                : "text-[14px] lg:text-[18px] text-white hover:text-primary"
             }
           >
             Contact Us
@@ -65,15 +66,17 @@ const Navbar = () => {
         </div>
 
         {/* Language Selector and Button */}
-        <div className="hidden md:block items-center">
+        <div className="hidden md:flex gap-8 items-center">
           {/* <span className="text-gray-800">MYA / EN</span> */}
-          <a
-            href="https://m.me/197568866770556?source=qr_link_share"
-            className="open-sans inline-flex items-center bg-primary font-bold lg:text-[20px] font-bold text-white py-3 px-6 lg:py-6 lg:px-10 rounded-full hover:scale-105 hover:shadow-lg shadow-primary transition duration-300 ease-in-out"
-          >
-            We’re Here to Help
-            <FaFacebookMessenger className="inline-block ml-2" />
-          </a>
+          <div className="flex items-center gap-2 cursor-pointer">
+            <p>Global</p>
+            <TfiWorld size={20} />
+          </div>
+
+          <div className="button">
+            <p>Call Us</p>
+            <FaPhoneVolume size={20} />
+          </div>
         </div>
 
         {/* Mobile Menu Button */}
@@ -98,8 +101,8 @@ const Navbar = () => {
               onClick={toggleMenu}
               className={({ isActive }) =>
                 isActive
-                  ? "text-primary text-lg font-semibold text-gray-800 hover:text-green-600"
-                  : "text-black text-lg font-semibold text-gray-800 hover:text-green-600"
+                  ? "text-lg text-primary"
+                  : "text-black text-lg font-semibold text-white hover:text-primary"
               }
             >
               Home
@@ -109,8 +112,8 @@ const Navbar = () => {
               onClick={toggleMenu}
               className={({ isActive }) =>
                 isActive
-                  ? "text-primary text-lg font-semibold text-gray-800 hover:text-green-600"
-                  : "text-black text-lg font-semibold text-gray-800 hover:text-green-600"
+                  ? "text-lg text-primary"
+                  : "text-black text-lg font-semibold text-white hover:text-primary"
               }
             >
               About Us
@@ -120,8 +123,8 @@ const Navbar = () => {
               onClick={toggleMenu}
               className={({ isActive }) =>
                 isActive
-                  ? "text-primary text-lg font-semibold text-gray-800 hover:text-green-600"
-                  : "text-black text-lg font-semibold text-gray-800 hover:text-green-600"
+                  ? "text-lg text-primary"
+                  : "text-black text-lg font-semibold text-white hover:text-primary"
               }
             >
               Services
@@ -131,8 +134,8 @@ const Navbar = () => {
               onClick={toggleMenu}
               className={({ isActive }) =>
                 isActive
-                  ? "text-primary text-lg font-semibold text-gray-800 hover:text-green-600"
-                  : "text-black text-lg font-semibold text-gray-800 hover:text-green-600"
+                  ? "text-lg text-primary"
+                  : "text-black text-lg font-semibold text-white hover:text-primary"
               }
             >
               Contact Us

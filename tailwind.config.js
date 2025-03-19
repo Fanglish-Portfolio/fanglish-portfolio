@@ -15,12 +15,12 @@ export default {
         cardbody: ["14px"],
       },
       colors: {
-        primary: "#3DBB47",
+        primary: "#e20a17",
         pridark: "#1A4F1E",
-        background: "#C3EAC6", // Custom primary color
-        secondary: "#2EA14A", // Custom secondary color
+        background: "#f2f2f2", // Custom primary color
+        secondary: "#003399", // Custom secondary color
         hihglight: "#154119",
-        sub: "#C3EAC6",
+        sub: "#1a1a1a",
         footer: "#1C1C1C",
         // Add more custom colors as needed
       },

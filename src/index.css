@@ -3,9 +3,15 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Sofia Pro";
-  src: local("CHANGANUNITYPE-BOLD"),
-    url("./assets/Fonts/Poppins-Regular.ttf") format("truetype");
+  font-family: "RobotoFlex";
+  src: local("RobotoFlex"),
+    url("./assets/Fonts/RobotoFlex.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SuzukiPROHeadline";
+  src: local("SuzukiPROHeadline"),
+    url("./assets/Fonts/SuzukiPROHeadline.ttf") format("truetype");
 }
 
 @font-face {
@@ -25,36 +31,33 @@ html {
 }
 
 body {
-  background: #ecf8ed;
+  background: #1a1a1a;
   scroll-behavior: smooth;
-  color: black;
-  font-family: "Sofia Pro";
+  color: white;
+  font-family: "RobotoFlex";
 }
 
-.open-sans {
-  font-family: "Open Sans";
+.containers {
+  @apply mx-auto lg:w-[1000px] py-[64px] px-5 md:px-10 lg:px-5;
 }
 
-.sourcesans {
-  font-family: "Source Sans 3";
+.suzukipro {
+  font-family: "SuzukiPROHeadline";
 }
 
 .header-text {
-  @apply text-header md:text-[24px] lg:text-[42px] text-pridark;
-  color: "#1C1C1C";
+  @apply text-header md:text-[24px] lg:text-[42px] text-white;
+  font-family: "SuzukiPROHeadline";
 }
 
 .body-text {
-  @apply text-body md:text-[18px] lg:text-[24px];
+  @apply text-body md:text-[16px] lg:text-[20px];
+  font-family: "RobotoFlex";
   color: "#565656";
 }
 
-.card-header {
-  @apply text-cardheader md:text-[18px] lg:text-[24px];
-}
-
-.card-body {
-  @apply text-cardbody md:text-[14px] lg:text-[16px];
+.button {
+  @apply flex items-center font-semibold gap-2 cursor-pointer border-2 border-white rounded-md px-6 py-2;
 }
 
 /* styles.css */
