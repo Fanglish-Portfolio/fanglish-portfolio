@@ -21,7 +21,7 @@ const AboutUs = () => {
             Learn About Us
           </button>
         </div>
-        <div className="hidden ms-10 md:flex w-full md:w-1/2 justify-end">
+        <div className="md:ms-10 md:flex w-full md:w-1/2 justify-end">
           <img src={about} alt="about" className=" w-auto" />
         </div>
       </div>

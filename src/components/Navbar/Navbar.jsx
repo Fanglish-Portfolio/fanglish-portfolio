@@ -54,14 +54,14 @@ const Navbar = () => {
             Services
           </NavLink>
           <NavLink
-            to="/contact"
+            to="/spare"
             className={({ isActive }) =>
               isActive
                 ? "text-[14px] lg:text-[18px] font-semibold text-primary"
                 : "text-[14px] lg:text-[18px] text-white hover:text-primary"
             }
           >
-            Contact Us
+            Spear Parts
           </NavLink>
         </div>
 
@@ -130,7 +130,7 @@ const Navbar = () => {
               Services
             </NavLink>
             <NavLink
-              to="/contact"
+              to="/spare"
               onClick={toggleMenu}
               className={({ isActive }) =>
                 isActive
@@ -138,7 +138,7 @@ const Navbar = () => {
                   : "text-black text-lg font-semibold text-white hover:text-primary"
               }
             >
-              Contact Us
+              Spear Parts
             </NavLink>
           </div>
         </div>

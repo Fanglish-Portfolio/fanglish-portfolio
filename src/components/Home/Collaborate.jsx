@@ -19,7 +19,7 @@ function Number({ n }) {
 const Collaborate = () => {
   return (
     <div className="containers">
-      <div className="mb-10 flex flex-col md:flex-row items-center justify-between">
+      <div className="mb-10 flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 justify-between">
         <div className="font-bold">
           <h3>Service & Maintained</h3>
           <p className="header-text">

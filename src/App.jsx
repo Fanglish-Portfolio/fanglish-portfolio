@@ -4,12 +4,12 @@ import Navbar from "./components/Navbar/Navbar";
 import About from "./pages/About";
 // import Service from "./pages/Service";
 import ServicePage from "./pages/Service";
-import Contact from "./pages/Contact";
 import PageTransition from "./components/PageTransition";
 import Footer from "./components/Footer";
 import { AnimatePresence } from "framer-motion";
 import ScrollToTop from "./ScrollToTop";
 import { Analytics } from "@vercel/analytics/react";
+import Spare from "./pages/Spare";
 // import About from "./pages/About";
 // import Service from "./pages/Service";
 // import PageNotFound from "./pages/PageNotFound";
@@ -50,10 +50,10 @@ function App() {
               }
             />
             <Route
-              path="/contact"
+              path="/spare"
               element={
                 <PageTransition>
-                  <Contact />
+                  <Spare />
                 </PageTransition>
               }
             />
