@@ -1,5 +1,5 @@
 import React from "react";
-import showroom from "../../assets/image/Home/showroom.png";
+import showroom from "../../assets/image/home/showroom.png";
 
 function ShowRoom() {
   return (
