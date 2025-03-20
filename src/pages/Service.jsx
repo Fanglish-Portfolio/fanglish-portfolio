@@ -1,7 +1,7 @@
 function ServicePage() {
   return (
-    <div>
-      <p>Service</p>
+    <div className="containers">
+      <div></div>
     </div>
   );
 }
