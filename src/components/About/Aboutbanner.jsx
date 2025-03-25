@@ -9,7 +9,8 @@ function Aboutbanner() {
         style={{
           backgroundImage: `url(${banner})`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPositionY: "-250px",
+          backgroundRepeat: "no-repeat",
         }}
       ></div>
     </div>

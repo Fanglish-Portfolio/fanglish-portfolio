@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "./../../assets/image/About/aboutbanner.jpg";
+import banner from "./../../assets/image/Service/servicebanner.jpg";
 
 function Servicebanner() {
   return (
@@ -7,9 +7,10 @@ function Servicebanner() {
       <div
         className="h-[80vh]"
         style={{
-          backgroundImage: `url(${banner})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url("https://suzukimyanmar.com/storage//ServicesContentImages/1680515817MC&CT-M.webp")`,
           backgroundSize: "cover",
           backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       ></div>
     </div>
