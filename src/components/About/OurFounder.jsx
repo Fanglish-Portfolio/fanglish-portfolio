@@ -15,7 +15,7 @@ function OurFounder() {
 
           <div>
             <img src={founder2} alt="founder" />
-            <p className="header-text text-center">U Kyaw Min Htun</p>
+            <p className="header-text text-center">Dr. Aung Naing Soe</p>
           </div>
         </div>
       </div>

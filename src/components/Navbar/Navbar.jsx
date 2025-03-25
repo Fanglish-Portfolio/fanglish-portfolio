@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     <nav className="py-7 bg-sub">
-      <div className="lg:w-[1000px] mx-auto flex items-center justify-between ">
+      <div className="lg:w-[1000px] px-5 md:px-10 lg:px-0 mx-auto flex items-center justify-between ">
         {/* Logo */}
         <Link to="/" className="">
           <img src={logo} alt="Logo" className="w-24 md:w-20" />
@@ -83,9 +83,9 @@ const Navbar = () => {
         <div className="md:hidden flex items-center">
           <button onClick={toggleMenu} className="text-sub focus:outline-none">
             {isOpen ? (
-              <IoClose size={20} className="text-pridark" />
+              <IoClose size={25} className="text-primary" />
             ) : (
-              <IoMenuSharp size={20} className="text-pridark" />
+              <IoMenuSharp size={25} className="text-primary" />
             )}{" "}
             {/* Hamburger or Close icon */}
           </button>
@@ -94,15 +94,15 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white">
-          <div className="flex flex-col space-y-4 px-4 py-10 absolute w-full z-10 bg-white">
+        <div className="md:hidden transition-all duration-300">
+          <div className="flex flex-col space-y-4 px-4 py-10 w-full">
             <NavLink
               to="/"
               onClick={toggleMenu}
               className={({ isActive }) =>
                 isActive
-                  ? "text-lg text-primary"
-                  : "text-black text-lg font-semibold text-white hover:text-primary"
+                  ? "text-lg text-primary font-semibold"
+                  : "text-black text-lg  text-white hover:text-primary"
               }
             >
               Home
@@ -112,8 +112,8 @@ const Navbar = () => {
               onClick={toggleMenu}
               className={({ isActive }) =>
                 isActive
-                  ? "text-lg text-primary"
-                  : "text-black text-lg font-semibold text-white hover:text-primary"
+                  ? "text-lg text-primary font-semibold"
+                  : "text-black text-lg text-white hover:text-primary"
               }
             >
               About Us
@@ -123,8 +123,8 @@ const Navbar = () => {
               onClick={toggleMenu}
               className={({ isActive }) =>
                 isActive
-                  ? "text-lg text-primary"
-                  : "text-black text-lg font-semibold text-white hover:text-primary"
+                  ? "text-lg text-primary font-semibold"
+                  : "text-black text-lg text-white hover:text-primary"
               }
             >
               Services
@@ -134,8 +134,8 @@ const Navbar = () => {
               onClick={toggleMenu}
               className={({ isActive }) =>
                 isActive
-                  ? "text-lg text-primary"
-                  : "text-black text-lg font-semibold text-white hover:text-primary"
+                  ? "text-lg text-primary font-semibold"
+                  : "text-black text-lg text-white hover:text-primary"
               }
             >
               Spear Parts
