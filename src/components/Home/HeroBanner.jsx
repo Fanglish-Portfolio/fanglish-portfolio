@@ -25,8 +25,7 @@ const HeroBanner = () => {
 
         <div className="flex flex-col sm:flex-row gap-4 mt-10 md:mt-0">
           <a
-            href="tel:+123456789"
-            target="_blank"
+            href="tel:095119806"
             className="button bg-white text-secondary text-lg font-semibold"
           >
             Call Us

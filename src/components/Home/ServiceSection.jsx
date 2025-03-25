@@ -53,7 +53,7 @@ function ServiceSection() {
                   {service.title}
                 </p>
                 <a
-                  href={service.link}
+                  href="tel:095119806"
                   target="_blank"
                   className="button w-fit flex items-center"
                 >

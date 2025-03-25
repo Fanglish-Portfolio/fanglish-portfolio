@@ -12,31 +12,37 @@ const spears = [
     id: 1,
     image: spare1,
     name: "Air Filter",
+    link: "https://suzukimyanmar.com/frontend/assets/pdf/spare-parts/aircleaner-filter-en.pdf",
   },
   {
     id: 2,
     image: spare2,
     name: "Air Conditional Filter",
+    link: "https://suzukimyanmar.com/frontend/assets/pdf/spare-parts/aircon-filter-flyer-en.pdf",
   },
   {
     id: 3,
     image: spare3,
     name: "Break Pads",
+    link: "https://suzukimyanmar.com/frontend/assets/pdf/spare-parts/brake-pad-flyer-en.pdf",
   },
   {
     id: 4,
     image: spare4,
     name: "Oil Filter",
+    link: "https://suzukimyanmar.com/frontend/assets/pdf/spare-parts/oil-filter-flyer-en.pdf",
   },
   {
     id: 5,
     image: spare5,
     name: "Spark Plug",
+    link: "https://suzukimyanmar.com/frontend/assets/pdf/spare-parts/spark-plug-flyer-en.pdf",
   },
   {
     id: 6,
     image: spare6,
     name: "Wiper Blade",
+    link: "https://suzukimyanmar.com/frontend/assets/pdf/spare-parts/wiper-blade-flyer-en.pdf",
   },
 ];
 
@@ -51,7 +57,10 @@ function SpareCollection() {
             <img src={spear.image} alt={spear.name} />
             <div className="flex flex-col items-center gap-4 mt-4">
               <p className="suzukipro text-2xl">{spear.name}</p>
-              <button className="button">
+              <button
+                onClick={() => window.open(spear.link)}
+                className="button hover:scale-105 duration-300"
+              >
                 <p>Download PDF</p>
                 <FaFileAlt />
               </button>

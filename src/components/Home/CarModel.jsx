@@ -12,7 +12,14 @@ function CarModel() {
           <div className="p-10 flex flex-col items-center justify-center">
             <img src={car1} alt="car1" className="w-[400px]" />
             <p className="header-text text-center">Ertiga</p>
-            <button className="button w-fit text-primary bg-white">
+            <button
+              onClick={() => {
+                window.open(
+                  "https://suzukimyanmar.com/frontend/assets/pdf/models/Suzuki_Ertiga_Brochure.pdf"
+                );
+              }}
+              className="button w-fit text-primary bg-white"
+            >
               Explore Ertiga
             </button>
           </div>
@@ -21,7 +28,14 @@ function CarModel() {
           <div className="p-10 flex flex-col items-center justify-center">
             <img src={car2} alt="car2" className="w-[400px]" />
             <p className="header-text text-center mt-4">Carry Pro</p>
-            <button className="button w-fit text-black bg-white">
+            <button
+              onClick={() => {
+                window.open(
+                  "https://suzukimyanmar.com/frontend/assets/pdf/models/Carry-Pro_Brochure.pdf"
+                );
+              }}
+              className="button w-fit text-black bg-white"
+            >
               Explore Carry Pro
             </button>
           </div>

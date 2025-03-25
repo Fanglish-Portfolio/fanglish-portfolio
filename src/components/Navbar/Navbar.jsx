@@ -73,10 +73,13 @@ const Navbar = () => {
             <TfiWorld size={20} />
           </div>
 
-          <div className="button">
+          <a
+            href="tel:095119806"
+            className="button hover:scale-105 transition duration-300"
+          >
             <p>Call Us</p>
             <FaPhoneVolume size={20} />
-          </div>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}

@@ -73,19 +73,28 @@ const Footer = () => {
                 <FaFacebook />
                 Facebook
               </li>
-              <li className="flex items-center gap-2 cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300">
+              <li
+                className="flex items-center gap-2 cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
+                onClick={() => window.open("viber://chat?number=+959420054395")}
+              >
                 <FaViber />
                 Viber
               </li>
 
-              <li className="flex items-center gap-2 cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300">
+              <a
+                href="tel:095119806"
+                className="flex items-center gap-2 cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
+              >
                 <BiPhoneCall />
-                0912345678
-              </li>
-              <li className="flex items-center gap-2 cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300">
+                095119806
+              </a>
+              <a
+                href="tel:09443364499"
+                className="flex items-center gap-2 cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
+              >
                 <BiPhoneCall />
-                0912345678
-              </li>
+                09443364499
+              </a>
             </ul>
           </div>
         </div>
