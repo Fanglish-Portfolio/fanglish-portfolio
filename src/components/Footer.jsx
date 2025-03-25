@@ -3,8 +3,14 @@ import React from "react";
 import logo from "./../assets/image/logo/logo.png";
 import { BiPhoneCall } from "react-icons/bi";
 import { FaFacebook, FaViber } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleRoute = (path) => {
+    navigate(path);
+  };
   return (
     <div className="bg-[#2B2B2B] text-white py-20 px-5 flex flex-col md:flex-row gap-4">
       <div className="w-full md:w-1/3">
@@ -20,10 +26,16 @@ const Footer = () => {
           <div>
             <h2 className="text-2xl font-semibold mb-5">Services</h2>
             <ul className="space-y-4 ms-2 text-lg">
-              <li className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300">
+              <li
+                onClick={() => handleRoute("/spare")}
+                className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
+              >
                 Spear Parts
               </li>
-              <li className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300">
+              <li
+                onClick={() => handleRoute("/service")}
+                className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
+              >
                 Car repair and <br /> Maintenance services
               </li>
             </ul>
@@ -33,10 +45,16 @@ const Footer = () => {
           <div>
             <h2 className="text-2xl font-semibold mb-5">About Us</h2>
             <ul className="space-y-4 ms-2 text-lg">
-              <li className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300">
+              <li
+                onClick={() => handleRoute("/about")}
+                className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
+              >
                 Our Story
               </li>
-              <li className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300">
+              <li
+                onClick={() => handleRoute("/about")}
+                className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
+              >
                 Meet Our Founders
               </li>
             </ul>
@@ -46,7 +64,12 @@ const Footer = () => {
           <div>
             <h2 className="text-2xl font-semibold mb-5">Contact Us</h2>
             <ul className="space-y-4 ms-2 text-lg">
-              <li className="flex items-center gap-2 cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300">
+              <li
+                className="flex items-center gap-2 cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
+                onClick={() =>
+                  window.open("https://www.facebook.com/suzukimega6.spt")
+                }
+              >
                 <FaFacebook />
                 Facebook
               </li>

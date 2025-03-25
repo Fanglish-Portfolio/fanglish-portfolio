@@ -5,11 +5,11 @@ function Aboutbanner() {
   return (
     <div>
       <div
-        className="h-[80vh]"
+        className="h-[80vh] md:bg-red-500 lg:bg-white"
         style={{
-          backgroundImage: `url(${banner})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(${banner})`,
           backgroundSize: "cover",
-          backgroundPositionY: "-250px",
+          backgroundPositionY: "bottom",
           backgroundRepeat: "no-repeat",
         }}
       ></div>
