@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "./../../assets/image/Service/servicebanner.jpg";
+import banner from "./../../assets/image/service/servicebanner.jpg";
 
 function Servicebanner() {
   return (
