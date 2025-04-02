@@ -68,10 +68,14 @@ const Navbar = () => {
         {/* Language Selector and Button */}
         <div className="hidden md:flex gap-8 items-center">
           {/* <span className="text-gray-800">MYA / EN</span> */}
-          <div className="flex items-center gap-2 cursor-pointer">
+          <a
+            href="https://www.globalsuzuki.com/"
+            target="_blank"
+            className="flex items-center gap-2 cursor-pointer hover:scale-105 transition duration-300"
+          >
             <p>Global</p>
             <TfiWorld size={20} />
-          </div>
+          </a>
 
           <a
             href="tel:095119806"

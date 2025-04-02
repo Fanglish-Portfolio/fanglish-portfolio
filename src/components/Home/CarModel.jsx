@@ -18,7 +18,7 @@ function CarModel() {
                   "https://suzukimyanmar.com/frontend/assets/pdf/models/Suzuki_Ertiga_Brochure.pdf"
                 );
               }}
-              className="button w-fit text-primary bg-white"
+              className="button w-fit text-primary bg-white hover:scale-105 transition-all duration-300"
             >
               Explore Ertiga
             </button>
@@ -34,7 +34,7 @@ function CarModel() {
                   "https://suzukimyanmar.com/frontend/assets/pdf/models/Carry-Pro_Brochure.pdf"
                 );
               }}
-              className="button w-fit text-black bg-white"
+              className="button w-fit text-black bg-white hover:scale-105 transition-all duration-300"
             >
               Explore Carry Pro
             </button>

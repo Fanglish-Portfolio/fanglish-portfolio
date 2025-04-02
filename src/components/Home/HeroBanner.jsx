@@ -9,7 +9,7 @@ const HeroBanner = () => {
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url(${bg})`,
         backgroundSize: "cover",
-        backgroundPosition: "0 25%",
+        backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
     >
@@ -23,7 +23,7 @@ const HeroBanner = () => {
           Always ready to provide <br /> the best service
         </h1>
 
-        <div className="flex flex-col sm:flex-row gap-4 mt-10 md:mt-0">
+        <div className="flex flex-col sm:flex-row gap-4">
           <a
             href="tel:095119806"
             className="button bg-white text-secondary text-lg font-semibold"

@@ -10,7 +10,7 @@ function CarRepair() {
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/2 h-[400px] flex flex-col justify-center">
             <h1 className="header-text mb-5">Car Service</h1>
-            <p className="body-text mb-5 text-justify me-10">
+            <p className="body-text mb-5 md:me-10">
               At Suzuki Mega 6 , our skilled technicians are equipped to handle
               a wide range of car repair needs. Utilizing advanced diagnostics
               and genuine Suzuki parts, we provide reliable solutions for engine
@@ -32,7 +32,7 @@ function CarRepair() {
             <h1 className="header-text mb-5 md:ms-10">
               Repair & Maintenance Service
             </h1>
-            <p className="body-text mb-5 text-justify md:ms-10">
+            <p className="body-text mb-5 md:ms-10">
               Maintain the optimal performance and longevity of your Suzuki with
               our comprehensive car maintenance services at Suzuki Mega 6.
               Following Suzuki's recommended schedules, our expert team offers

@@ -8,7 +8,7 @@ const AboutUs = () => {
       <div className="flex flex-col md:flex-row">
         <div className="md:w-1/2 h-[400px] flex flex-col justify-center">
           <h1 className="header-text mb-5">Our Story</h1>
-          <p className="body-text mb-5 text-justify me-10">
+          <p className="body-text mb-5 md:me-10">
             Founded in 2018 and led by experienced directors in the automobile
             services industry, Suzuki Mega 6 is your authorized Suzuki reseller
             and premier car repair and maintenance provider. We are committed to
