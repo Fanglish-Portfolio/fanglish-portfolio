@@ -61,7 +61,7 @@ const Navbar = () => {
                 : "text-[14px] lg:text-[18px] text-white hover:text-primary"
             }
           >
-            Spear Parts
+            Spare Parts
           </NavLink>
         </div>
 

@@ -30,7 +30,7 @@ const Footer = () => {
                 onClick={() => handleRoute("/spare")}
                 className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
               >
-                Spear Parts
+                Spare Parts
               </li>
               <li
                 onClick={() => handleRoute("/service")}

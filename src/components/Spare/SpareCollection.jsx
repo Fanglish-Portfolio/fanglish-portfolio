@@ -49,7 +49,7 @@ const spears = [
 function SpareCollection() {
   return (
     <div className="containers">
-      <p className="header-text mb-10">Spear Parts</p>
+      <p className="header-text mb-10">Spare Parts</p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
         {spears.map((spear) => (
