@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import about from "../../assets/image/Home/aboutus.png";
+import about from "../../assets/image/home/aboutus.png";
+
 const AboutUs = () => {
   const navigate = useNavigate();
   return (
@@ -7,12 +8,12 @@ const AboutUs = () => {
       <div className="flex flex-col md:flex-row">
         <div className="md:w-1/2 h-[400px] flex flex-col justify-center">
           <h1 className="header-text mb-5">Our Story</h1>
-          <p className="body-text mb-5 text-justify me-10">
-            Founded in 2024, MEG was established to revolutionize medical and
-            healthcare education by bridging the gap between ambition and
-            achievement and excellence. Through our Medicine philosophy, we
-            cultivate academic brilliance, ethical responsibility, and lifelong
-            professional development.
+          <p className="body-text mb-5 md:me-10">
+            Founded in 2018 and led by experienced directors in the automobile
+            services industry, Suzuki Mega 6 is your authorized Suzuki reseller
+            and premier car repair and maintenance provider. We are committed to
+            building lasting relationships with our customers through trust,
+            expertise, and exceptional service.
           </p>
           <button
             className="button w-fit text-secondary bg-white"
@@ -21,7 +22,7 @@ const AboutUs = () => {
             Learn About Us
           </button>
         </div>
-        <div className="hidden ms-10 md:flex w-full md:w-1/2 justify-end">
+        <div className="md:ms-10 md:flex w-full md:w-1/2 justify-end">
           <img src={about} alt="about" className=" w-auto" />
         </div>
       </div>

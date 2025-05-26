@@ -6,15 +6,12 @@ import { useLocation } from "react-router-dom";
 const pageVariants = {
   initial: {
     opacity: 0,
-    x: 100,
   },
   in: {
     opacity: 1,
-    x: 0,
   },
   out: {
     opacity: 0,
-    x: -100,
   },
 };
 
@@ -27,7 +24,7 @@ const PageTransition = ({ children }) => {
       animate="in"
       exit="out"
       variants={pageVariants}
-      transition={{ type: "linear", duration: 0.5 }}
+      transition={{ type: "linear", duration: 1.5, ease: "easeInOut" }}
       key={location.key}
     >
       {children}
