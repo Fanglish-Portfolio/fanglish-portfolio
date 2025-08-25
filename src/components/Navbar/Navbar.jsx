@@ -15,20 +15,25 @@ const Navbar = () => {
 
   return (
     <nav className="py-7 bg-sub">
-      <div className="lg:w-[1000px] px-5 md:px-10 lg:px-0 mx-auto flex items-center justify-between ">
+      <div className="lg:w-[1280px] px-5 md:px-10 lg:px-0 mx-auto flex items-center justify-between ">
         {/* Logo */}
         <Link to="/" className="">
-          <img src={logo} alt="Logo" className="w-24 md:w-20" />
+          <div className="flex items-center gap-2">
+            <img src={logo} alt="logo" width={32} height={32} />
+            <p className="text-[16px] font-medium text-primary">
+              FuNglish Global
+            </p>
+          </div>
         </Link>
 
         {/* Desktop Nav Links */}
-        <div className="hidden md:flex md:space-x-5 lg:space-x-10">
+        <div className="hidden md:flex md:space-x-5 lg:space-x-5 libre">
           <NavLink
             to="/"
             className={({ isActive }) =>
               isActive
-                ? "text-[14px] lg:text-[18px] font-semibold text-primary"
-                : "text-[14px] lg:text-[18px] text-white hover:text-primary"
+                ? "text-[14px] lg:text-[14px] font-semibold text-primary"
+                : "text-[14px] lg:text-[14px] text-white hover:text-primary"
             }
           >
             Home
@@ -37,8 +42,8 @@ const Navbar = () => {
             to="/about"
             className={({ isActive }) =>
               isActive
-                ? "text-[14px] lg:text-[18px] font-semibold text-primary"
-                : "text-[14px] lg:text-[18px] text-white hover:text-primary"
+                ? "text-[14px] lg:text-[14px] font-semibold text-primary"
+                : "text-[14px] lg:text-[14px] text-white hover:text-primary"
             }
           >
             About Us
@@ -47,43 +52,47 @@ const Navbar = () => {
             to="/service"
             className={({ isActive }) =>
               isActive
-                ? "text-[14px] lg:text-[18px] font-semibold text-primary"
-                : "text-[14px] lg:text-[18px] text-white hover:text-primary"
+                ? "text-[14px] lg:text-[14px] font-semibold text-primary"
+                : "text-[14px] lg:text-[14px] text-white hover:text-primary"
             }
           >
-            Services
+            Our Services
           </NavLink>
           <NavLink
             to="/spare"
             className={({ isActive }) =>
               isActive
-                ? "text-[14px] lg:text-[18px] font-semibold text-primary"
-                : "text-[14px] lg:text-[18px] text-white hover:text-primary"
+                ? "text-[14px] lg:text-[14px] font-semibold text-primary"
+                : "text-[14px] lg:text-[14px] text-white hover:text-primary"
             }
           >
-            Spare Parts
+            Study Abroad
+          </NavLink>
+          <NavLink
+            to="/spare"
+            className={({ isActive }) =>
+              isActive
+                ? "text-[14px] lg:text-[14px] font-semibold text-primary"
+                : "text-[14px] lg:text-[14px] text-white hover:text-primary"
+            }
+          >
+            Blogs
+          </NavLink>
+          <NavLink
+            to="/spare"
+            className={({ isActive }) =>
+              isActive
+                ? "text-[14px] lg:text-[14px] font-semibold text-primary"
+                : "text-[14px] lg:text-[14px] text-white hover:text-primary"
+            }
+          >
+            Contact Us
           </NavLink>
         </div>
 
         {/* Language Selector and Button */}
         <div className="hidden md:flex gap-8 items-center">
-          {/* <span className="text-gray-800">MYA / EN</span> */}
-          <a
-            href="https://www.globalsuzuki.com/"
-            target="_blank"
-            className="flex items-center gap-2 cursor-pointer hover:scale-105 transition duration-300"
-          >
-            <p>Global</p>
-            <TfiWorld size={20} />
-          </a>
-
-          <a
-            href="tel:095119806"
-            className="button hover:scale-105 transition duration-300"
-          >
-            <p>Call Us</p>
-            <FaPhoneVolume size={20} />
-          </a>
+          <button className="button">Meet Our Counselors</button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -108,8 +117,8 @@ const Navbar = () => {
               onClick={toggleMenu}
               className={({ isActive }) =>
                 isActive
-                  ? "text-lg text-primary font-semibold"
-                  : "text-black text-lg  text-white hover:text-primary"
+                  ? "text-[14px] lg:text-[14px] font-semibold text-primary"
+                  : "text-[14px] lg:text-[14px] text-white hover:text-primary"
               }
             >
               Home
@@ -119,8 +128,8 @@ const Navbar = () => {
               onClick={toggleMenu}
               className={({ isActive }) =>
                 isActive
-                  ? "text-lg text-primary font-semibold"
-                  : "text-black text-lg text-white hover:text-primary"
+                  ? "text-[14px] lg:text-[14px] font-semibold text-primary"
+                  : "text-[14px] lg:text-[14px] text-white hover:text-primary"
               }
             >
               About Us
@@ -130,22 +139,44 @@ const Navbar = () => {
               onClick={toggleMenu}
               className={({ isActive }) =>
                 isActive
-                  ? "text-lg text-primary font-semibold"
-                  : "text-black text-lg text-white hover:text-primary"
+                  ? "text-[14px] lg:text-[14px] font-semibold text-primary"
+                  : "text-[14px] lg:text-[14px] text-white hover:text-primary"
               }
             >
-              Services
+              Our Services
             </NavLink>
             <NavLink
               to="/spare"
               onClick={toggleMenu}
               className={({ isActive }) =>
                 isActive
-                  ? "text-lg text-primary font-semibold"
-                  : "text-black text-lg text-white hover:text-primary"
+                  ? "text-[14px] lg:text-[14px] font-semibold text-primary"
+                  : "text-[14px] lg:text-[14px] text-white hover:text-primary"
               }
             >
-              Spear Parts
+              Study Abroad
+            </NavLink>
+            <NavLink
+              to="/spare"
+              onClick={toggleMenu}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[14px] lg:text-[14px] font-semibold text-primary"
+                  : "text-[14px] lg:text-[14px] text-white hover:text-primary"
+              }
+            >
+              Blogs
+            </NavLink>
+            <NavLink
+              to="/spare"
+              onClick={toggleMenu}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[14px] lg:text-[14px] font-semibold text-primary"
+                  : "text-[14px] lg:text-[14px] text-white hover:text-primary"
+              }
+            >
+              Contact Us
             </NavLink>
           </div>
         </div>

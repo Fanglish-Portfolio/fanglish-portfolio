@@ -1,38 +1,25 @@
 import { motion } from "framer-motion";
-import bg from "./../../assets/image/home/heroBanner.svg";
+import bg from "./../../assets/image/home/heroBanner.jpg";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 
 const HeroBanner = () => {
   return (
-    <div
-      className="min-h-[100vh] text-white"
-      style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url(${bg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="containers flex flex-col justify-end h-screen"
-      >
-        <h1 className="text-4xl md:text-5xl lg:text-6xl suzukipro font-bold mb-10">
-          Always ready to provide <br /> the best service
-        </h1>
-
-        <div className="flex flex-col sm:flex-row gap-4">
-          <a
-            href="tel:095119806"
-            className="button bg-white text-secondary text-lg font-semibold"
-          >
-            Call Us
-            <MdOutlinePhoneInTalk size={25} />
-          </a>
+    <div className="min-h-[100vh] text-white my-32">
+      <div className="w-full h-full flex justify-center items-center">
+        <div className="relative rounded-xl overflow-hidden">
+          <img src={bg} alt="bg" />
+          <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-0"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-[60%]">
+            <div className="flex flex-col items-center justify-center gap-4">
+              <h1 className="banner-text text-center libre">
+                We Empower learners of all levels to expand their skills , reach
+                their goals and steps onto global stage.
+              </h1>
+              <button className="button">Meet Our Counselors</button>
+            </div>
+          </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };

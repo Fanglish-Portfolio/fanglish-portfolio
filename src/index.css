@@ -3,27 +3,15 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "RobotoFlex";
-  src: local("RobotoFlex"),
-    url("./assets/Fonts/RobotoFlex.ttf") format("truetype");
+  font-family: "LibreCaslonText";
+  src: local("LibreCaslonText"),
+    url("./assets/Fonts/LibreCaslonText-Bold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "SuzukiPROHeadline";
-  src: local("SuzukiPROHeadline"),
-    url("./assets/Fonts/SuzukiPROHeadline.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Open Sans";
-  src: local("OPEN-SANS"),
-    url("./assets/Fonts/OpenSans-SemiBold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Source Sans 3";
-  src: local("SOURCE-SANS-3"),
-    url("./assets/Fonts/SourceSans3-SemiBold.ttf") format("truetype");
+  font-family: "Poppins";
+  src: local("Poppins"),
+    url("./assets/Fonts/Poppins-Regular.ttf") format("truetype");
 }
 
 html {
@@ -34,30 +22,47 @@ body {
   background: #1a1a1a;
   scroll-behavior: smooth;
   color: white;
-  font-family: "RobotoFlex";
+  font-family: "Poppins";
+}
+
+.libre {
+  font-family: "LibreCaslonText";
 }
 
 .containers {
-  @apply mx-auto lg:w-[1000px] py-[64px] px-5 md:px-10 lg:px-5;
+  @apply mx-auto lg:w-[1280px] py-[64px] px-[64px] md:px-10 lg:px-5;
 }
 
-.suzukipro {
-  font-family: "SuzukiPROHeadline";
+.banner-text {
+  font-weight: 700;
+  font-size: 36px;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  /* font-style: bold; */
 }
 
 .header-text {
-  @apply text-header md:text-[24px] lg:text-[42px] text-white;
-  font-family: "SuzukiPROHeadline";
+  @apply text-[20px] md:text-[24px] lg:text-[36px] text-white;
+  font-family: "LibreCaslonText";
+  font-weight: 600;
+  font-style: bold;
+  line-height: 100%;
+  letter-spacing: -1.9%;
+  /* text-align: center; */
 }
 
 .body-text {
   @apply text-body md:text-[16px] lg:text-[20px];
-  font-family: "RobotoFlex";
+  font-family: "Poppins";
   color: "#565656";
 }
 
 .button {
-  @apply flex items-center font-semibold gap-2 cursor-pointer border-2 border-white rounded-md px-6 py-2;
+  @apply flex items-center gap-4 bg-primary text-black py-3 px-5 rounded-xl font-semibold text-[14px] hover:scale-105 transition-all duration-300;
+}
+
+.button-outline {
+  @apply flex items-center gap-4 border-2 border-primary text-primary py-3 px-5 rounded-xl font-semibold text-[14px] hover:scale-105 transition-all duration-300;
 }
 
 /* styles.css */
@@ -67,9 +72,48 @@ body {
   text-align: center;
 }
 
+.glass-card {
+  background: linear-gradient(
+    165deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.001)
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 3rem 2.5rem;
+  text-align: center;
+
+  /* The key shadow styles */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
 @media (max-width: 767px) {
   .custom-gradient {
     background: linear-gradient(180deg, #ecf8ed 10%, #319639 55%, #1e5c23 100%);
     padding: 0.5rem;
   }
+}
+
+/* Carousel Swiper */
+.carousel-swiper {
+  padding-bottom: 50px !important;
+}
+
+.carousel-swiper .swiper-pagination {
+  bottom: 10px !important;
+}
+
+.carousel-swiper .swiper-pagination-bullet {
+  background: #feb609 !important;
+  opacity: 0.5 !important;
+}
+
+.carousel-swiper .swiper-pagination-bullet-active {
+  width: 18px !important;
+  border-radius: 5px !important;
+  /* height: 12px !important; */
+  background: #feb609 !important;
+  opacity: 1 !important;
 }
