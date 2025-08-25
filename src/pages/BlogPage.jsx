@@ -1,14 +1,15 @@
+// import Blog from "../../components/Home/Blog";
 import MiddleSection from "../components/Home/MiddleSection";
-import ServicesSection from "../components/Home/ServiceSection";
+import Blog from "../components/Home/Blog";
 
-function ServicePage() {
+function BlogPage() {
   return (
     <div>
       <div className="mt-20"></div>
-      <ServicesSection />
+      <Blog />
       <MiddleSection />
     </div>
   );
 }
 
-export default ServicePage;
+export default BlogPage;

@@ -3,8 +3,6 @@ import { Link, NavLink } from "react-router-dom";
 import { IoMenuSharp } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import logo from "./../../assets/image/logo/logo.png";
-import { TfiWorld } from "react-icons/tfi";
-import { FaPhoneVolume } from "react-icons/fa6";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -59,7 +57,7 @@ const Navbar = () => {
             Our Services
           </NavLink>
           <NavLink
-            to="/spare"
+            to="/blog"
             className={({ isActive }) =>
               isActive
                 ? "text-[14px] lg:text-[14px] font-semibold text-primary"
@@ -69,7 +67,7 @@ const Navbar = () => {
             Study Abroad
           </NavLink>
           <NavLink
-            to="/spare"
+            to="/blog"
             className={({ isActive }) =>
               isActive
                 ? "text-[14px] lg:text-[14px] font-semibold text-primary"
@@ -79,7 +77,7 @@ const Navbar = () => {
             Blogs
           </NavLink>
           <NavLink
-            to="/spare"
+            to="/contact"
             className={({ isActive }) =>
               isActive
                 ? "text-[14px] lg:text-[14px] font-semibold text-primary"
@@ -157,7 +155,7 @@ const Navbar = () => {
               Study Abroad
             </NavLink>
             <NavLink
-              to="/spare"
+              to="/blog"
               onClick={toggleMenu}
               className={({ isActive }) =>
                 isActive
@@ -168,7 +166,7 @@ const Navbar = () => {
               Blogs
             </NavLink>
             <NavLink
-              to="/spare"
+              to="/contact"
               onClick={toggleMenu}
               className={({ isActive }) =>
                 isActive
