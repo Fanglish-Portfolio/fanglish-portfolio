@@ -59,7 +59,7 @@ const Navbar = () => {
             Our Services
           </NavLink>
           <NavLink
-            to="/blog"
+            to="/study-abroad"
             className={({ isActive }) =>
               isActive
                 ? "text-[14px] lg:text-[14px] font-semibold text-primary"
@@ -148,7 +148,7 @@ const Navbar = () => {
               Our Services
             </NavLink>
             <NavLink
-              to="/spare"
+              to="/study-abroad"
               onClick={toggleMenu}
               className={({ isActive }) =>
                 isActive

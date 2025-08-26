@@ -19,8 +19,8 @@ function Number({ n }) {
 const Collaborate = () => {
   return (
     <div className="containers">
-      <div className="mb-10 flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 justify-between">
-        <div className="glass-card font-bold flex flex-col items-center justify-between py-5 w-[350px] h-[350px] rounded-lg">
+      <div className="mb-10 flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 justify-between">
+        <div className="glass-card font-bold flex flex-col items-center justify-between py-5 w-[350px] lg:h-[350px] rounded-lg">
           <p className="libre text-[64px] italic py-5 ">
             <Number n={1500} /> +
           </p>
@@ -29,7 +29,7 @@ const Collaborate = () => {
           </h3>
         </div>
 
-        <div className="glass-card font-bold flex flex-col items-center justify-between py-5 w-[350px] h-[350px] rounded-lg">
+        <div className="glass-card font-bold flex flex-col items-center justify-between py-5 w-[350px] lg:h-[350px] rounded-lg">
           <p className="libre text-[64px] italic py-5 ">
             <Number n={700} /> +
           </p>
@@ -38,7 +38,7 @@ const Collaborate = () => {
           </h3>
         </div>
 
-        <div className="glass-card font-bold flex flex-col items-center justify-between py-5 w-[350px] h-[350px] rounded-lg">
+        <div className="glass-card font-bold flex flex-col items-center justify-between py-5 w-[350px] lg:h-[350px] rounded-lg">
           <p className="libre text-[64px] italic py-5 ">
             <Number n={15000} /> +
           </p>

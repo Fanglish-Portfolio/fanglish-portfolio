@@ -5,6 +5,27 @@ import flag2 from "../../assets/image/university/Flags2.png";
 import flag3 from "../../assets/image/university/Flags3.png";
 import flag4 from "../../assets/image/university/Flags4.png";
 
+import uni1 from "./../../assets/image/university/schoolImage/uni1.png";
+import uni2 from "./../../assets/image/university/schoolImage/uni2.png";
+import uni3 from "./../../assets/image/university/schoolImage/uni3.png";
+import uni4 from "./../../assets/image/university/schoolImage/uni4.png";
+import uni5 from "./../../assets/image/university/schoolImage/uni5.png";
+import uni6 from "./../../assets/image/university/schoolImage/uni6.png";
+import uni7 from "./../../assets/image/university/schoolImage/uni7.png";
+import uni8 from "./../../assets/image/university/schoolImage/uni8.png";
+import uni9 from "./../../assets/image/university/schoolImage/uni9.png";
+// import uni10 from "./../../assets/image/university/schoolImage/uni10.png";
+// import uni11 from "./../../assets/image/university/schoolImage/uni11.png";
+// import uni12 from "./../../assets/image/university/schoolImage/uni12.png";
+// import uni13 from "./../../assets/image/university/schoolImage/uni13.png";
+// import uni14 from "./../../assets/image/university/schoolImage/uni14.png";
+// import uni15 from "./../../assets/image/university/schoolImage/uni15.png";
+// import uni16 from "./../../assets/image/university/schoolImage/uni16.png";
+// import uni17 from "./../../assets/image/university/schoolImage/uni17.png";
+// import uni18 from "./../../assets/image/university/schoolImage/uni18.png";
+// import uni19 from "./../../assets/image/university/schoolImage/uni19.png";
+// import uni20 from "./../../assets/image/university/schoolImage/uni20.png";
+
 function University() {
   const [selectedCountry, setSelectedCountry] = useState("us");
   const [selectedType, setSelectedType] = useState("university");
@@ -18,28 +39,63 @@ function University() {
         {
           id: 1,
           name: "Weber State University",
-          logo: "WSU",
+          logo: uni1,
           backgroundColor: "bg-white",
           type: "university",
         },
         {
           id: 2,
           name: "De Anza College",
-          logo: "DAC",
+          logo: uni2,
           backgroundColor: "bg-red-700",
           type: "college",
         },
         {
           id: 3,
           name: "Ohlone College",
-          logo: "OC",
+          logo: uni3,
           backgroundColor: "bg-white",
           type: "college",
         },
         {
           id: 4,
           name: "Orange Coast College",
-          logo: "OCC",
+          logo: uni4,
+          backgroundColor: "bg-white",
+          type: "college",
+        },
+        {
+          id: 5,
+          name: "Orange Coast College",
+          logo: uni5,
+          backgroundColor: "bg-white",
+          type: "college",
+        },
+        {
+          id: 6,
+          name: "Orange Coast College",
+          logo: uni6,
+          backgroundColor: "bg-white",
+          type: "college",
+        },
+        {
+          id: 7,
+          name: "Orange Coast College",
+          logo: uni7,
+          backgroundColor: "bg-white",
+          type: "college",
+        },
+        {
+          id: 8,
+          name: "Orange Coast College",
+          logo: uni8,
+          backgroundColor: "bg-white",
+          type: "college",
+        },
+        {
+          id: 9,
+          name: "Orange Coast College",
+          logo: uni9,
           backgroundColor: "bg-white",
           type: "college",
         },
@@ -228,13 +284,21 @@ function University() {
         <div className="flex-1 px-8">
           <div className="flex gap-4 mb-10">
             <button
-              className="button"
+              className={` px-6 py-2 rounded-full border border-primary transition-all duration-300 ${
+                selectedType === "university"
+                  ? "bg-primary text-black"
+                  : " text-primary text-primary"
+              }`}
               onClick={() => setSelectedType("university")}
             >
               University
             </button>
             <button
-              className="button"
+              className={` px-6 py-2 rounded-full border border-primary transition-all duration-300 ${
+                selectedType === "college"
+                  ? "bg-primary text-black"
+                  : "text-primary"
+              }`}
               onClick={() => setSelectedType("college")}
             >
               Collage
@@ -246,97 +310,30 @@ function University() {
               {filteredUniversities.map((university) => (
                 <div
                   key={university.id}
-                  className="bg-gray-800 rounded-2xl p-1 hover:bg-gray-700 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl group"
+                  className="bg-[#161616]/20 rounded-2xl p-6 overflow-hidden border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105"
                 >
-                  <div className="bg-gray-800 rounded-2xl overflow-hidden">
-                    {/* University Logo Area */}
-                    <div
-                      className={`h-48 ${university.backgroundColor} flex items-center justify-center relative overflow-hidden`}
-                    >
-                      {university.name === "Weber State University" && (
-                        <div className="text-center">
-                          <div className="w-16 h-16 bg-purple-800 rounded-full flex items-center justify-center mx-auto mb-2">
-                            <span className="text-white font-bold text-xl">
-                              W
-                            </span>
-                          </div>
-                          <div className="text-purple-800 font-bold text-sm">
-                            WEBER STATE
-                            <br />
-                            UNIVERSITY
-                          </div>
-                        </div>
-                      )}
-                      {university.name === "De Anza College" && (
-                        <div className="text-center text-white">
-                          <div className="w-20 h-12 bg-white rounded-lg flex items-center justify-center mx-auto mb-2">
-                            <div className="w-8 h-8 bg-red-700 rounded"></div>
-                          </div>
-                          <div className="font-bold text-2xl">
-                            DeAnza
-                            <br />
-                            College
-                          </div>
-                        </div>
-                      )}
-                      {university.name === "Ohlone College" && (
-                        <div className="text-center">
-                          <div className="mb-2">
-                            <div className="w-16 h-8 bg-yellow-400 rounded-full mx-auto mb-1"></div>
-                            <div className="w-20 h-3 bg-green-500 rounded mx-auto"></div>
-                          </div>
-                          <div className="text-green-600 font-bold text-xl">
-                            OHLONE
-                            <br />
-                            <span className="text-yellow-500">COLLEGE</span>
-                          </div>
-                        </div>
-                      )}
-                      {university.name === "Orange Coast College" && (
-                        <div className="text-center">
-                          <div className="w-16 h-16 mx-auto mb-2">
-                            <div className="w-full h-full bg-gradient-to-br from-orange-400 to-blue-600 rounded-full flex items-center justify-center">
-                              <div className="w-8 h-8 bg-white rounded-full"></div>
-                            </div>
-                          </div>
-                          <div className="text-gray-800 font-bold">
-                            <span className="text-orange-500">ORANGE</span>
-                            <br />
-                            <span className="text-blue-600">COAST</span>
-                            <br />
-                            <span className="text-gray-600">College</span>
-                          </div>
-                        </div>
-                      )}
-                      {![
-                        "Weber State University",
-                        "De Anza College",
-                        "Ohlone College",
-                        "Orange Coast College",
-                      ].includes(university.name) && (
-                        <div className="text-center text-white">
-                          <div className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span className="text-2xl font-bold">
-                              {university.logo}
-                            </span>
-                          </div>
-                          <div className="text-lg font-semibold">
-                            {university.name}
-                          </div>
-                        </div>
-                      )}
-                    </div>
+                  {/* Card Image */}
+                  <div className={`relative flex items-center justify-center`}>
+                    <img
+                      src={university.logo}
+                      alt={university.name}
+                      className="w-full h-full object-cover rounded-xl"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-20 rounded-lg"></div>
+                  </div>
 
-                    {/* University Info */}
-                    <div className="p-6">
-                      <h3 className="text-xl font-semibold text-white mb-4 text-center">
+                  {/* Card Content */}
+                  <div className="mt-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="text-white">{university.icon}</div>
+                      <h3 className="text-white text-[20px] font-semibold">
                         {university.name}
                       </h3>
-
-                      <button className="w-full bg-yellow-500 hover:bg-yellow-400 text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]">
-                        View University
-                      </button>
                     </div>
+
+                    <button className="bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300">
+                      View University
+                    </button>
                   </div>
                 </div>
               ))}

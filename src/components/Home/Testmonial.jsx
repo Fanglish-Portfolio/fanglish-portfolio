@@ -110,8 +110,8 @@ export default function Testimonials() {
                   <div className="rounded-2xl p-8 border border-gray-700 mx-auto">
                     <div className="flex flex-col lg:flex-row gap-8">
                       {/* Student Image */}
-                      <div className="flex-shrink-0">
-                        <div className="w-[278px] h-[278px] rounded-2xl overflow-hidden">
+                      <div className="flex flex-col sm:flex-row lg:flex-col gap-8">
+                        <div className="md:w-[278px] md:h-[278px] rounded-2xl overflow-hidden">
                           <img
                             src={testimonial.image}
                             alt={testimonial.name}
