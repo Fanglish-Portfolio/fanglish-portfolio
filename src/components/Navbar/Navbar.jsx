@@ -3,8 +3,10 @@ import { Link, NavLink } from "react-router-dom";
 import { IoMenuSharp } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import logo from "./../../assets/image/logo/logo.png";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -90,7 +92,9 @@ const Navbar = () => {
 
         {/* Language Selector and Button */}
         <div className="hidden md:flex gap-8 items-center">
-          <button className="button">Meet Our Counselors</button>
+          <button onClick={() => navigate("/booking")} className="button">
+            Meet Our Counselors
+          </button>
         </div>
 
         {/* Mobile Menu Button */}

@@ -9,6 +9,7 @@ import { AnimatePresence } from "framer-motion";
 import ScrollToTop from "./ScrollToTop";
 import { Analytics } from "@vercel/analytics/react";
 import Blog from "./pages/BlogPage";
+import ConsultationBooking from "./pages/Booking";
 
 function App() {
   return (
@@ -50,6 +51,14 @@ function App() {
               element={
                 <PageTransition>
                   <Blog />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/booking"
+              element={
+                <PageTransition>
+                  <ConsultationBooking />
                 </PageTransition>
               }
             />

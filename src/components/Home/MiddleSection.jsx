@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function MiddleSection() {
+  const navigate = useNavigate();
   return (
     <div className="bg-primary text-black">
       <div className="containers">
@@ -14,6 +16,7 @@ function MiddleSection() {
           </p>
           <button
             className="button"
+            onClick={() => navigate("/booking")}
             style={{ backgroundColor: "#161616", color: "white" }}
           >
             Meet Our Counselors
