@@ -10,6 +10,7 @@ import ScrollToTop from "./ScrollToTop";
 import { Analytics } from "@vercel/analytics/react";
 import Blog from "./pages/BlogPage";
 import ConsultationBooking from "./pages/Booking";
+import StudyAboard from "./pages/StudyAboard";
 
 function App() {
   return (
@@ -59,6 +60,14 @@ function App() {
               element={
                 <PageTransition>
                   <ConsultationBooking />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/study-abroad"
+              element={
+                <PageTransition>
+                  <StudyAboard />
                 </PageTransition>
               }
             />
