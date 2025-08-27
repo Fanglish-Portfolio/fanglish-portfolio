@@ -21,8 +21,8 @@ const Footer = () => {
   };
   return (
     <section className="max-w-[1280px] mx-auto">
-      <div className="text-white py-20 px-5 flex flex-col md:flex-row gap-4">
-        <div className="w-full md:w-1/3">
+      <div className="text-white py-20 px-5 flex flex-col lg:flex-row gap-4">
+        <div className="w-full lg:w-1/3">
           <div className="flex items-center gap-2">
             <img src={logo} alt="logo" width={32} height={32} />
             <p className="text-[16px] font-medium text-primary">
@@ -42,8 +42,8 @@ const Footer = () => {
             <FaTiktok size={24} />
           </div>
         </div>
-        <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-2 mt-10 md:mt-0 space-y-10 md:space-y-0">
-          <div className="flex md:justify-center">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-4 gap-2 mt-10 lg:mt-0 space-y-10 lg:space-y-0">
+          <div className="flex lg:justify-center">
             <div>
               <h2 className="text-[23px] font-semibold mb-5 libre">
                 Useful Links
@@ -82,7 +82,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="flex md:justify-center">
+          <div className="flex lg:justify-center">
             <div>
               <h2 className="text-[23px] font-semibold mb-5 libre">
                 Our Services
@@ -121,7 +121,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="flex md:justify-center">
+          <div className="flex lg:justify-center">
             <div>
               <h2 className="text-[23px] font-semibold mb-5 libre">
                 Study Abroad
@@ -160,7 +160,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="flex md:justify-center">
+          <div className="flex lg:justify-center">
             <div>
               <h2 className="text-[23px] font-semibold mb-5 libre">
                 Contact Us

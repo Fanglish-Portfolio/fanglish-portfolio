@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     <nav className="py-7 bg-sub">
-      <div className="lg:w-[1280px] px-5 md:px-10 lg:px-0 mx-auto flex items-center justify-between ">
+      <div className="lg:max-w-[1280px] px-5 md:px-10 lg:px-0 mx-auto flex items-center justify-between ">
         {/* Logo */}
         <Link to="/" className="">
           <div className="flex items-center gap-2">
@@ -27,7 +27,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Nav Links */}
-        <div className="hidden md:flex md:space-x-5 lg:space-x-5 libre">
+        <div className="hidden lg:flex lg:space-x-5 libre">
           <NavLink
             to="/"
             className={({ isActive }) =>
@@ -91,14 +91,14 @@ const Navbar = () => {
         </div>
 
         {/* Language Selector and Button */}
-        <div className="hidden md:flex gap-8 items-center">
+        <div className="hidden lg:flex gap-8 items-center">
           <button onClick={() => navigate("/booking")} className="button">
             Meet Our Counselors
           </button>
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden flex items-center">
+        <div className="lg:hidden flex items-center">
           <button onClick={toggleMenu} className="text-sub focus:outline-none">
             {isOpen ? (
               <IoClose size={25} className="text-primary" />
@@ -112,7 +112,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden transition-all duration-300">
+        <div className="lg:hidden transition-all duration-300">
           <div className="flex flex-col space-y-4 px-4 py-10 w-full">
             <NavLink
               to="/"

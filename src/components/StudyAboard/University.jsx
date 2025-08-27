@@ -29,6 +29,7 @@ import uni9 from "./../../assets/image/university/schoolImage/uni9.png";
 function University() {
   const [selectedCountry, setSelectedCountry] = useState("us");
   const [selectedType, setSelectedType] = useState("university");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const countries = [
     {
@@ -257,86 +258,120 @@ function University() {
     <section className="containers">
       <div className="mt-20"></div>
       <h1 className="header-text mb-10">Study Abroad</h1>
-      <div className="min-h-screen flex ">
-        {/* Left Sidebar */}
-        <div className="w-80 p-6 border-r border-gray-700">
-          <div className="space-y-10">
-            {countries.map((country) => (
-              <button
-                key={country.id}
-                onClick={() => setSelectedCountry(country.id)}
-                className={`w-full flex items-center justify-between p-4 rounded-xl transition-all duration-300 group ${
-                  selectedCountry === country.id
-                    ? "bg-white text-black"
-                    : "hover:scale-[1.02] "
-                }`}
-              >
-                <div className="flex items-center space-x-3">
-                  <img src={country.flag} alt="" />
-                  <span className="font-medium text-left">{country.name}</span>
-                </div>
-              </button>
-            ))}
-          </div>
+      <div className="min-h-screen">
+        <div className="lg:hidden mb-6 px-6">
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="w-full flex items-center justify-between p-4 bg-gray-800 rounded-xl border border-gray-700"
+          >
+            <span className="font-medium">Select Country</span>
+            <svg
+              className={`w-5 h-5 transform transition-transform ${
+                isMobileMenuOpen ? "rotate-180" : ""
+              }`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
         </div>
-
-        {/* Main Content Area */}
-        <div className="flex-1 px-8">
-          <div className="flex gap-4 mb-10">
-            <button
-              className={` px-6 py-2 rounded-full border border-primary transition-all duration-300 ${
-                selectedType === "university"
-                  ? "bg-primary text-black"
-                  : " text-primary text-primary"
-              }`}
-              onClick={() => setSelectedType("university")}
-            >
-              University
-            </button>
-            <button
-              className={` px-6 py-2 rounded-full border border-primary transition-all duration-300 ${
-                selectedType === "college"
-                  ? "bg-primary text-black"
-                  : "text-primary"
-              }`}
-              onClick={() => setSelectedType("college")}
-            >
-              Collage
-            </button>
-          </div>
-          <div className="max-w-6xl mx-auto">
-            {/* University Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {filteredUniversities.map((university) => (
-                <div
-                  key={university.id}
-                  className="bg-[#161616]/20 rounded-2xl p-6 overflow-hidden border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105"
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+          {/* Left Sidebar */}
+          <div
+            className={`
+            lg:w-80 lg:block px-6 md:px-0
+            ${isMobileMenuOpen ? "block" : "hidden lg:block"}
+          `}
+          >
+            <div className="space-y-10">
+              {countries.map((country) => (
+                <button
+                  key={country.id}
+                  onClick={() => setSelectedCountry(country.id)}
+                  className={`w-full flex items-center justify-between p-4 rounded-xl transition-all duration-300 group ${
+                    selectedCountry === country.id
+                      ? "bg-white text-black"
+                      : "hover:scale-[1.02] "
+                  }`}
                 >
-                  {/* Card Image */}
-                  <div className={`relative flex items-center justify-center`}>
-                    <img
-                      src={university.logo}
-                      alt={university.name}
-                      className="w-full h-full object-cover rounded-xl"
-                    />
-                    <div className="absolute inset-0 bg-black bg-opacity-20 rounded-lg"></div>
+                  <div className="flex items-center space-x-3">
+                    <img src={country.flag} alt="" />
+                    <span className="font-medium text-left">
+                      {country.name}
+                    </span>
                   </div>
+                </button>
+              ))}
+            </div>
+          </div>
 
-                  {/* Card Content */}
-                  <div className="mt-6">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="text-white">{university.icon}</div>
-                      <h3 className="text-white text-[20px] font-semibold">
-                        {university.name}
-                      </h3>
+          {/* Main Content Area */}
+          <div className="flex-1 px-8">
+            <div className="flex gap-4 mb-10">
+              <button
+                className={` px-6 py-2 rounded-full border border-primary transition-all duration-300 ${
+                  selectedType === "university"
+                    ? "bg-primary text-black"
+                    : " text-primary text-primary"
+                }`}
+                onClick={() => setSelectedType("university")}
+              >
+                University
+              </button>
+              <button
+                className={` px-6 py-2 rounded-full border border-primary transition-all duration-300 ${
+                  selectedType === "college"
+                    ? "bg-primary text-black"
+                    : "text-primary"
+                }`}
+                onClick={() => setSelectedType("college")}
+              >
+                Collage
+              </button>
+            </div>
+            <div className="max-w-6xl mx-auto">
+              {/* University Cards Grid */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {filteredUniversities.map((university) => (
+                  <div
+                    key={university.id}
+                    className="bg-[#161616]/20 rounded-2xl p-6 overflow-hidden border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105"
+                  >
+                    {/* Card Image */}
+                    <div
+                      className={`relative flex items-center justify-center`}
+                    >
+                      <img
+                        src={university.logo}
+                        alt={university.name}
+                        className="w-full h-full object-cover rounded-xl"
+                      />
+                      <div className="absolute inset-0 bg-black bg-opacity-20 rounded-lg"></div>
                     </div>
 
-                    <button className="bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300">
-                      View University
-                    </button>
+                    {/* Card Content */}
+                    <div className="mt-6">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="text-white">{university.icon}</div>
+                        <h3 className="text-white text-[20px] font-semibold">
+                          {university.name}
+                        </h3>
+                      </div>
+
+                      <button className="bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300">
+                        View University
+                      </button>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>

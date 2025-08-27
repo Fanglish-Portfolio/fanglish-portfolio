@@ -30,19 +30,19 @@ body {
 }
 
 .containers {
-  @apply mx-auto lg:w-[1280px] py-[64px] px-[64px] md:px-10 lg:px-5;
+  @apply mx-auto lg:max-w-[1280px] py-[64px] px-5 md:px-[64px] md:px-10 lg:px-5;
 }
 
 .banner-text {
+  @apply text-[18px] md:text-[24px] lg:text-[36px] text-white;
   font-weight: 700;
-  font-size: 36px;
   letter-spacing: 2px;
   line-height: 1.2;
   /* font-style: bold; */
 }
 
 .header-text {
-  @apply text-[20px] md:text-[24px] lg:text-[36px] text-white;
+  @apply text-[24px] md:text-[24px] lg:text-[36px] text-white;
   font-family: "LibreCaslonText";
   font-weight: 600;
   font-style: bold;
@@ -52,13 +52,11 @@ body {
 }
 
 .body-text {
-  @apply text-body md:text-[16px] lg:text-[20px];
-  font-family: "Poppins";
-  color: "#565656";
+  @apply text-[18px] md:text-[24px] lg:text-[32px];
 }
 
 .button {
-  @apply flex items-center gap-4 bg-primary text-black py-3 px-5 rounded-xl font-semibold text-[14px] hover:scale-105 transition-all duration-300;
+  @apply flex items-center gap-4 bg-primary text-black py-3 px-5 rounded-xl font-semibold text-[12px] md:text-[14px] hover:scale-105 transition-all duration-300;
 }
 
 .button-outline {

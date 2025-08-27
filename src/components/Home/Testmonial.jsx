@@ -110,7 +110,7 @@ export default function Testimonials() {
                   <div className="rounded-2xl p-8 border border-gray-700 mx-auto">
                     <div className="flex flex-col lg:flex-row gap-8">
                       {/* Student Image */}
-                      <div className="flex flex-col sm:flex-row lg:flex-col gap-8">
+                      <div className="flex flex-col sm:flex-row lg:flex-col gap-4 md:gap-8">
                         <div className="md:w-[278px] md:h-[278px] rounded-2xl overflow-hidden">
                           <img
                             src={testimonial.image}
@@ -134,8 +134,8 @@ export default function Testimonials() {
 
                       {/* Testimonial Content */}
                       <div className="flex-1 flex">
-                        <div className="space-y-24">
-                          <blockquote className="text-white text-[24px] leading-relaxed font-medium letter-spacing-[2px]">
+                        <div className="space-y-8 md:space-y-24">
+                          <blockquote className="text-white md:text-[24px] leading-relaxed font-medium letter-spacing-[2px]">
                             "{testimonial.quote}"
                           </blockquote>
 

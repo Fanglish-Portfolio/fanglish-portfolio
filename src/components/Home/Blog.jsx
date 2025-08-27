@@ -75,12 +75,12 @@ const Blog = () => {
               {/* Card Content */}
               <div className="mt-6">
                 <div className="flex items-center gap-3 mb-4">
-                  <h3 className="text-white text-[20px] h-[95px] font-semibold">
+                  <h3 className="text-white text-[14px] md:text-[20px] md:h-[95px] font-semibold">
                     {service.title}
                   </h3>
                 </div>
 
-                <button className="bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300">
+                <button className="text-[12px] md:text-[16px] bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300">
                   Read
                 </button>
               </div>
