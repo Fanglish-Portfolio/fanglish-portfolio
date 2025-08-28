@@ -18,8 +18,10 @@ import service3 from "../../assets/image/service/service/service3.png";
 import service4 from "../../assets/image/service/service/service4.png";
 import service5 from "../../assets/image/service/service/service5.png";
 import service6 from "../../assets/image/service/service/service6.png";
+import { useNavigate } from "react-router-dom";
 
 const ServicesSection = () => {
+  const navigate = useNavigate();
   const services = [
     {
       id: 1,
@@ -119,7 +121,10 @@ const ServicesSection = () => {
                   </h3>
                 </div>
 
-                <button className="text-[12px] md:text-[16px] bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300">
+                <button
+                  onClick={() => navigate(`/service-detail/${service.id}`)}
+                  className="text-[12px] md:text-[16px] bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300"
+                >
                   View Service Details
                 </button>
               </div>

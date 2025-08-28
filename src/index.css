@@ -115,3 +115,22 @@ body {
   background: #feb609 !important;
   opacity: 1 !important;
 }
+
+.service-header {
+  position: relative;
+}
+
+.service-header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.service-card {
+  position: absolute;
+  top: 50%;
+}

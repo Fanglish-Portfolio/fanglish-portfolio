@@ -11,6 +11,7 @@ import { Analytics } from "@vercel/analytics/react";
 import Blog from "./pages/BlogPage";
 import ConsultationBooking from "./pages/Booking";
 import StudyAboard from "./pages/StudyAboard";
+import ServiceDetail from "./pages/ServideDetail";
 
 function App() {
   return (
@@ -48,10 +49,10 @@ function App() {
               }
             />
             <Route
-              path="/blog"
+              path="/service-detail/:id"
               element={
                 <PageTransition>
-                  <Blog />
+                  <ServiceDetail />
                 </PageTransition>
               }
             />
