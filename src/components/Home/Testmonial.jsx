@@ -2,13 +2,12 @@
 
 import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  MdOutlineForum,
-  MdOutlineLocalLibrary,
-  MdOutlineCases,
-  MdOutlineSchool,
-} from "react-icons/md";
 import testimonial1 from "../../assets/image/home/testmonial/student1.png";
+import testimonial2 from "../../assets/image/home/testmonial/student2.png";
+import testimonial3 from "../../assets/image/home/testmonial/student3.png";
+import testimonial4 from "../../assets/image/home/testmonial/student4.png";
+import testimonial5 from "../../assets/image/home/testmonial/student5.png";
+import testimonial6 from "../../assets/image/home/testmonial/student6.png";
 
 // Import Swiper modules
 import { Navigation, Pagination } from "swiper/modules";
@@ -23,22 +22,52 @@ import { ChevronLeft, ChevronRight, Languages } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    name: "Khin Chit Su Thein",
-    university: "Weber State University",
-    scholarship: "8,000 USD Scholarship",
+    title: "“FuNglish made my study abroad journey so smooth!”",
     image: testimonial1,
     quote:
-      "FuNglish made my study abroad journey so smooth! With their All-in-One Service, I didn’t have to worry about anything— from documents to interview prep. I was accepted as a Bachelor of Environmental Science major, and with my GPA 5 and Honors Student background, my case was successfully approved at the U.S. Embassy in Cambodia. I’m so grateful for their guidance and support every step of the way!",
+      "With their All-in-One Service,I didn’t have to worry about anything— from documents to interview prep. I was accepted as a Bachelor of Environmental Science major, and with my GPA 5 and Honors Student background, my case was successfully approved at the U.S. Embassy in Cambodia. I’m so grateful for their guidance and support every step of the way!",
     hasVideo: true,
   },
   {
     id: 2,
-    name: "Maria Rodriguez",
-    university: "University of Toronto",
-    scholarship: "12,000 CAD Scholarship",
-    image: testimonial1,
+    title: "“Becoming a teacher has always been my dream”",
+    image: testimonial2,
     quote:
-      "The language preparation program was exceptional. I improved my IELTS score from 6.0 to 8.5 in just 3 months. The personalized coaching and mock interviews gave me the confidence I needed for my visa application.",
+      " After three failed attempts, I finally got approved on my 4th try at the U.S. Embassy in Rangoon with the help of FuNglish and Tr. Pinky, who supported me every step of the way. Now I’m proudly studying at East Los Angeles College in the U.S.!”",
+    hasVideo: true,
+  },
+  {
+    id: 3,
+    title: "“Thanks to FuNglish’s All-in-One Urgent Service”",
+    image: testimonial3,
+    quote:
+      "My case was successfully approved at the U.S. Embassy in Rangoon just before . I’m now a student in the U.S!”",
+    hasVideo: true,
+  },
+  {
+    id: 4,
+    title: "“ On my very first attempt, I got my U.S. visa approved  “",
+    image: testimonial4,
+    quote:
+      "I got my U.S. visa approved at the Chiang Mai Embassy with FuNglish’s All-in-One Service. Their support made everything simple and stress-free, and now I’m studying at Los Angeles City College!",
+    hasVideo: true,
+  },
+  {
+    id: 5,
+    title:
+      "“After two failed attempts, I finally got my U.S. visa approved at the Hanoi Embassy“",
+    image: testimonial5,
+    quote:
+      "With FuNglish’s All-in-One Service. Tr.Pinky and the team guided me through every step and never gave up on me. Now I’m so excited to start my journey at Mt. San Antonio College!",
+    hasVideo: true,
+  },
+  {
+    id: 6,
+    title:
+      "“ It took me six tries, but with FuNglish’s DS-160 service, I finally got approved at the U.S. Embassy in Rangoon! “",
+    image: testimonial6,
+    quote:
+      "I can’t believe I’m achieveing my dreams to study in the U.S Borough of Manhattan College—thank you FuNglish for helping my dreams of studying in the U.S.",
     hasVideo: true,
   },
 ];
@@ -66,7 +95,7 @@ export default function Testimonials() {
         <div className="w-full">
           <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-8">
             <div>
-              <h2 className="header-text">Language Class</h2>
+              <h2 className="header-text">What Our Students Says</h2>
             </div>
             <div className="flex md:items-center space-x-4 mt-4 md:mt-0">
               <button
@@ -111,36 +140,28 @@ export default function Testimonials() {
                     <div className="flex flex-col lg:flex-row gap-8">
                       {/* Student Image */}
                       <div className="flex flex-col sm:flex-row lg:flex-col gap-4 md:gap-8">
-                        <div className="md:w-[278px] md:h-[278px] rounded-2xl overflow-hidden">
+                        <div className="rounded-2xl overflow-hidden">
                           <img
                             src={testimonial.image}
                             alt={testimonial.name}
                             className="w-full h-full object-cover"
                           />
                         </div>
-                        {/* Student Info */}
-                        <div className="mt-6 text-center lg:text-left">
-                          <h3 className="text-xl font-semibold text-white mb-1">
-                            {testimonial.name}
-                          </h3>
-                          <p className="text-gray-300 text-sm mb-1">
-                            {testimonial.university}
-                          </p>
-                          <p className="text-yellow-500 font-medium text-sm">
-                            {testimonial.scholarship}
-                          </p>
-                        </div>
                       </div>
 
                       {/* Testimonial Content */}
                       <div className="flex-1 flex">
-                        <div className="space-y-8 md:space-y-24">
+                        <div className="flex flex-col justify-between">
                           <blockquote className="text-white md:text-[24px] leading-relaxed font-medium letter-spacing-[2px]">
-                            "{testimonial.quote}"
+                            {testimonial.title}
                           </blockquote>
 
+                          <p className="text-white text-[20px]">
+                            {testimonial.quote}
+                          </p>
+
                           {testimonial.hasVideo && (
-                            <button className="button-outline">
+                            <button className="w-[160px] mt-2 button-outline">
                               Watch Interview
                             </button>
                           )}

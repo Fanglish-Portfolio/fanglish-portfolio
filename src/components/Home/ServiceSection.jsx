@@ -52,7 +52,7 @@ const ServicesSection = () => {
     },
     {
       id: 4,
-      title: "Duales Studium",
+      title: "Scholar  Application Support Program",
       image: service4,
       icon: <MdOutlineCases className="w-6 h-6" />,
       bgColor: "bg-gradient-to-br from-yellow-400 to-blue-500",
@@ -61,7 +61,7 @@ const ServicesSection = () => {
     },
     {
       id: 5,
-      title: "Scholarship Programs",
+      title: "Duales Stadium",
       image: service5,
       icon: <MdOutlineSchool className="w-6 h-6" />,
       bgColor: "bg-gradient-to-br from-yellow-400 to-orange-500",
@@ -114,16 +114,16 @@ const ServicesSection = () => {
 
               {/* Card Content */}
               <div className="mt-6">
-                <div className="flex items-center gap-3 mb-4">
+                <div className="flex items-center h-[60px] gap-3 mb-4">
                   <div className="text-white">{service.icon}</div>
-                  <h3 className="text-white text-[14px]  md:text-[20px] font-semibold">
+                  <h3 className="text-white text-[14px] sm:text-[26px] md:text-[20px] font-semibold">
                     {service.title}
                   </h3>
                 </div>
 
                 <button
                   onClick={() => navigate(`/service-detail/${service.id}`)}
-                  className="text-[12px] md:text-[16px] bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300"
+                  className="w-full text-[12px] md:text-[16px] bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300"
                 >
                   View Service Details
                 </button>

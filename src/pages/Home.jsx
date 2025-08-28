@@ -5,6 +5,7 @@ import ServicesSection from "../components/Home/ServiceSection";
 import LanguageClassCarousel from "../components/Home/LanguageClassCarousel";
 import Testimonials from "../components/Home/Testmonial";
 import Blog from "../components/Home/Blog";
+import PackageCarousel from "../components/Home/PackageCarousel";
 
 function Home() {
   return (
@@ -12,6 +13,7 @@ function Home() {
       <HeroBanner />
       <Collaborate />
       <ServicesSection />
+      <PackageCarousel />
       <LanguageClassCarousel />
       <Testimonials />
       <Blog />

@@ -2,66 +2,58 @@
 
 import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  MdOutlineForum,
-  MdOutlineLocalLibrary,
-  MdOutlineCases,
-  MdOutlineSchool,
-} from "react-icons/md";
-import language1 from "./../../assets/image/home/languageClass/language1.png";
-import language2 from "./../../assets/image/home/languageClass/language2.png";
-import language3 from "./../../assets/image/home/languageClass/language3.png";
+import { MdLibraryBooks } from "react-icons/md";
+import package1 from "./../../assets/image/home/packageImage/package1.png";
+import package2 from "./../../assets/image/home/packageImage/package2.png";
+import package3 from "./../../assets/image/home/packageImage/package3.png";
+import package4 from "./../../assets/image/home/packageImage/package4.png";
+import package5 from "./../../assets/image/home/packageImage/package5.png";
+
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // Import Swiper modules
 import { Navigation, Pagination } from "swiper/modules";
-import { useState } from "react";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { ChevronLeft, ChevronRight, Languages } from "lucide-react";
-
 const classes = [
   {
     id: 1,
-    title: "German For Young Leaners",
-    image: language1,
-    icon: <Languages className="w-6 h-6" />,
-    type: "German",
+    title: "Dual Tack Package",
+    image: package1,
+    icon: <MdLibraryBooks className="w-6 h-6" />,
   },
   {
     id: 2,
-    title: "German Language A1 to C2 Intensive Clasee ",
-    image: language2,
-    icon: <Languages className="w-6 h-6" />,
-    type: "German",
+    title: "IELTS Preparation + Scholarship Mentoring Program",
+    image: package2,
+    icon: <MdLibraryBooks className="w-6 h-6" />,
   },
   {
     id: 3,
-    title: "FuNglish Duolingo Intensive Class",
-    image: language3,
-    icon: <Languages className="w-6 h-6" />,
-    type: "IELTS",
+    title: "German Dream Package",
+    image: package3,
+    icon: <MdLibraryBooks className="w-6 h-6" />,
   },
   {
     id: 4,
-    title: "FuNglish IELTS Class – Achieve a High Band Score",
-    image: language1,
-    icon: <Languages className="w-6 h-6" />,
-    type: "IELTS",
+    title: "IELTS Germany or Austria",
+    image: package4,
+    icon: <MdLibraryBooks className="w-6 h-6" />,
+  },
+  {
+    id: 5,
+    title: "IELTS Or Duolingo Package",
+    image: package5,
+    icon: <MdLibraryBooks className="w-6 h-6" />,
   },
 ];
 
-export default function LanguageClassCarousel() {
+export default function PackageCarousel() {
   const swiperRef = useRef(null);
-
-  const [activeType, setActiveType] = useState("IELTS");
-
-  const filteredClasses = classes.filter(
-    (service) => service.type === activeType
-  );
 
   // Custom previous button click handler
   const handlePrev = () => {
@@ -83,10 +75,11 @@ export default function LanguageClassCarousel() {
         <div className="w-full">
           <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-8">
             <div>
-              <h2 className="header-text">Language Class</h2>
+              <h2 className="header-text">
+                Explore Our Learning Packages for Student Success!
+              </h2>
             </div>
-
-            <div className=" flex md:hidden md:items-center space-x-4 mt-4 md:mt-0">
+            <div className="flex md:items-center space-x-4 mt-4 md:mt-0">
               <button
                 onClick={handlePrev}
                 className={`p-2 rounded-full border border-primary  hover:bg-black/50 transition-colors shadow-md `}
@@ -105,29 +98,7 @@ export default function LanguageClassCarousel() {
           </div>
 
           {/* Swiper Slider */}
-          <div className="flex space-x-4 mt-10 ">
-            <button
-              onClick={() => setActiveType("IELTS")}
-              className={`border font-semibold border-primary py-2 px-8 rounded-3xl transition-all duration-300 ${
-                activeType === "IELTS"
-                  ? "bg-primary text-black"
-                  : "text-primary"
-              }`}
-            >
-              IELTS
-            </button>
-            <button
-              onClick={() => setActiveType("German")}
-              className={`border font-semibold border-primary py-2 px-8 rounded-3xl transition-all duration-300 ${
-                activeType === "German"
-                  ? "bg-primary text-black"
-                  : "text-primary"
-              }`}
-            >
-              German
-            </button>
-          </div>
-          <div className="mt-5 text-black overflow-x-hidden">
+          <div className="mt-10 text-black overflow-x-hidden">
             <Swiper
               ref={swiperRef}
               modules={[Navigation, Pagination]}
@@ -156,7 +127,7 @@ export default function LanguageClassCarousel() {
                 "--swiper-pagination-bullet-inactive-opacity": "1",
               }}
             >
-              {filteredClasses.map((service) => (
+              {classes.map((service) => (
                 <SwiperSlide key={service.id}>
                   <div className="bg-[#161616]/20 rounded-2xl p-6 overflow-hidden border border-gray-700 hover:border-gray-600 transition-all duration-300">
                     {/* Card Image */}
@@ -166,7 +137,7 @@ export default function LanguageClassCarousel() {
                       <img
                         src={service.image}
                         alt={service.title}
-                        className="w-full h-full object-cover rounded-xl "
+                        className="w-full h-full object-cover rounded-xl"
                       />
                       <div className="absolute inset-0 bg-black bg-opacity-20 rounded-lg"></div>
                     </div>
@@ -181,7 +152,7 @@ export default function LanguageClassCarousel() {
                       </div>
 
                       <button className="text-[12px] md:text-[16px] bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300">
-                        View Service Details
+                        View Package
                       </button>
                     </div>
                   </div>
