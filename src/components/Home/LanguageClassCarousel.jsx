@@ -180,9 +180,9 @@ export default function LanguageClassCarousel() {
                         onClick={() =>
                           navigate(`/language-detail/${service.id}`)
                         }
-                        className="text-[12px] md:text-[16px] bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300"
+                        className="w-full text-[12px] md:text-[16px] bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300"
                       >
-                        View Service Details
+                        Discover Class
                       </button>
                     </div>
                   </div>

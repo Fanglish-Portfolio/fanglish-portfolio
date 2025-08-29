@@ -14,6 +14,9 @@ import StudyAboard from "./pages/StudyAboard";
 import ServiceDetail from "./pages/ServideDetail";
 import LanguageDetail from "./pages/LanguageDetail";
 import PackageDetail from "./pages/PaclkageDetail";
+import BlogPage from "./pages/BlogPage";
+import BlogDetailPage from "./pages/BlogDetailPage";
+import LanguageClass from "./pages/LanguageClass";
 
 function App() {
   return (
@@ -71,6 +74,30 @@ function App() {
               element={
                 <PageTransition>
                   <PackageDetail />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/blog"
+              element={
+                <PageTransition>
+                  <BlogPage />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/language-class"
+              element={
+                <PageTransition>
+                  <LanguageClass />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/blog-detail/:id"
+              element={
+                <PageTransition>
+                  <BlogDetailPage />
                 </PageTransition>
               }
             />

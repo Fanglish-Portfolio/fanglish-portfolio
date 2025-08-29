@@ -100,17 +100,17 @@ export default function Testimonials() {
             <div className="flex md:items-center space-x-4 mt-4 md:mt-0">
               <button
                 onClick={handlePrev}
-                className={`p-2 rounded-full border border-primary  hover:bg-black/50 transition-colors shadow-md `}
+                className={`p-2 rounded-full text-primary border border-primary transition-colors shadow-md hover:bg-primary hover:text-black `}
                 aria-label="Previous testimonials"
               >
-                <ChevronLeft className="w-5 h-5 text-primary" />
+                <ChevronLeft className="w-5 h-5" />
               </button>
               <button
                 onClick={handleNext}
-                className={`p-2 rounded-full border border-primary hover:bg-black/50 transition-colors shadow-md`}
+                className={`p-2 rounded-full text-primary border  border-primary transition-colors shadow-md hover:bg-primary hover:text-black`}
                 aria-label="Next testimonials"
               >
-                <ChevronRight className="w-5 h-5 text-primary" />
+                <ChevronRight className="w-5 h-5" />
               </button>
             </div>
           </div>

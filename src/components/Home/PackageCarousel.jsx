@@ -53,9 +53,11 @@ const classes = [
   },
 ];
 
-export default function PackageCarousel() {
+export default function PackageCarousel({ id }) {
   const swiperRef = useRef(null);
   const navigate = useNavigate();
+
+  const filteredClasses = classes.filter((service) => service.id != id);
 
   // Custom previous button click handler
   const handlePrev = () => {
@@ -84,17 +86,17 @@ export default function PackageCarousel() {
             <div className="flex md:items-center space-x-4 mt-4 md:mt-0">
               <button
                 onClick={handlePrev}
-                className={`p-2 rounded-full border border-primary  hover:bg-black/50 transition-colors shadow-md `}
+                className={`p-2 rounded-full text-primary border border-primary transition-colors shadow-md hover:bg-primary hover:text-black `}
                 aria-label="Previous testimonials"
               >
-                <ChevronLeft className="w-5 h-5 text-primary" />
+                <ChevronLeft className="w-5 h-5" />
               </button>
               <button
                 onClick={handleNext}
-                className={`p-2 rounded-full border border-primary hover:bg-black/50 transition-colors shadow-md`}
+                className={`p-2 rounded-full text-primary border  border-primary transition-colors shadow-md hover:bg-primary hover:text-black`}
                 aria-label="Next testimonials"
               >
-                <ChevronRight className="w-5 h-5 text-primary" />
+                <ChevronRight className="w-5 h-5" />
               </button>
             </div>
           </div>
@@ -129,7 +131,7 @@ export default function PackageCarousel() {
                 "--swiper-pagination-bullet-inactive-opacity": "1",
               }}
             >
-              {classes.map((service) => (
+              {filteredClasses.map((service) => (
                 <SwiperSlide key={service.id}>
                   <div className="bg-[#161616]/20 rounded-2xl p-6 overflow-hidden border border-gray-700 hover:border-gray-600 transition-all duration-300">
                     {/* Card Image */}
@@ -157,7 +159,7 @@ export default function PackageCarousel() {
                         onClick={() =>
                           navigate(`/package-detail/${service.id}`)
                         }
-                        className="text-[12px] md:text-[16px] bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300"
+                        className="w-full text-[12px] md:text-[16px] bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300"
                       >
                         View Package
                       </button>
