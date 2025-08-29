@@ -35,7 +35,7 @@ export default function CalendySection() {
           <div className="">
             <div
               className="calendly-inline-widget"
-              data-url="https://calendly.com/aungaungooace/new-meeting"
+              data-url="https://calendly.com/funglishachievemax/30min?background_color=1a1a1a&text_color=ffffff&primary_color=feb609"
               style={{ minWidth: "320px", height: "800px" }}
             ></div>
           </div>
