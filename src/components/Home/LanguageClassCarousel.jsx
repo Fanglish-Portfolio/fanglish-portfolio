@@ -2,16 +2,10 @@
 
 import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  MdOutlineForum,
-  MdOutlineLocalLibrary,
-  MdOutlineCases,
-  MdOutlineSchool,
-} from "react-icons/md";
 import language1 from "./../../assets/image/home/languageClass/language1.png";
 import language2 from "./../../assets/image/home/languageClass/language2.png";
 import language3 from "./../../assets/image/home/languageClass/language3.png";
-
+import language4 from "./../../assets/image/home/languageClass/language4.png";
 // Import Swiper modules
 import { Navigation, Pagination } from "swiper/modules";
 import { useState } from "react";
@@ -22,6 +16,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { ChevronLeft, ChevronRight, Languages } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const classes = [
   {
@@ -48,7 +43,7 @@ const classes = [
   {
     id: 4,
     title: "FuNglish IELTS Class – Achieve a High Band Score",
-    image: language1,
+    image: language4,
     icon: <Languages className="w-6 h-6" />,
     type: "IELTS",
   },
@@ -56,6 +51,7 @@ const classes = [
 
 export default function LanguageClassCarousel() {
   const swiperRef = useRef(null);
+  const navigate = useNavigate();
 
   const [activeType, setActiveType] = useState("IELTS");
 
@@ -180,7 +176,12 @@ export default function LanguageClassCarousel() {
                         </h3>
                       </div>
 
-                      <button className="text-[12px] md:text-[16px] bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300">
+                      <button
+                        onClick={() =>
+                          navigate(`/language-detail/${service.id}`)
+                        }
+                        className="text-[12px] md:text-[16px] bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300"
+                      >
                         View Service Details
                       </button>
                     </div>

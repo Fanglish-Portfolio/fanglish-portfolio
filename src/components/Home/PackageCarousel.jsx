@@ -18,6 +18,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useNavigate } from "react-router-dom";
 
 const classes = [
   {
@@ -54,6 +55,7 @@ const classes = [
 
 export default function PackageCarousel() {
   const swiperRef = useRef(null);
+  const navigate = useNavigate();
 
   // Custom previous button click handler
   const handlePrev = () => {
@@ -151,7 +153,12 @@ export default function PackageCarousel() {
                         </h3>
                       </div>
 
-                      <button className="text-[12px] md:text-[16px] bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300">
+                      <button
+                        onClick={() =>
+                          navigate(`/package-detail/${service.id}`)
+                        }
+                        className="text-[12px] md:text-[16px] bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300"
+                      >
                         View Package
                       </button>
                     </div>

@@ -1,10 +1,19 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
+import backgroud from "./../../assets/image/Pattern-6.png";
+
 function MiddleSection() {
   const navigate = useNavigate();
   return (
-    <div className="bg-primary text-black">
+    <div
+      className="text-black"
+      style={{
+        backgroundImage: `url(${backgroud})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="containers">
         <div className="flex flex-col gap-4 justify-center items-center h-[400px]">
           <h1 className="text-[20px] md:text-[36px] font-bold libre mb-2">

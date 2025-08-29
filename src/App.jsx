@@ -12,6 +12,8 @@ import Blog from "./pages/BlogPage";
 import ConsultationBooking from "./pages/Booking";
 import StudyAboard from "./pages/StudyAboard";
 import ServiceDetail from "./pages/ServideDetail";
+import LanguageDetail from "./pages/LanguageDetail";
+import PackageDetail from "./pages/PaclkageDetail";
 
 function App() {
   return (
@@ -53,6 +55,22 @@ function App() {
               element={
                 <PageTransition>
                   <ServiceDetail />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/language-detail/:id"
+              element={
+                <PageTransition>
+                  <LanguageDetail />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/package-detail/:id"
+              element={
+                <PageTransition>
+                  <PackageDetail />
                 </PageTransition>
               }
             />
