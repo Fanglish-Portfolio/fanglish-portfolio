@@ -11,6 +11,11 @@ import {
   MdOutlineSchool,
   MdOutlineHotelClass,
 } from "react-icons/md";
+import flag from "../../assets/image/university/Flags.png";
+import flag1 from "../../assets/image/university/Flags1.png";
+import flag2 from "../../assets/image/university/Flags2.png";
+import flag3 from "../../assets/image/university/Flags3.png";
+import flag4 from "../../assets/image/university/Flags4.png";
 
 import { Languages } from "lucide-react";
 
@@ -170,35 +175,39 @@ const Navbar = () => {
 
             {isStudyAbroadOpen && (
               <div
-                className="libre absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 z-50"
+                className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 z-50"
                 onMouseEnter={() => setIsStudyAbroadOpen(true)}
                 onMouseLeave={() => setIsStudyAbroadOpen(false)}
               >
                 <div className="absolute -top-2 left-6 w-4 h-4 bg-white transform rotate-45"></div>
-                <a
-                  href="#"
-                  className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors"
+                <NavLink
+                  to="/study-abroad/us"
+                  className="hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-gray-50 transition-colors"
                 >
-                  Germany
-                </a>
-                <a
-                  href="#"
-                  className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors"
+                  <img src={flag} alt="flag" />
+                  Study in USA
+                </NavLink>
+                <NavLink
+                  to="/study-abroad/uk"
+                  className="hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-gray-50 transition-colors"
                 >
-                  Canada
-                </a>
-                <a
-                  href="#"
-                  className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors"
+                  <img src={flag1} alt="flag" />
+                  Study in UK
+                </NavLink>
+                <NavLink
+                  to="/study-abroad/germany"
+                  className="hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-gray-50 transition-colors"
                 >
-                  Australia
-                </a>
-                <a
-                  href="#"
-                  className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors"
+                  <img src={flag2} alt="flag" />
+                  Study in Germany
+                </NavLink>
+                <NavLink
+                  to="/study-abroad/austria"
+                  className="hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-gray-50 transition-colors"
                 >
-                  UK
-                </a>
+                  <img src={flag3} alt="flag" />
+                  Study in Austria
+                </NavLink>
               </div>
             )}
           </div>
@@ -212,7 +221,7 @@ const Navbar = () => {
           >
             Blogs
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/contact"
             className={({ isActive }) =>
               isActive
@@ -221,7 +230,7 @@ const Navbar = () => {
             }
           >
             Contact Us
-          </NavLink>
+          </NavLink> */}
         </div>
 
         {/* Language Selector and Button */}
@@ -270,28 +279,109 @@ const Navbar = () => {
             >
               About Us
             </NavLink>
-            <NavLink
-              to="/service"
-              onClick={toggleMenu}
-              className={({ isActive }) =>
-                isActive
-                  ? "text-[14px] lg:text-[14px] font-semibold text-primary"
-                  : "text-[14px] lg:text-[14px] text-white hover:text-primary"
-              }
-            >
-              Our Services
-            </NavLink>
-            <NavLink
-              to="/study-abroad"
-              onClick={toggleMenu}
-              className={({ isActive }) =>
-                isActive
-                  ? "text-[14px] lg:text-[14px] font-semibold text-primary"
-                  : "text-[14px] lg:text-[14px] text-white hover:text-primary"
-              }
-            >
-              Study Abroad
-            </NavLink>
+            {/* Our Services Dropdown */}
+            <div className="relative">
+              <button
+                className="text-[14px] flex items-center space-x-1 hover:text-yellow-500 transition-colors"
+                onClick={() => setIsServicesOpen(!isServicesOpen)}
+              >
+                <span>Our Services</span>
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+
+              {isServicesOpen && (
+                <div
+                  className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl py-2 z-50"
+                  onMouseEnter={() => setIsServicesOpen(true)}
+                  onMouseLeave={() => setIsServicesOpen(false)}
+                  onClick={() => setIsServicesOpen(false)}
+                >
+                  <div className="absolute -top-2 left-6 w-4 h-4 bg-white transform rotate-45"></div>
+                  {servicesItems.map((item, index) => (
+                    <NavLink
+                      key={index}
+                      to={item.link}
+                      className="flex text-[14px] items-center my-2 space-x-2 px-4 py-2 text-gray-800 hover:bg-primary/20 transition-colors"
+                    >
+                      <span className="text-lg">{item.icon}</span>
+                      <span className="font-medium">{item.name}</span>
+                    </NavLink>
+                  ))}
+                </div>
+              )}
+            </div>
+            {/* Study Abroad Dropdown */}
+            <div className="relative">
+              <button
+                className="text-[14px] flex items-center space-x-1 hover:text-yellow-500 transition-colors"
+                onClick={() => setIsStudyAbroadOpen(!isStudyAbroadOpen)}
+              >
+                <span>Study Abroad</span>
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+
+              {isStudyAbroadOpen && (
+                <div
+                  className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 z-50"
+                  onMouseEnter={() => setIsStudyAbroadOpen(true)}
+                  onMouseLeave={() => setIsStudyAbroadOpen(false)}
+                >
+                  <div className="absolute -top-2 left-6 w-4 h-4 bg-white transform rotate-45"></div>
+                  <NavLink
+                    to="/study-abroad/us"
+                    className="text-[14px] hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-2 text-gray-800 hover:bg-gray-50 transition-colors"
+                  >
+                    <img src={flag} alt="flag" />
+                    Study in USA
+                  </NavLink>
+                  <NavLink
+                    to="/study-abroad/uk"
+                    className="text-[14px] hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-2 text-gray-800 hover:bg-gray-50 transition-colors"
+                  >
+                    <img src={flag1} alt="flag" />
+                    Study in UK
+                  </NavLink>
+                  <NavLink
+                    to="/study-abroad/germany"
+                    className="text-[14px] hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-2 text-gray-800 hover:bg-gray-50 transition-colors"
+                  >
+                    <img src={flag2} alt="flag" />
+                    Study in Germany
+                  </NavLink>
+                  <NavLink
+                    to="/study-abroad/austria"
+                    className="text-[14px] hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-2 text-gray-800 hover:bg-gray-50 transition-colors"
+                  >
+                    <img src={flag3} alt="flag" />
+                    Study in Austria
+                  </NavLink>
+                </div>
+              )}
+            </div>
             <NavLink
               to="/blog"
               onClick={toggleMenu}
@@ -303,7 +393,7 @@ const Navbar = () => {
             >
               Blogs
             </NavLink>
-            <NavLink
+            {/* <NavLink
               to="/contact"
               onClick={toggleMenu}
               className={({ isActive }) =>
@@ -313,7 +403,7 @@ const Navbar = () => {
               }
             >
               Contact Us
-            </NavLink>
+            </NavLink> */}
           </div>
         </div>
       )}

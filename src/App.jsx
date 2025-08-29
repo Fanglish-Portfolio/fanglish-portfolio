@@ -110,7 +110,7 @@ function App() {
               }
             />
             <Route
-              path="/study-abroad"
+              path="/study-abroad/:country"
               element={
                 <PageTransition>
                   <StudyAboard />

@@ -50,35 +50,29 @@ const Footer = () => {
               </h2>
               <ul className="space-y-4 ms-2 text-[12px] font-medium">
                 <li
-                  onClick={() => handleRoute("/spare")}
+                  onClick={() => handleRoute("/about")}
                   className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
                 >
                   About Us
                 </li>
-                <li
+                {/* <li
                   onClick={() => handleRoute("/service")}
                   className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
                 >
                   Privacy Policy
-                </li>
+                </li> */}
                 <li
-                  onClick={() => handleRoute("/service")}
+                  onClick={() => handleRoute("/blog")}
                   className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
                 >
                   Blogs
                 </li>
-                <li
+                {/* <li
                   onClick={() => handleRoute("/service")}
                   className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
                 >
                   Contact Us
-                </li>
-                <li
-                  onClick={() => handleRoute("/service")}
-                  className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
-                >
-                  Blog Posts
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
@@ -89,34 +83,46 @@ const Footer = () => {
               </h2>
               <ul className="space-y-4 ms-2 text-[12px] font-medium">
                 <li
-                  onClick={() => handleRoute("/about")}
+                  onClick={() => handleRoute("/service-detail/1")}
                   className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
                 >
                   Consultation
                 </li>
                 <li
-                  onClick={() => handleRoute("/about")}
+                  onClick={() => handleRoute("/language-class")}
                   className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
                 >
                   Language Class
                 </li>
                 <li
-                  onClick={() => handleRoute("/about")}
+                  onClick={() => handleRoute("/service-detail/3")}
                   className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
                 >
                   Ausbildung
                 </li>
                 <li
-                  onClick={() => handleRoute("/about")}
+                  onClick={() => handleRoute("/service-detail/4")}
+                  className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
+                >
+                  Scholarship Programs
+                </li>
+                <li
+                  onClick={() => handleRoute("/service-detail/5")}
                   className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
                 >
                   Duales Stadium
                 </li>
                 <li
-                  onClick={() => handleRoute("/about")}
+                  onClick={() => handleRoute("/study-abroad/us")}
                   className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
                 >
-                  Scholarship Programs
+                  Study Abroad
+                </li>
+                <li
+                  onClick={() => handleRoute("/service-detail/7")}
+                  className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
+                >
+                  6 Months To The Max
                 </li>
               </ul>
             </div>
@@ -128,31 +134,26 @@ const Footer = () => {
               </h2>
               <ul className="space-y-4 ms-2 text-[12px] font-medium">
                 <li
-                  onClick={() => handleRoute("/about")}
+                  onClick={() => handleRoute("/study-abroad/austria")}
                   className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
                 >
-                  Study in Australia
+                  Study in Austria
                 </li>
                 <li
-                  onClick={() => handleRoute("/about")}
+                  onClick={() => handleRoute("/study-abroad/germany")}
                   className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
                 >
                   Study in GERMANY
                 </li>
+
                 <li
-                  onClick={() => handleRoute("/about")}
-                  className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
-                >
-                  Study in DUBAI
-                </li>
-                <li
-                  onClick={() => handleRoute("/about")}
+                  onClick={() => handleRoute("/study-abroad/uk")}
                   className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
                 >
                   Study in UK
                 </li>
                 <li
-                  onClick={() => handleRoute("/about")}
+                  onClick={() => handleRoute("/study-abroad/us")}
                   className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
                 >
                   Study in US

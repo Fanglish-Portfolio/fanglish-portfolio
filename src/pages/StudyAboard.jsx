@@ -1,12 +1,14 @@
 import React from "react";
 import UniversityPlatform from "../components/StudyAboard/University";
+import { useParams } from "react-router-dom";
 
-function StudyAboard() {
+const StudyAboard = () => {
+  const { country } = useParams();
   return (
     <div>
-      <UniversityPlatform />
+      <UniversityPlatform country={country} />
     </div>
   );
-}
+};
 
 export default StudyAboard;

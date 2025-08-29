@@ -26,8 +26,8 @@ import uni9 from "./../../assets/image/university/schoolImage/uni9.png";
 // import uni19 from "./../../assets/image/university/schoolImage/uni19.png";
 // import uni20 from "./../../assets/image/university/schoolImage/uni20.png";
 
-function University() {
-  const [selectedCountry, setSelectedCountry] = useState("us");
+function University({ country }) {
+  const [selectedCountry, setSelectedCountry] = useState(country);
   const [selectedType, setSelectedType] = useState("university");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
