@@ -1,6 +1,4 @@
-import { motion } from "framer-motion";
-import bg from "./../../assets/image/home/heroBanner.jpg";
-import { MdOutlinePhoneInTalk } from "react-icons/md";
+import bg from "./../../assets/image/home/herobanner.jpg";
 
 const HeroBanner = () => {
   return (
