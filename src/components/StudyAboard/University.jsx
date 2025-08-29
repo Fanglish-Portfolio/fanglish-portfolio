@@ -14,6 +14,21 @@ import uni6 from "./../../assets/image/university/schoolImage/uni6.png";
 import uni7 from "./../../assets/image/university/schoolImage/uni7.png";
 import uni8 from "./../../assets/image/university/schoolImage/uni8.png";
 import uni9 from "./../../assets/image/university/schoolImage/uni9.png";
+import uni10 from "./../../assets/image/university/schoolImage/us/usCollage1.png";
+import uni11 from "./../../assets/image/university/schoolImage/us/usCollage2.png";
+import uni12 from "./../../assets/image/university/schoolImage/us/usCollage3.png";
+import uni13 from "./../../assets/image/university/schoolImage/us/usCollage4.png";
+import uni14 from "./../../assets/image/university/schoolImage/us/usCollage5.png";
+import uni15 from "./../../assets/image/university/schoolImage/us/usCollage6.png";
+import uni16 from "./../../assets/image/university/schoolImage/us/usCollage7.png";
+
+import uni17 from "./../../assets/image/university/schoolImage/uk/ukUni1.png";
+import uni18 from "./../../assets/image/university/schoolImage/uk/ukUni2.png";
+import uni19 from "./../../assets/image/university/schoolImage/uk/ukUni3.png";
+import uni20 from "./../../assets/image/university/schoolImage/uk/ukUni4.png";
+import uni21 from "./../../assets/image/university/schoolImage/uk/ukUni5.png";
+import uni22 from "./../../assets/image/university/schoolImage/uk/ukUni6.png";
+
 // import uni10 from "./../../assets/image/university/schoolImage/uni10.png";
 // import uni11 from "./../../assets/image/university/schoolImage/uni11.png";
 // import uni12 from "./../../assets/image/university/schoolImage/uni12.png";
@@ -42,7 +57,7 @@ function University({ country }) {
           name: "Weber State University",
           logo: uni1,
           backgroundColor: "bg-white",
-          type: "university",
+          type: "college",
         },
         {
           id: 2,
@@ -100,6 +115,55 @@ function University({ country }) {
           backgroundColor: "bg-white",
           type: "college",
         },
+        {
+          id: 10,
+          name: "Weber State University",
+          logo: uni10,
+          backgroundColor: "bg-white",
+          type: "university",
+        },
+        {
+          id: 11,
+          name: "Texas State University",
+          logo: uni11,
+          backgroundColor: "bg-white",
+          type: "university",
+        },
+        {
+          id: 12,
+          name: "Lawrence Technological University",
+          logo: uni12,
+          backgroundColor: "bg-white",
+          type: "university",
+        },
+        {
+          id: 13,
+          name: "Skyline College",
+          logo: uni13,
+          backgroundColor: "bg-white",
+          type: "university",
+        },
+        {
+          id: 14,
+          name: "Houston Community College ",
+          logo: uni14,
+          backgroundColor: "bg-white",
+          type: "university",
+        },
+        {
+          id: 15,
+          name: "Santa Monica College",
+          logo: uni15,
+          backgroundColor: "bg-white",
+          type: "university",
+        },
+        {
+          id: 16,
+          name: "San Jose State University",
+          logo: uni16,
+          backgroundColor: "bg-white",
+          type: "university",
+        },
       ],
     },
     {
@@ -108,31 +172,45 @@ function University({ country }) {
       flag: flag1,
       universities: [
         {
-          id: 5,
-          name: "University of Oxford",
-          logo: "OXF",
+          id: 17,
+          name: "University Of Bristo",
+          logo: uni17,
           backgroundColor: "bg-blue-900",
           type: "university",
         },
         {
-          id: 6,
-          name: "Cambridge University",
-          logo: "CAM",
+          id: 18,
+          name: "University of Edinbrugh",
+          logo: uni18,
           backgroundColor: "bg-blue-700",
           type: "university",
         },
         {
-          id: 7,
-          name: "London School of Economics",
-          logo: "LSE",
+          id: 19,
+          name: "University of Birmingham",
+          logo: uni19,
           backgroundColor: "bg-purple-700",
           type: "university",
         },
         {
-          id: 8,
-          name: "Imperial College London",
-          logo: "ICL",
+          id: 20,
+          name: "University of Southampton",
+          logo: uni20,
           backgroundColor: "bg-blue-800",
+          type: "university",
+        },
+        {
+          id: 21,
+          name: "Manchester Metropolitan University",
+          logo: uni21,
+          backgroundColor: "bg-blue-900",
+          type: "university",
+        },
+        {
+          id: 22,
+          name: "University of Hertfordshire",
+          logo: uni22,
+          backgroundColor: "bg-blue-700",
           type: "university",
         },
       ],
@@ -313,7 +391,7 @@ function University({ country }) {
           </div>
 
           {/* Main Content Area */}
-          <div className="flex-1 px-8">
+          <div className="flex-1 px-8 overflow-y-auto h-[550px] university">
             <div className="flex gap-4 mb-10">
               <button
                 className={` px-6 py-2 rounded-full border border-primary transition-all duration-300 ${
@@ -360,7 +438,7 @@ function University({ country }) {
                     <div className="mt-6">
                       <div className="flex items-center gap-3 mb-4">
                         <div className="text-white">{university.icon}</div>
-                        <h3 className="text-white text-[20px] font-semibold">
+                        <h3 className="text-white h-[50px] mb-2 text-[20px] font-semibold">
                           {university.name}
                         </h3>
                       </div>
