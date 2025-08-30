@@ -15,10 +15,7 @@ import {
 import blog1 from "../../assets/image/home/blog/blog1.png";
 import blog2 from "../../assets/image/home/blog/blog2.png";
 import blog3 from "../../assets/image/home/blog/blog3.png";
-import blog4 from "../../assets/image/home/blog/blog4.png";
-import blog5 from "../../assets/image/home/blog/blog5.png";
-import blog6 from "../../assets/image/home/blog/blog6.png";
-import blog7 from "../../assets/image/home/blog/blog7.png";
+
 import { useNavigate } from "react-router-dom";
 
 const BlogSection = ({ id }) => {
@@ -73,7 +70,9 @@ const BlogSection = ({ id }) => {
         {/* Section Header */}
         <div className="flex items-center justify-between mb-12">
           <h2 className="header-text">Our Blogs</h2>
-          <button className="button">View Other Blogs</button>
+          <button onClick={() => navigate("/blog")} className="button">
+            View Other Blogs
+          </button>
         </div>
 
         {/* Services Grid */}

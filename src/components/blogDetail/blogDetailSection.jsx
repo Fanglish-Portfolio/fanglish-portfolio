@@ -13,7 +13,8 @@ const serviceData = [
   {
     id: 1,
     image: service1,
-    title: "Upgrade your Academic   English Skill with FuNglilsh ",
+    title:
+      "Upgrade Your Academic English Skill With FuNglish‘s Be a Grammar Monster Series",
     text: (
       <div className="space-y-6">
         {/* Intro */}

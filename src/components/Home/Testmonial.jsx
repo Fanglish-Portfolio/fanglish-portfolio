@@ -167,7 +167,12 @@ export default function Testimonials() {
                           </p>
 
                           {testimonial.hasVideo && (
-                            <button className="w-[160px] mt-2 button-outline">
+                            <button
+                              onClick={() =>
+                                window.open(testimonial.link, "_blank")
+                              }
+                              className="w-[160px] mt-2 button-outline"
+                            >
                               Watch Interview
                             </button>
                           )}
