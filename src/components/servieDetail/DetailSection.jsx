@@ -17,7 +17,7 @@ const serviceData = [
     text: (
       <div>
         {/* Title */}
-        <h1>
+        <h1 className="texl-lg lg:text-xl font-bold mb-4">
           Personalized one-on-one guidance for students and working
           professionals
         </h1>
@@ -40,14 +40,18 @@ const serviceData = [
         </p>
 
         {/* Section Header */}
-        <h2 className="">For Working Professionals: Career Pathways</h2>
+        <h2 className="text-lg mt-8 mb-3 font-bold ">
+          For Working Professionals: Career Pathways
+        </h2>
         <p>
           Germany, in particular, provides attractive options such as Ausbildung
           and the Opportunity Card. Choosing the right route depends on:
         </p>
 
         {/* Package details */}
-        <h3 className="">Eligibility criteria for your field</h3>
+        <h3 className="text-lg mt-8 mb-3 font-bold ">
+          Eligibility criteria for your field
+        </h3>
         <p>Your education level and work experience</p>
         <p>Language expectations and documentation</p>
         <p>
@@ -60,7 +64,7 @@ const serviceData = [
           and costs.
         </p>
 
-        <h3 className="">What you’ll get</h3>
+        <h3 className="text-lg mt-8 mb-3 font-bold ">What you’ll get</h3>
         <p>Up to 45 minutes of tailored advice</p>
 
         <p>Review of your academic/work background</p>
@@ -70,7 +74,7 @@ const serviceData = [
         </p>
 
         {/* Benefits */}
-        <h2 className="">Why FuNglish</h2>
+        <h2 className="text-lg mt-8 mb-3 font-bold">Why FuNglish</h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>Clear, structured planning from the first conversation</li>
           <li>Program and pathway matching based on your profile</li>
@@ -103,93 +107,111 @@ const serviceData = [
             allowfullscreen
           ></iframe>
         </div>
-        <p className="font-semibold">
-          At FuNglish, we not only provide services for applying to Germany’s
-          Public and Private Universities, but we are now also offering one of
-          Germany’s most in-demand opportunities — the Vocational Education &
-          Training Program (Ausbildung) for Myanmar students.
-          <br />
-          Trainer Pinky has explained the key details of this program in the
-          video provided.
-          <br />
-          What is Ausbildung?
-          <br />
-          The Ausbildung system combines practical work experience with academic
-          learning, enabling students to gain both real-world skills and
-          theoretical knowledge at the same time. It is one of the most
-          attractive and well-established programs in Germany, widely respected
-          by both international and local students.
-          <br />
-          Benefits of the Ausbildung Program
-          <br />
-          Earn While You Learn
-          <br />
-          Unlike traditional education programs, Ausbildung students receive a
-          monthly salary throughout the training period. Training costs are
-          covered by the company, while students also earn enough income to
-          support their living expenses. Depending on the field, programs
-          typically last between 3 to 5 years.
-          <br />
-          Gain Practical Experience
-          <br />
-          The Ausbildung program emphasizes hands-on training. Students work
-          directly in professional environments while also learning theoretical
-          knowledge in class. Upon completion, graduates are also eligible to
-          apply for an 18-month visa extension.
-          <br />
-          High Career Prospects
-          <br />
-          Graduates of the Ausbildung program benefit from excellent career
-          opportunities. German companies actively hire vocationally trained
-          graduates who already have both practical and theoretical experience.
-          Students also receive a state-recognized qualification, which can
-          later provide access to university-level education if desired.
-          <br />
-          Applicants are expected to prepare a strong CV/Resume and demonstrate
-          at least B1 level German language skills. At FuNglish, our trainer
-          will guide you through comprehensive German language preparation.
-          <br />
-          Global Opportunities
-          <br />
-          After completing Ausbildung, students are eligible to work not only in
-          Germany but also in other German-speaking countries such as Austria
-          and Switzerland.
-          <br />
-          Fields of Training
-          <br />
-          The Vocational Education & Training Program offers opportunities in a
-          wide range of fields, including:
-          <br />
-          Automotive and Mechanical Engineering
-          <br />
-          Nursing and Healthcare Logistics
-          <br />
-          Bakery and Culinary Arts
-          <br />
-          Hospitality and Tourism
-          <br />
-          And more
-          <br />
-          How to Apply
-          <br />
-          Consultations are now open at FuNglish. Our team will guide you step
-          by step in preparing for the program and ensuring your application is
-          strong and complete. Please contact us directly via our Chat Box to
-          book a consultation session.
-          <br />
-          Additional Programs at FuNglish
-          <br />
-          In addition to Ausbildung, we also provide:
-          <br />
-          English Language Programs:
-          <br />
-          IELTS, Duolingo, Grammar Courses German Language Programs:
-          <br />
-          From A1.1 and A1.2 to higher levels
-          <br />
-          More detailed program announcements will be available soon on our
-          website.
-        </p>
+        {/* Main content container with consistent spacing */}
+        <div className="space-y-4">
+          <h1 className="text-xl font-semibold text-yellow-600 mb-6">
+            At FuNglish, we not only provide services for applying to Germany’s
+            Public and Private Universities, but we are now also offering one of
+            Germany’s most in-demand opportunities — the Vocational Education &
+            Training Program (Ausbildung) for Myanmar students.
+          </h1>
+
+          <p>
+            Trainer Pinky has explained the key details of this program in the
+            video provided.
+          </p>
+
+          <h2 className="font-bold text-lg mt-4">What is Ausbildung?</h2>
+          <p>
+            The Ausbildung system combines practical work experience with
+            academic learning, enabling students to gain both real-world skills
+            and theoretical knowledge at the same time. It is one of the most
+            attractive and well-established programs in Germany, widely
+            respected by both international and local students.
+          </p>
+
+          <h2 className="font-bold text-lg mt-4">
+            Benefits of the Ausbildung Program
+          </h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              <span className="font-bold">Earn While You Learn</span>
+              <br />
+              Unlike traditional education programs, Ausbildung students receive
+              a monthly salary throughout the training period. Training costs
+              are covered by the company, while students also earn enough income
+              to support their living expenses. Depending on the field, programs
+              typically last between 3 to 5 years.
+            </li>
+            <li>
+              <span className="font-bold">Gain Practical Experience</span>
+              <br />
+              The Ausbildung program emphasizes hands-on training. Students work
+              directly in professional environments while also learning
+              theoretical knowledge in class. Upon completion, graduates are
+              also eligible to apply for an 18-month visa extension.
+            </li>
+            <li>
+              <span className="font-bold">High Career Prospects</span>
+              <br />
+              Graduates of the Ausbildung program benefit from excellent career
+              opportunities. German companies actively hire vocationally trained
+              graduates who already have both practical and theoretical
+              experience. Students also receive a state-recognized
+              qualification, which can later provide access to university-level
+              education if desired.
+            </li>
+            <li>
+              Applicants are expected to prepare a strong CV/Resume and
+              demonstrate at least B1 level German language skills. At FuNglish,
+              our trainer will guide you through comprehensive German language
+              preparation.
+            </li>
+            <li>
+              <span className="font-bold">Global Opportunities</span>
+              <br />
+              After completing Ausbildung, students are eligible to work not
+              only in Germany but also in other German-speaking countries such
+              as Austria and Switzerland.
+            </li>
+          </ul>
+
+          <h2 className="font-bold text-lg mt-4">Fields of Training</h2>
+          <p>
+            The Vocational Education & Training Program offers opportunities in
+            a wide range of fields, including:
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Automotive and Mechanical Engineering</li>
+            <li>Nursing and Healthcare</li>
+            <li>Logistics</li>
+            <li>Bakery and Culinary Arts</li>
+            <li>Hospitality and Tourism</li>
+            <li>And more</li>
+          </ul>
+
+          <h2 className="font-bold text-lg mt-4">How to Apply</h2>
+          <p>
+            Consultations are now open at FuNglish. Our team will guide you step
+            by step in preparing for the program and ensuring your application
+            is strong and complete. Please contact us directly via our Chat Box
+            to book a consultation session.
+          </p>
+
+          <h2 className="font-bold text-lg mt-4">
+            Additional Programs at FuNglish
+          </h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>English Language Programs: IELTS, Duolingo, Grammar Courses</li>
+            <li>
+              German Language Programs: From A1.1 and A1.2 to higher levels
+            </li>
+          </ul>
+          <p>
+            More detailed program announcements will be available soon on our
+            website.
+          </p>
+        </div>
       </div>
     ),
   },
@@ -198,53 +220,96 @@ const serviceData = [
     image: service4,
     title: "Scholarship Application Support Program",
     text: (
-      <p className="font-semibold">
-        <br /> FuNglish is pleased to offer a CSR initiative for academically
-        outstanding students with high GPA results who face challenges applying
-        for scholarships. The Scholarship Application Support Program (SASP) is
-        designed to assist students seeking scholarships for German public
-        universities.
-        <br /> <br />{" "}
-        <span className="font-semibold">
-          How FuNglish Supports Students:
-        </span>{" "}
-        <br /> Assist with securing admission to public universities in Germany.
-        <br /> Help students apply for scholarships that provide at least €300
-        monthly allowance for a minimum of 2 semesters.
-        <br /> <br />
-        <span className="font-semibold">Eligibility Criteria:</span> <br />
-        Minimum education of Grade 13.
-        <br /> Students who have completed at least the 3rd year of a Bachelor’s
-        degree or hold a Bachelor’s degree.
-        <br /> High proficiency in IELTS and all four skills in German. (For
-        students without the required language level, FuNglish can provide
-        language courses; charges may apply.)
-        <br /> GPA above 3.8.
-        <br /> Ability to participate in a multi-stage selection process.
-        <br /> Highly motivated and committed students.
-        <br /> <br />
-        <span className="font-semibold">Program Benefits:</span> <br />
-        Guidance from FuNglish Founder Tr. Pinky throughout the university
-        admission and scholarship application process.
-        <br /> Opportunity to secure full tuition scholarships or small semester
-        fees through private donors and federal support (Stipendium) at German
-        public universities.
-        <br /> Access to a global network and career opportunities.
-        <br /> Potential for permanent residency and citizenship opportunities
-        in Germany.
-        <br /> <br /> <span className="font-semibold">
-          Selection Process:
-        </span>{" "}
-        <br /> FuNglish will select three final candidates from applicants and
-        assist them with university admission and scholarship applications.
-        <br /> Students not selected for SASP can still access other FuNglish
-        services for applying to German public universities.
-        <br /> <br /> For more details about the program, you can watch the
-        FuNglish YouTube video:
-        <br /> Scholarship Application Support Program Video
-        <br /> Students interested in joining the SASP can apply through
-        FuNglish Page Messenger.
-      </p>
+      <div>
+        {/* Main content container with consistent spacing */}
+        <div className="space-y-4 ">
+          <h1 className="text-xl font-semibold text-yellow-600 mb-6">
+            FuNglish is pleased to offer a CSR initiative for academically
+            outstanding students with high GPA results who face challenges
+            applying for scholarships. The Scholarship Application Support
+            Program (SASP) is designed to assist students seeking scholarships
+            for German public universities.
+          </h1>
+
+          <h2 className="font-bold text-lg mt-4">
+            How FuNglish Supports Students:
+          </h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              Assist with securing admission to public universities in Germany.
+            </li>
+            <li>
+              Help students apply for scholarships that provide at least €300
+              monthly allowance for a minimum of 2 semesters.
+            </li>
+          </ul>
+
+          <h2 className="font-bold text-lg mt-4">Eligibility Criteria:</h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Minimum education of Grade 13.</li>
+            <li>
+              Students who have completed at least the 3rd year of a Bachelor’s
+              degree or hold a Bachelor’s degree.
+            </li>
+            <li>
+              High proficiency in IELTS and all four skills in German. (For
+              students without the required language level, FuNglish can provide
+              language courses; charges may apply.)
+            </li>
+            <li>GPA above 3.8.</li>
+            <li>Ability to participate in a multi-stage selection process.</li>
+            <li>Highly motivated and committed students.</li>
+          </ul>
+
+          <h2 className="font-bold text-lg mt-4">Program Benefits:</h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              Guidance from FuNglish Founder Tr. Pinky throughout the university
+              admission and scholarship application process.
+            </li>
+            <li>
+              Opportunity to secure full tuition scholarships or small semester
+              fees through private donors and federal support (Stipendium) at
+              German public universities.
+            </li>
+            <li>Access to a global network and career opportunities.</li>
+            <li>
+              Potential for permanent residency and citizenship opportunities in
+              Germany.
+            </li>
+          </ul>
+
+          <h2 className="font-bold text-lg mt-4">Selection Process:</h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              FuNglish will select three final candidates from applicants and
+              assist them with university admission and scholarship
+              applications.
+            </li>
+            <li>
+              Students not selected for SASP can still access other FuNglish
+              services for applying to German public universities.
+            </li>
+          </ul>
+
+          <p>
+            For more details about the program, you can watch the FuNglish
+            YouTube video:{" "}
+            {/* <a
+              href="https://www.youtube.com/watch?v=your-video-id"
+              className="text-blue-600 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Scholarship Application Support Program Video
+            </a> */}
+          </p>
+          <p>
+            Students interested in joining the SASP can apply through FuNglish
+            Page Messenger.
+          </p>
+        </div>
+      </div>
     ),
   },
   {
@@ -265,53 +330,80 @@ const serviceData = [
             allowfullscreen
           ></iframe>
         </div>
-        <span className="font-bold text-xl">
-          Duales Studium Program in Germany: Study and Work While Pursuing a
-          Bachelor’s Degree
-        </span>{" "}
-        <br />
-        <span className="font-semibold">
-          What is the Duales Studium Program?
-        </span>{" "}
-        <br /> The Duales Studium Program is a unique option that combines
-        academic study with practical work experience. Unlike vocational
-        Ausbildung programs, this program allows students to pursue a Bachelor’s
-        degree while gaining experience in white-collar jobs. <br /> <br />{" "}
-        <span className="font-semibold">Eligibility Requirements:</span> <br />{" "}
-        Completion of 12th grade education IGCSE A Levels, <br /> IB Diploma, or
-        High School Diploma + completion of the 1st year of university <br />{" "}
-        <br />
-        <span className="font-semibold">Program Duration:</span> <br /> The
-        program typically lasts 3 to 3.5 years. Students alternate between study
-        and practical work, either weekly or monthly, depending on the program
-        structure. <br /> <br />{" "}
-        <span className="font-semibold">Who is this program suitable for?</span>{" "}
-        <br /> * Students with strong academic performance who can manage
-        responsibilities efficiently <br /> * Students with a good GPA and
-        completion of 12th grade <br /> * Students with German language
-        proficiency at B2/C1 level <br /> * Students seeking an academic pathway
-        rather than a vocational track while gaining practical work experience.
-        <br /> <br />{" "}
-        <span className="font-semibold">Fields of Study Include:</span>
-        <ul className="list-disc ms-6">
-          <li>Business Administration</li>
-          <li>IT & Computer Science</li>
-          <li>Engineering & Technology</li>
-          <li>Health & Social Science</li>
-          <li>Finance & Law</li>
-          <li>Tourism & Hospitality</li>
-          <li>Media & Design</li>
-          <li>Agricultural Science</li>
-          <li>Environment & Sustainability</li>
-        </ul>
-        <br />
-        For more detailed information about the Duales Studium Program, you can
-        watch our full explanation video here: Full YouTube Video <br />{" "}
-        Students interested in the Duales Studium Program can consultation
-        appointment with Tr. Pinky. Additionally, for those looking to improve
-        their German language skills, A1 to A2 classes will be available in
-        July. <br /> For more information, please contact us via FuNglish Page
-        Messenger.
+        {/* Main content container with consistent spacing */}
+        <div className="space-y-4">
+          <h1 className="text-xl font-semibold text-yellow-600 mb-6">
+            Duales Studium Program in Germany: Study and Work While Pursuing a
+            Bachelor’s Degree
+          </h1>
+
+          <h2 className="font-bold text-lg mt-4">
+            What is the Duales Studium Program?
+          </h2>
+          <p>
+            The Duales Studium Program is a unique option that combines academic
+            study with practical work experience. Unlike vocational Ausbildung
+            programs, this program allows students to pursue a Bachelor’s degree
+            while gaining experience in white-collar jobs.
+          </p>
+
+          <h2 className="font-bold text-lg mt-4">Eligibility Requirements:</h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Completion of 12th grade education</li>
+            <li>
+              IGCSE A Levels, IB Diploma, or High School Diploma + completion of
+              the 1st year of university
+            </li>
+          </ul>
+
+          <h2 className="font-bold text-lg mt-4">Program Duration:</h2>
+          <p>
+            The program typically lasts 3 to 3.5 years. Students alternate
+            between study and practical work, either weekly or monthly,
+            depending on the program structure.
+          </p>
+
+          <h2 className="font-bold text-lg mt-4">
+            Who is this program suitable for?
+          </h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              Students with strong academic performance who can manage
+              responsibilities efficiently
+            </li>
+            <li>Students with a good GPA and completion of 12th grade</li>
+            <li>Students with German language proficiency at B2/C1 level</li>
+            <li>
+              Students seeking an academic pathway rather than a vocational
+              track while gaining practical work experience
+            </li>
+          </ul>
+
+          <h2 className="font-bold text-lg mt-4">Fields of Study Include:</h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Business Administration</li>
+            <li>IT & Computer Science</li>
+            <li>Engineering & Technology</li>
+            <li>Health & Social Science</li>
+            <li>Finance & Law</li>
+            <li>Tourism & Hospitality</li>
+            <li>Media & Design</li>
+            <li>Agricultural Science</li>
+            <li>Environment & Sustainability</li>
+          </ul>
+
+          <p>
+            For more detailed information about the Duales Studium Program, you
+            can watch our full explanation video here
+          </p>
+          <p>
+            Students interested in the Duales Studium Program can schedule a
+            consultation appointment with Tr. Pinky. Additionally, for those
+            looking to improve their German language skills, A1 to A2 classes
+            will be available in July. For more information, please contact us
+            via FuNglish Page Messenger.
+          </p>
+        </div>
       </div>
     ),
   },
@@ -327,107 +419,124 @@ const serviceData = [
     title: "6 Months To The Max",
     text: (
       <div>
-        <p>6-Months-to-the-Max: 3-in-1 English Class Package</p>
-        <p>
-          Are you struggling with fluency, grammar, or confidence when speaking
-          English? Do you want to prepare for studying or working abroad with
-          strong language skills?
-        </p>
-        <p>
-          FuNglish offers the “6-Months-to-the-Max” Power Skills Series – a
-          structured 3-in-1 package designed to take you from building
-          vocabulary and mastering grammar to achieving fluency in conversation.
-        </p>
-        <p>
-          Unlike general English classes, this program focuses on practical
-          communication skills, using a detailed syllabus and step-by-step
-          learning across three interconnected classes.
-        </p>
-        <p>1. Vocabulary Amplifier Class</p>
-        <p>
-          Designed for students, professionals, and anyone who wants to expand
-          vocabulary for daily life and the workplace.
-          <br />
-          Learn practical vocabulary through bite-sized lessons and interactive
-          activities.
-          <br />
-          Improve your word choice for everyday communication and academic or
-          professional use.
-        </p>
-        <p>
-          Class Information
-          <br />
-          Start Date: 17th August 2025
-          <br />
-          Duration: 2 months
-          <br />
-          Schedule: Saturday & Sunday, 8:30 – 10:00 PM (MMT)
-        </p>
-        <p>
-          2. Grammar Monster Series
-          <br />
-          Ideal for learners who want to build a strong grammar foundation for
-          both communication and exams.
-          <br />
-          Master grammar from the basics to advanced use.
-          <br />
-          Strengthen daily communication and academic writing.
-          <br />
-          Suitable for IGCSE, GED, IELTS, Duolingo, and other test preparation.
-        </p>
-        <p>
-          Class Information
-          <br />
-          Start Date: 17th October 2025
-          <br />
-          Duration: 2 months
-          <br />
-          Schedule: Monday & Friday, 8:00 – 9:30 PM (MMT)
-        </p>
-        <p>
-          3. Step-Up Speaking for Conversation Skills
-          <br />
-          Aimed at learners who already have a grammar and vocabulary
-          foundation.
-          <br />
-          Develop fluency and confidence through real-life conversations.
-          <br />
-          Practice weekly themes and interactive speaking activities.
-          <br />
-          Classes are taught by both local and native teachers for balanced
-          learning.
-        </p>
-        <p>
-          Class Information
-          <br />
-          Start Date: 20th December 2025
-          <br />
-          Duration: 2 months
-          <br />
-          Entry Requirements
-          <br />
-          Students must take a level test before joining.
-        </p>
-        <p>
-          Only Pre-Intermediate level and above are eligible for enrollment.
-          <br />
-          Flexible Options & Discounts
-          <br />
-          Join a single class or the full 3-in-1 package.
-          <br />
-          Special promotional discounts are available for students who register
-          for the full package.
-          <br />
-          Why Choose FuNglish?
-          <br />
-          Structured program covering vocabulary, grammar, and speaking.
-          <br />
-          Practical, real-life communication focus.
-          <br />
-          Taught by both local and native teachers.
-          <br />
-          Affordable pricing with fast results.
-        </p>
+        {/* Main content container with consistent spacing */}
+        <div className="space-y-4">
+          <h1 className="text-xl font-semibold text-yellow-600 mb-6">
+            6-Months-to-the-Max: 3-in-1 English Class Package
+          </h1>
+
+          <p>
+            Are you struggling with fluency, grammar, or confidence when
+            speaking English? Do you want to prepare for studying or working
+            abroad with strong language skills?
+          </p>
+          <p>
+            FuNglish offers the “6-Months-to-the-Max” Power Skills Series – a
+            structured 3-in-1 package designed to take you from building
+            vocabulary and mastering grammar to achieving fluency in
+            conversation.
+          </p>
+          <p>
+            Unlike general English classes, this program focuses on practical
+            communication skills, using a detailed syllabus and step-by-step
+            learning across three interconnected classes.
+          </p>
+
+          <h2 className="font-bold text-lg mt-4">
+            1. Vocabulary Amplifier Class
+          </h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              Designed for students, professionals, and anyone who wants to
+              expand vocabulary for daily life and the workplace.
+            </li>
+            <li>
+              Learn practical vocabulary through bite-sized lessons and
+              interactive activities.
+            </li>
+            <li>
+              Improve your word choice for everyday communication and academic
+              or professional use.
+            </li>
+          </ul>
+          <h3 className="font-semibold mt-2">Class Information</h3>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Start Date: 17th August 2025</li>
+            <li>Duration: 2 months</li>
+            <li>Schedule: Saturday & Sunday, 8:30 – 10:00 PM (MMT)</li>
+          </ul>
+
+          <h2 className="font-bold text-lg mt-4">2. Grammar Monster Series</h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              Ideal for learners who want to build a strong grammar foundation
+              for both communication and exams.
+            </li>
+            <li>Master grammar from the basics to advanced use.</li>
+            <li>Strengthen daily communication and academic writing.</li>
+            <li>
+              Suitable for IGCSE, GED, IELTS, Duolingo, and other test
+              preparation.
+            </li>
+          </ul>
+          <h3 className="font-semibold mt-2">Class Information</h3>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Start Date: 17th October 2025</li>
+            <li>Duration: 2 months</li>
+            <li>Schedule: Monday & Friday, 8:00 – 9:30 PM (MMT)</li>
+          </ul>
+
+          <h2 className="font-bold text-lg mt-4">
+            3. Step-Up Speaking for Conversation Skills
+          </h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              Aimed at learners who already have a grammar and vocabulary
+              foundation.
+            </li>
+            <li>
+              Develop fluency and confidence through real-life conversations.
+            </li>
+            <li>Practice weekly themes and interactive speaking activities.</li>
+            <li>
+              Classes are taught by both local and native teachers for balanced
+              learning.
+            </li>
+          </ul>
+          <h3 className="font-semibold mt-2">Class Information</h3>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Start Date: 20th December 2025</li>
+            <li>Duration: 2 months</li>
+          </ul>
+          <h3 className="font-semibold mt-2">Entry Requirements</h3>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Students must take a level test before joining.</li>
+            <li>
+              Only Pre-Intermediate level and above are eligible for enrollment.
+            </li>
+          </ul>
+
+          <h2 className="font-bold text-lg mt-4">
+            Flexible Options & Discounts
+          </h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Join a single class or the full 3-in-1 package.</li>
+            <li>
+              Special promotional discounts are available for students who
+              register for the full package.
+            </li>
+          </ul>
+
+          <h2 className="font-bold text-lg mt-4">Why Choose FuNglish?</h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              Structured program covering vocabulary, grammar, and speaking.
+            </li>
+            <li>Practical, real-life communication focus.</li>
+            <li>Taught by both local and native teachers.</li>
+            <li>Affordable pricing with fast results.</li>
+          </ul>
+        </div>
       </div>
     ),
   },

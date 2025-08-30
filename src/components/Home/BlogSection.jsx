@@ -26,7 +26,8 @@ const BlogSection = ({ id }) => {
   const services = [
     {
       id: 1,
-      title: "Upgrade your Academic   English Skill with FuNglilsh ",
+      title:
+        "Upgrade Your Academic English Skill With FuNglish‘s Be a Grammar Monster Series",
       image: blog1,
     },
     {
@@ -83,13 +84,12 @@ const BlogSection = ({ id }) => {
               className="bg-[#161616]/20 rounded-2xl p-6 overflow-hidden border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105"
             >
               {/* Card Image */}
-              <div className={`relative flex items-center justify-center`}>
+              <div className={`flex items-center justify-center`}>
                 <img
                   src={service.image}
                   alt={service.title}
                   className="w-full h-full object-cover rounded-xl"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-20 rounded-lg"></div>
               </div>
 
               {/* Card Content */}

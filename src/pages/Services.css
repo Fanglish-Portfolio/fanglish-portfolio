@@ -1,0 +1,602 @@
+.services,
+.services * {
+  box-sizing: border-box;
+}
+.services {
+  margin: -1px 0 0 0;
+  background: #151515;
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.services .header {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 712px;
+  position: relative;
+}
+.services .privacy-notice {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 64px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 700;
+  position: relative;
+}
+.services .paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.services .sub-header {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 712px;
+  position: relative;
+}
+.services .last-updated {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 700;
+  position: relative;
+  width: 712px;
+}
+.services .description {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 712px;
+  position: relative;
+}
+.services
+  .this-privacy-notice-for-fu-nglish-we-our-us-describes-how-and-why-we-collect-use-and-protect-your-personal-information-when-you-use-our-services-services-such-as-when-you-visit-our-website-at-your-website-url-or-any-site-of-ours-that-links-to-this-privacy-notice-engage-with-us-through-consultations-visa-services-classes-or-events-communicate-with-us-via-phone-email-or-social-platforms-questions-or-concerns-reading-this-privacy-notice-will-help-you-understand-your-rights-and-choices-if-you-do-not-agree-with-our-policies-please-discontinue-use-of-our-services-for-questions-contact-us-at-your-email {
+  color: #ffffff;
+  text-align: left;
+  position: relative;
+  width: 712px;
+}
+.this-privacy-notice-for-fu-nglish-we-our-us-describes-how-and-why-we-collect-use-and-protect-your-personal-information-when-you-use-our-services-services-such-as-when-you-visit-our-website-at-your-website-url-or-any-site-of-ours-that-links-to-this-privacy-notice-engage-with-us-through-consultations-visa-services-classes-or-events-communicate-with-us-via-phone-email-or-social-platforms-questions-or-concerns-reading-this-privacy-notice-will-help-you-understand-your-rights-and-choices-if-you-do-not-agree-with-our-policies-please-discontinue-use-of-our-services-for-questions-contact-us-at-your-email-span {
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 700;
+}
+.this-privacy-notice-for-fu-nglish-we-our-us-describes-how-and-why-we-collect-use-and-protect-your-personal-information-when-you-use-our-services-services-such-as-when-you-visit-our-website-at-your-website-url-or-any-site-of-ours-that-links-to-this-privacy-notice-engage-with-us-through-consultations-visa-services-classes-or-events-communicate-with-us-via-phone-email-or-social-platforms-questions-or-concerns-reading-this-privacy-notice-will-help-you-understand-your-rights-and-choices-if-you-do-not-agree-with-our-policies-please-discontinue-use-of-our-services-for-questions-contact-us-at-your-email-span2 {
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 500;
+}
+.this-privacy-notice-for-fu-nglish-we-our-us-describes-how-and-why-we-collect-use-and-protect-your-personal-information-when-you-use-our-services-services-such-as-when-you-visit-our-website-at-your-website-url-or-any-site-of-ours-that-links-to-this-privacy-notice-engage-with-us-through-consultations-visa-services-classes-or-events-communicate-with-us-via-phone-email-or-social-platforms-questions-or-concerns-reading-this-privacy-notice-will-help-you-understand-your-rights-and-choices-if-you-do-not-agree-with-our-policies-please-discontinue-use-of-our-services-for-questions-contact-us-at-your-email-span3 {
+  list-style-type: disc;
+  padding-left: 1em;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 500;
+}
+.services .summary-of-key-points {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 700;
+  position: relative;
+  width: 712px;
+}
+.services
+  .what-personal-data-do-we-collect-we-collect-information-you-provide-e-g-name-contact-info-academic-details-as-well-as-technical-and-usage-data-do-we-process-sensitive-data-we-do-not-intentionally-collect-or-process-sensitive-personal-data-do-we-share-your-data-yes-but-only-with-trusted-partners-universities-embassies-payment-providers-and-service-vendors-when-necessary-to-deliver-our-services-how-do-we-protect-your-data-we-use-organizational-and-technical-measures-to-safeguard-it-but-no-system-is-100-secure-what-are-your-rights-depending-on-your-location-you-may-have-the-right-to-access-update-or-delete-your-information-how-long-do-we-keep-your-data-only-as-long-as-needed-to-provide-our-services-or-as-required-by-law {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 500;
+  position: relative;
+  width: 712px;
+}
+.services .terms-condition-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.services ._1-what-information-do-we-collect {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 700;
+  position: relative;
+  width: 712px;
+}
+.services .contents {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.services .content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.services .title {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 712px;
+  position: relative;
+}
+.services .information-you-provide-to-us {
+  color: #ffffff;
+  text-align: left;
+  position: relative;
+  width: 712px;
+}
+.information-you-provide-to-us-span {
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 500;
+}
+.information-you-provide-to-us-span2 {
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 500;
+}
+.services
+  .name-email-address-phone-number-academic-background-test-scores-documents-e-g-transcripts-c-vs-application-forms-payment-information-if-applicable {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 500;
+  position: relative;
+  width: 712px;
+}
+.services
+  .automatically-collected-information-when-you-visit-our-website-we-may-automatically-collect {
+  color: #ffffff;
+  text-align: left;
+  position: relative;
+  width: 712px;
+}
+.automatically-collected-information-when-you-visit-our-website-we-may-automatically-collect-span {
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 700;
+}
+.automatically-collected-information-when-you-visit-our-website-we-may-automatically-collect-span2 {
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 500;
+}
+.automatically-collected-information-when-you-visit-our-website-we-may-automatically-collect-span3 {
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 600;
+}
+.services
+  .ip-address-device-details-browser-type-pages-visited-time-spent-and-other-analytics-data-cookies-or-similar-technologies-see-section-4 {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 500;
+  position: relative;
+  width: 712px;
+}
+.services
+  .information-from-other-sources-we-may-receive-additional-information-from {
+  color: #ffffff;
+  text-align: left;
+  position: relative;
+  width: 712px;
+}
+.information-from-other-sources-we-may-receive-additional-information-from-span {
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 700;
+}
+.information-from-other-sources-we-may-receive-additional-information-from-span2 {
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 500;
+}
+.information-from-other-sources-we-may-receive-additional-information-from-span3 {
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 600;
+}
+.services
+  .partner-institutions-universities-training-centers-social-platforms-if-you-connect-with-us-there-public-databases-or-marketing-partners {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 500;
+  position: relative;
+  width: 712px;
+}
+.services .terms-condition-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.services ._2-how-do-we-use-your-information {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 700;
+  position: relative;
+  width: 712px;
+}
+.services .we-use-your-information-to {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 500;
+  position: relative;
+  width: 712px;
+}
+.services
+  .deliver-consulting-visa-and-educational-services-process-and-submit-applications-on-your-behalf-improve-our-website-services-and-communications-send-important-updates-e-g-deadlines-service-notifications-comply-with-legal-or-regulatory-obligations {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 500;
+  position: relative;
+  width: 712px;
+}
+.services .terms-condition-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.services ._3-when-and-with-whom-do-we-share-your-information {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 700;
+  position: relative;
+  width: 712px;
+}
+.services .we-do-not-sell-your-data-we-may-share-your-data-with {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 500;
+  position: relative;
+  width: 712px;
+}
+.services
+  .educational-institutions-embassies-when-applying-for-studies-visas-payment-processors-for-service-fees-service-providers-it-hosting-analytics-email-systems-legal-authorities-if-required-by-law {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 500;
+  position: relative;
+  width: 712px;
+}
+.services .terms-condition-4 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.services ._4-do-we-use-cookies {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 700;
+  position: relative;
+  width: 712px;
+}
+.services
+  .yes-cookies-help-us-improve-website-performance-personalize-your-experience-and-analyze-usage-you-may-disable-cookies-in-your-browser-settings-but-some-features-may-not-work-properly {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 600;
+  position: relative;
+  width: 712px;
+}
+.services .terms-condition-5 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.services ._5-how-do-we-protect-your-information {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 700;
+  position: relative;
+  width: 712px;
+}
+.services
+  .we-use-encryption-firewalls-secure-servers-and-restricted-access-to-safeguard-your-information-however-no-system-is-completely-secure-so-we-cannot-guarantee-absolute-protection {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 600;
+  position: relative;
+  width: 712px;
+}
+.services .terms-condition-6 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.services ._6-do-we-collect-information-from-minors {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 700;
+  position: relative;
+  width: 712px;
+}
+.services
+  .we-do-not-knowingly-collect-data-from-children-under-18-if-you-are-a-parent-guardian-and-believe-your-child-has-provided-information-please-contact-us-and-we-will-take-appropriate-action {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 600;
+  position: relative;
+  width: 712px;
+}
+.services .terms-condition-7 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.services ._7-your-privacy-rights {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 700;
+  position: relative;
+  width: 712px;
+}
+.services
+  .depending-on-your-country-you-may-have-the-right-to-request-access-to-the-information-we-hold-about-you-correct-or-update-inaccurate-information-request-deletion-of-your-data-opt-out-of-promotional-communications-to-exercise-these-rights-contact-us-at-pinky-htut-funglishedu-org {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 500;
+  position: relative;
+  width: 712px;
+}
+.services .terms-condition-8 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.services ._8-updates-to-this-notice {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 700;
+  position: relative;
+  width: 712px;
+}
+.services
+  .we-may-update-this-privacy-notice-periodically-any-changes-will-be-posted-on-our-website-with-the-revised-date {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 600;
+  position: relative;
+  width: 712px;
+}
+.services .terms-condition-9 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.services ._9-contact-us {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 700;
+  position: relative;
+  width: 712px;
+}
+.services .if-you-have-questions-please-contact-us {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 600;
+  position: relative;
+  width: 712px;
+}
+.services
+  .fu-nglish-global-max-pinky-htut-funglishedu-org-66969949572-https-www-funglishglobalmax-org {
+  color: #ffffff;
+  text-align: left;
+  position: relative;
+  width: 712px;
+}
+.fu-nglish-global-max-pinky-htut-funglishedu-org-66969949572-https-www-funglishglobalmax-org-span {
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 700;
+}
+.fu-nglish-global-max-pinky-htut-funglishedu-org-66969949572-https-www-funglishglobalmax-org-span2 {
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 700;
+}
+.fu-nglish-global-max-pinky-htut-funglishedu-org-66969949572-https-www-funglishglobalmax-org-span3 {
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 600;
+}
+.fu-nglish-global-max-pinky-htut-funglishedu-org-66969949572-https-www-funglishglobalmax-org-span4 {
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.019em;
+  font-weight: 600;
+}

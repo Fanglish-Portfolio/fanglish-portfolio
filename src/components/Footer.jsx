@@ -8,6 +8,7 @@ import {
   FaMailBulk,
   FaTiktok,
   FaViber,
+  FaWhatsapp,
 } from "react-icons/fa";
 
 import { BiPhoneCall } from "react-icons/bi";
@@ -170,29 +171,35 @@ const Footer = () => {
                 <li
                   className="flex items-center gap-2 cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
                   onClick={() =>
-                    window.open("https://www.facebook.com/suzukimega6.spt")
+                    window.open("https://www.facebook.com/FunglishMyanmar")
                   }
                 >
                   <FaFacebookMessenger />
                   FuNglish Facebook Page
                 </li>
-                <li
-                  className="flex items-center gap-2 cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
-                  onClick={() =>
-                    window.open("https://www.facebook.com/suzukimega6.spt")
-                  }
-                >
+                <li className="flex items-center gap-2 cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300">
                   <FaMailBulk />
-                  pinky.htut@funglishedu.org
+                  <a href="mailto:pinky.htut@funglishedu.org" target="_blank">
+                    pinky.htut@funglishedu.org
+                  </a>
                 </li>
-                <li
-                  className="flex items-center gap-2 cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
-                  onClick={() =>
-                    window.open("viber://chat?number=+959420054395")
-                  }
-                >
+                <li className="flex items-center gap-2 cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300">
                   <FaViber />
-                  +66969949572
+                  <a href="viber://chat?number=+66969949572" target="_blank">
+                    +66969949572
+                  </a>
+                </li>
+                <li className="flex items-center gap-2 cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300">
+                  <FaWhatsapp />
+                  <a href="https://wa.me/66969949572" target="_blank">
+                    +66969949572
+                  </a>
+                </li>
+                <li className="flex items-center gap-2 cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300">
+                  <FaViber />
+                  <a href="viber://chat?number=+66969949572" target="_blank">
+                    +66969949572
+                  </a>
                 </li>
               </ul>
             </div>

@@ -5,15 +5,12 @@ import flag2 from "../../assets/image/university/Flags2.png";
 import flag3 from "../../assets/image/university/Flags3.png";
 import flag4 from "../../assets/image/university/Flags4.png";
 
-import uni1 from "./../../assets/image/university/schoolImage/uni1.png";
-import uni2 from "./../../assets/image/university/schoolImage/uni2.png";
-import uni3 from "./../../assets/image/university/schoolImage/uni3.png";
-import uni4 from "./../../assets/image/university/schoolImage/uni4.png";
-import uni5 from "./../../assets/image/university/schoolImage/uni5.png";
-import uni6 from "./../../assets/image/university/schoolImage/uni6.png";
-import uni7 from "./../../assets/image/university/schoolImage/uni7.png";
-import uni8 from "./../../assets/image/university/schoolImage/uni8.png";
-import uni9 from "./../../assets/image/university/schoolImage/uni9.png";
+import uni1 from "./../../assets/image/university/schoolImage/us/usUni7.png";
+import uni2 from "./../../assets/image/university/schoolImage/us/usUni2.png";
+import uni3 from "./../../assets/image/university/schoolImage/us/usUni6.png";
+import uni4 from "./../../assets/image/university/schoolImage/us/usUni4.png";
+import uni5 from "./../../assets/image/university/schoolImage/us/usUni8.png";
+
 import uni10 from "./../../assets/image/university/schoolImage/us/usCollage1.png";
 import uni11 from "./../../assets/image/university/schoolImage/us/usCollage2.png";
 import uni12 from "./../../assets/image/university/schoolImage/us/usCollage3.png";
@@ -21,25 +18,33 @@ import uni13 from "./../../assets/image/university/schoolImage/us/usCollage4.png
 import uni14 from "./../../assets/image/university/schoolImage/us/usCollage5.png";
 import uni15 from "./../../assets/image/university/schoolImage/us/usCollage6.png";
 import uni16 from "./../../assets/image/university/schoolImage/us/usCollage7.png";
+import uni17 from "./../../assets/image/university/schoolImage/us/usCollage8.png";
+import uni18 from "./../../assets/image/university/schoolImage/us/usCollage9.png";
+import uni19 from "./../../assets/image/university/schoolImage/us/usCollage10.png";
+import uni20 from "./../../assets/image/university/schoolImage/us/usCollage11.png";
+import uni21 from "./../../assets/image/university/schoolImage/us/usCollage12.png";
 
-import uni17 from "./../../assets/image/university/schoolImage/uk/ukUni1.png";
-import uni18 from "./../../assets/image/university/schoolImage/uk/ukUni2.png";
-import uni19 from "./../../assets/image/university/schoolImage/uk/ukUni3.png";
-import uni20 from "./../../assets/image/university/schoolImage/uk/ukUni4.png";
-import uni21 from "./../../assets/image/university/schoolImage/uk/ukUni5.png";
-import uni22 from "./../../assets/image/university/schoolImage/uk/ukUni6.png";
+import uni22 from "./../../assets/image/university/schoolImage/uk/ukUni1.png";
+import uni23 from "./../../assets/image/university/schoolImage/uk/ukUni2.png";
+import uni24 from "./../../assets/image/university/schoolImage/uk/ukUni3.png";
+import uni25 from "./../../assets/image/university/schoolImage/uk/ukUni4.png";
+import uni26 from "./../../assets/image/university/schoolImage/uk/ukUni5.png";
+import uni27 from "./../../assets/image/university/schoolImage/uk/ukUni6.png";
+import uni28 from "./../../assets/image/university/schoolImage/uk/ukUni7.png";
+import uni29 from "./../../assets/image/university/schoolImage/uk/ukUni8.png";
+import uni30 from "./../../assets/image/university/schoolImage/uk/ukUni9.png";
+import uni31 from "./../../assets/image/university/schoolImage/uk/ukUni10.png";
 
-// import uni10 from "./../../assets/image/university/schoolImage/uni10.png";
-// import uni11 from "./../../assets/image/university/schoolImage/uni11.png";
-// import uni12 from "./../../assets/image/university/schoolImage/uni12.png";
-// import uni13 from "./../../assets/image/university/schoolImage/uni13.png";
-// import uni14 from "./../../assets/image/university/schoolImage/uni14.png";
-// import uni15 from "./../../assets/image/university/schoolImage/uni15.png";
-// import uni16 from "./../../assets/image/university/schoolImage/uni16.png";
-// import uni17 from "./../../assets/image/university/schoolImage/uni17.png";
-// import uni18 from "./../../assets/image/university/schoolImage/uni18.png";
-// import uni19 from "./../../assets/image/university/schoolImage/uni19.png";
-// import uni20 from "./../../assets/image/university/schoolImage/uni20.png";
+import uni32 from "./../../assets/image/university/schoolImage/germany/GerUni1.png";
+import uni33 from "./../../assets/image/university/schoolImage/germany/GerUni2.png";
+import uni34 from "./../../assets/image/university/schoolImage/germany/GerUni3.png";
+import uni35 from "./../../assets/image/university/schoolImage/germany/GerUni4.png";
+import uni36 from "./../../assets/image/university/schoolImage/germany/GerUni5.png";
+
+import uni37 from "./../../assets/image/university/schoolImage/aus/AusUni1.png";
+import uni38 from "./../../assets/image/university/schoolImage/aus/AusUni2.png";
+import uni39 from "./../../assets/image/university/schoolImage/aus/AusUni3.png";
+import uni40 from "./../../assets/image/university/schoolImage/aus/AusUni4.png";
 
 function University({ country }) {
   const [selectedCountry, setSelectedCountry] = useState(country);
@@ -57,112 +62,113 @@ function University({ country }) {
           name: "Weber State University",
           logo: uni1,
           backgroundColor: "bg-white",
-          type: "college",
+          type: "university",
         },
         {
           id: 2,
-          name: "De Anza College",
+          name: "Lawrence Technological University",
           logo: uni2,
           backgroundColor: "bg-red-700",
-          type: "college",
+          type: "university",
         },
         {
           id: 3,
-          name: "Ohlone College",
+          name: "Texas State University",
           logo: uni3,
           backgroundColor: "bg-white",
-          type: "college",
+          type: "university",
         },
         {
           id: 4,
-          name: "Orange Coast College",
+          name: "Skyline College",
           logo: uni4,
           backgroundColor: "bg-white",
-          type: "college",
+          type: "College",
         },
         {
           id: 5,
-          name: "Orange Coast College",
+          name: "San Jose State University",
           logo: uni5,
           backgroundColor: "bg-white",
-          type: "college",
-        },
-        {
-          id: 6,
-          name: "Orange Coast College",
-          logo: uni6,
-          backgroundColor: "bg-white",
-          type: "college",
-        },
-        {
-          id: 7,
-          name: "Orange Coast College",
-          logo: uni7,
-          backgroundColor: "bg-white",
-          type: "college",
-        },
-        {
-          id: 8,
-          name: "Orange Coast College",
-          logo: uni8,
-          backgroundColor: "bg-white",
-          type: "college",
+          type: "university",
         },
         {
           id: 9,
-          name: "Orange Coast College",
-          logo: uni9,
+          name: "De Anza College",
+          logo: uni10,
           backgroundColor: "bg-white",
           type: "college",
         },
         {
           id: 10,
-          name: "Weber State University",
-          logo: uni10,
+          name: "Ohlone College",
+          logo: uni11,
           backgroundColor: "bg-white",
-          type: "university",
+          type: "college",
         },
         {
           id: 11,
-          name: "Texas State University",
-          logo: uni11,
+          name: "Orange Coast College",
+          logo: uni12,
           backgroundColor: "bg-white",
-          type: "university",
+          type: "college",
         },
         {
           id: 12,
-          name: "Lawrence Technological University",
-          logo: uni12,
-          backgroundColor: "bg-white",
-          type: "university",
-        },
-        {
-          id: 13,
           name: "Skyline College",
           logo: uni13,
           backgroundColor: "bg-white",
-          type: "university",
+          type: "college",
         },
+
         {
           id: 14,
           name: "Houston Community College ",
-          logo: uni14,
+          logo: uni15,
           backgroundColor: "bg-white",
-          type: "university",
+          type: "college",
         },
         {
           id: 15,
           name: "Santa Monica College",
-          logo: uni15,
+          logo: uni16,
           backgroundColor: "bg-white",
-          type: "university",
+          type: "college",
         },
         {
           id: 16,
           name: "San Jose State University",
-          logo: uni16,
+          logo: uni17,
           backgroundColor: "bg-white",
-          type: "university",
+          type: "college",
+        },
+        {
+          id: 17,
+          name: "Los Angeles City College",
+          logo: uni18,
+          backgroundColor: "bg-white",
+          type: "college",
+        },
+        {
+          id: 18,
+          name: " Queens College, CUNY",
+          logo: uni19,
+          backgroundColor: "bg-white",
+          type: "college",
+        },
+        {
+          id: 19,
+          name: "Mt. San Antonio College",
+          logo: uni20,
+          backgroundColor: "bg-white",
+          type: "college",
+        },
+        {
+          id: 20,
+          name: "Mt. San Antonio College",
+          logo: uni21,
+          backgroundColor: "Borough of Manhattan Community College, CUNY",
+          type: "college",
         },
       ],
     },
@@ -173,44 +179,72 @@ function University({ country }) {
       universities: [
         {
           id: 17,
-          name: "University Of Bristo",
-          logo: uni17,
+          name: "University of Edinbrugh",
+          logo: uni22,
           backgroundColor: "bg-blue-900",
           type: "university",
         },
         {
           id: 18,
-          name: "University of Edinbrugh",
-          logo: uni18,
-          backgroundColor: "bg-blue-700",
+          name: "University of Birmingham",
+          logo: uni23,
+          backgroundColor: "bg-blue-900",
           type: "university",
         },
         {
           id: 19,
-          name: "University of Birmingham",
-          logo: uni19,
-          backgroundColor: "bg-purple-700",
+          name: "University of Southampton",
+          logo: uni24,
+          backgroundColor: "bg-blue-900",
           type: "university",
         },
         {
           id: 20,
-          name: "University of Southampton",
-          logo: uni20,
-          backgroundColor: "bg-blue-800",
+          name: "Manchester Metropolitan University",
+          logo: uni25,
+          backgroundColor: "bg-blue-900",
           type: "university",
         },
         {
           id: 21,
-          name: "Manchester Metropolitan University",
-          logo: uni21,
+          name: "University of Hertfordshire",
+          logo: uni26,
           backgroundColor: "bg-blue-900",
           type: "university",
         },
         {
           id: 22,
-          name: "University of Hertfordshire",
-          logo: uni22,
-          backgroundColor: "bg-blue-700",
+          name: "University of Essex",
+          logo: uni27,
+          backgroundColor: "bg-blue-900",
+          type: "university",
+        },
+        {
+          id: 23,
+          name: " University of Sussex",
+          logo: uni28,
+          backgroundColor: "bg-blue-900",
+          type: "university",
+        },
+        {
+          id: 24,
+          name: "University of Leeds",
+          logo: uni29,
+          backgroundColor: "bg-blue-900",
+          type: "university",
+        },
+        {
+          id: 25,
+          name: " University of Glasgow",
+          logo: uni30,
+          backgroundColor: "bg-blue-900",
+          type: "university",
+        },
+        {
+          id: 26,
+          name: "University of London",
+          logo: uni31,
+          backgroundColor: "bg-blue-900",
           type: "university",
         },
       ],
@@ -221,31 +255,38 @@ function University({ country }) {
       flag: flag2,
       universities: [
         {
-          id: 9,
-          name: "Technical University Munich",
-          logo: "TUM",
+          id: 27,
+          name: "HSB Hochschule Bremen",
+          logo: uni32,
           backgroundColor: "bg-blue-600",
           type: "university",
         },
         {
-          id: 10,
-          name: "University of Heidelberg",
-          logo: "UH",
+          id: 28,
+          name: "Nordhausen University of Applied Science",
+          logo: uni33,
           backgroundColor: "bg-red-600",
           type: "university",
         },
         {
-          id: 11,
-          name: "Humboldt University",
-          logo: "HU",
+          id: 29,
+          name: "Hochschule München University of Applied Sciences",
+          logo: uni34,
           backgroundColor: "bg-green-600",
           type: "university",
         },
         {
-          id: 12,
-          name: "RWTH Aachen University",
-          logo: "RWTH",
+          id: 30,
+          name: "Deggendorf Institute Technology",
+          logo: uni35,
           backgroundColor: "bg-blue-700",
+          type: "university",
+        },
+        {
+          id: 31,
+          name: "Technology Arts Science TH Köln",
+          logo: uni36,
+          backgroundColor: "bg-red-700",
           type: "university",
         },
       ],
@@ -256,30 +297,30 @@ function University({ country }) {
       flag: flag3,
       universities: [
         {
-          id: 13,
-          name: "University of Vienna",
-          logo: "UV",
+          id: 32,
+          name: "FH University of Applied Science Upper Austria",
+          logo: uni37,
           backgroundColor: "bg-blue-800",
           type: "university",
         },
         {
-          id: 14,
-          name: "Vienna University of Technology",
-          logo: "VUT",
+          id: 33,
+          name: "University of Vienna",
+          logo: uni38,
           backgroundColor: "bg-red-600",
           type: "university",
         },
         {
-          id: 15,
-          name: "University of Salzburg",
-          logo: "US",
+          id: 34,
+          name: "University of Graz",
+          logo: uni39,
           backgroundColor: "bg-green-700",
           type: "university",
         },
         {
-          id: 16,
-          name: "University of Innsbruck",
-          logo: "UI",
+          id: 35,
+          name: "University of Applied Sciences, Burgenland",
+          logo: uni40,
           backgroundColor: "bg-purple-600",
           type: "university",
         },
@@ -337,12 +378,17 @@ function University({ country }) {
       <div className="mt-20"></div>
       <h1 className="header-text mb-10">Study Abroad</h1>
       <div className="min-h-screen">
-        <div className="lg:hidden mb-6 px-6">
+        <div className="lg:hidden mb-6 px-6 bg-[#1a1a1a] py-5 sticky top-[80px] z-10">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="w-full flex items-center justify-between p-4 bg-gray-800 rounded-xl border border-gray-700"
           >
-            <span className="font-medium">Select Country</span>
+            <div className="flex items-center space-x-3">
+              <img src={currentCountry.flag} alt="" />
+              <span className="font-medium text-left">
+                {currentCountry.name}
+              </span>
+            </div>
             <svg
               className={`w-5 h-5 transform transition-transform ${
                 isMobileMenuOpen ? "rotate-180" : ""
@@ -360,7 +406,7 @@ function University({ country }) {
             </svg>
           </button>
         </div>
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 ">
           {/* Left Sidebar */}
           <div
             className={`
@@ -372,6 +418,7 @@ function University({ country }) {
               {countries.map((country) => (
                 <button
                   key={country.id}
+                  va
                   onClick={() => setSelectedCountry(country.id)}
                   className={`w-full flex items-center justify-between p-4 rounded-xl transition-all duration-300 group ${
                     selectedCountry === country.id
@@ -391,65 +438,79 @@ function University({ country }) {
           </div>
 
           {/* Main Content Area */}
-          <div className="flex-1 px-8 overflow-y-auto h-[550px] university">
-            <div className="flex gap-4 mb-10">
-              <button
-                className={` px-6 py-2 rounded-full border border-primary transition-all duration-300 ${
-                  selectedType === "university"
-                    ? "bg-primary text-black"
-                    : " text-primary text-primary"
-                }`}
-                onClick={() => setSelectedType("university")}
-              >
-                University
-              </button>
-              <button
-                className={` px-6 py-2 rounded-full border border-primary transition-all duration-300 ${
-                  selectedType === "college"
-                    ? "bg-primary text-black"
-                    : "text-primary"
-                }`}
-                onClick={() => setSelectedType("college")}
-              >
-                Collage
-              </button>
-            </div>
+          <div className="flex-1 px-8 overflow-y-auto md:h-[600px] pb-50 university">
+            {selectedCountry !== "dubai" && (
+              <div className="flex gap-4 mb-10">
+                <button
+                  className={` px-6 py-2 rounded-full border border-primary transition-all duration-300 ${
+                    selectedType === "university"
+                      ? "bg-primary text-black"
+                      : " text-primary text-primary"
+                  }`}
+                  onClick={() => setSelectedType("university")}
+                >
+                  University
+                </button>
+                <button
+                  className={`${
+                    selectedCountry !== "us"
+                      ? "opacity-50 cursor-not-allowed"
+                      : ""
+                  }  px-6 py-2 rounded-full border border-primary transition-all duration-300 ${
+                    selectedType === "college"
+                      ? "bg-primary text-black"
+                      : "text-primary"
+                  }`}
+                  disabled={selectedCountry !== "us"}
+                  onClick={() => setSelectedType("college")}
+                >
+                  Collage
+                </button>
+              </div>
+            )}
             <div className="max-w-6xl mx-auto">
-              {/* University Cards Grid */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {filteredUniversities.map((university) => (
-                  <div
-                    key={university.id}
-                    className="bg-[#161616]/20 rounded-2xl p-6 overflow-hidden border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105"
-                  >
-                    {/* Card Image */}
+              {selectedCountry !== "dubai" ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {filteredUniversities.map((university) => (
                     <div
-                      className={`relative flex items-center justify-center`}
+                      key={university.id}
+                      className="bg-[#161616]/20 rounded-2xl p-6 overflow-hidden border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105"
                     >
-                      <img
-                        src={university.logo}
-                        alt={university.name}
-                        className="w-full h-full object-cover rounded-xl"
-                      />
-                      <div className="absolute inset-0 bg-black bg-opacity-20 rounded-lg"></div>
-                    </div>
-
-                    {/* Card Content */}
-                    <div className="mt-6">
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="text-white">{university.icon}</div>
-                        <h3 className="text-white h-[50px] mb-2 text-[20px] font-semibold">
-                          {university.name}
-                        </h3>
+                      {/* Card Image */}
+                      <div
+                        className={`relative flex items-center justify-center`}
+                      >
+                        <img
+                          src={university.logo}
+                          alt={university.name}
+                          className="sm:w-[100px] sm:h-[100px] lg:w-full lg:h-full object-cover rounded-xl"
+                        />
+                        <div className="absolute inset-0 bg-black bg-opacity-20 rounded-lg"></div>
                       </div>
 
-                      <button className="bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300">
-                        View University
-                      </button>
+                      {/* Card Content */}
+                      <div className="mt-6">
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="text-white">{university.icon}</div>
+                          <h3 className="text-white md:h-[50px] mb-2 text-[14px] md:text-[16px] lg:text-[18px] font-semibold">
+                            {university.name}
+                          </h3>
+                        </div>
+
+                        <button className="bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300">
+                          View University
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="flex items-center justify-center h-[300px]">
+                  <p className="text-white text-[24px] font-semibold">
+                    Coming Soon
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>

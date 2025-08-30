@@ -3,6 +3,8 @@
 import { useInView } from "react-intersection-observer";
 import { useSpring, animated } from "@react-spring/web";
 
+import background from "./../../assets/image/home/herobg.png";
+
 function Number({ n }) {
   const [ref, inView] = useInView();
   const { number } = useSpring({
@@ -18,7 +20,15 @@ function Number({ n }) {
 
 const Collaborate = () => {
   return (
-    <div className="containers">
+    <div
+      className="containers"
+      style={{
+        backgroundImage: `url(${background})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <div className="mb-10 flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 justify-between">
         <div className="glass-card font-bold flex flex-col items-center justify-between py-5 w-[350px] lg:h-[350px] rounded-lg">
           <p className="libre text-[48px] md:text-[64px] italic py-5 ">

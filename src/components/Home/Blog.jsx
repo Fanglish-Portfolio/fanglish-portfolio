@@ -26,12 +26,13 @@ const Blog = ({ id }) => {
   const services = [
     {
       id: 1,
-      title: "Upgrade your Academic   English Skill with FuNglilsh ",
+      title:
+        "Upgrade Your Academic English Skill With FuNglish‘s Be a Grammar Monster Series",
       image: blog1,
     },
     {
       id: 2,
-      title: "Upgrade your Academic   English Skill with FuNglilsh ",
+      title: "Upgrade your Academic English Skill with FuNglilsh ",
       image: blog2,
     },
     {

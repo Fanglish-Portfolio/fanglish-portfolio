@@ -60,7 +60,7 @@ const Navbar = () => {
           <path d="M123-440q-1-10-1.5-20t-.5-20q0-75 28-140.5t77-114q49-48.5 114-77T480-840q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-480q0 10-.5 20t-1.5 20h-81q2-10 2.5-20t.5-20q0-10-.5-20t-2.5-20H639q1 10 1 20v40q0 10-1 20h-79v-33q0-12-.5-24t-1.5-23H403q-1 11-1.5 23t-.5 24v33h-79q-1-10-1-20v-40q0-10 1-20H204q-2 10-2.5 20t-.5 20q0 10 .5 20t2.5 20h-81Zm105-160h103q8-43 20-77.5t26-62.5q-48 18-87 54.5T228-600Zm186 0h132q-10-43-25-84t-41-76q-26 35-41.5 76T414-600Zm216 0h103q-23-49-62.5-85.5T583-740q14 30 26.5 63.5T630-600ZM440-120v-40q0-50-35-85t-85-35H80v-80h240q48 0 89.5 21t70.5 59q29-38 70.5-59t89.5-21h240v80H640q-50 0-85 35t-35 85v40h-80Z" />
         </svg>
       ),
-      link: "/service-detail/6",
+      link: "/study-abroad/us",
     },
     {
       name: "6 Months To The Max",
@@ -75,7 +75,7 @@ const Navbar = () => {
 
   return (
     <nav className="py-7 bg-sub">
-      <div className="lg:max-w-[1280px] px-5 md:px-10 lg:px-0 mx-auto flex items-center justify-between ">
+      <div className="lg:max-w-[1280px] px-5 md:px-10 lg:px-5 mx-auto flex items-center justify-between ">
         {/* Logo */}
         <Link to="/" className="">
           <div className="flex items-center gap-2">
@@ -90,6 +90,10 @@ const Navbar = () => {
         <div className="hidden lg:flex lg:space-x-5">
           <NavLink
             to="/"
+            onClick={() => [
+              setIsServicesOpen(false),
+              setIsStudyAbroadOpen(false),
+            ]}
             className={({ isActive }) =>
               isActive
                 ? "libre text-[14px] lg:text-[14px] font-semibold text-primary"
@@ -100,6 +104,10 @@ const Navbar = () => {
           </NavLink>
           <NavLink
             to="/about"
+            onClick={() => [
+              setIsServicesOpen(false),
+              setIsStudyAbroadOpen(false),
+            ]}
             className={({ isActive }) =>
               isActive
                 ? "libre text-[14px] lg:text-[14px] font-semibold text-primary"
@@ -111,8 +119,11 @@ const Navbar = () => {
           {/* Our Services Dropdown */}
           <div className="relative">
             <button
-              className="libre flex items-center space-x-1 hover:text-yellow-500 transition-colors"
-              onClick={() => setIsServicesOpen(!isServicesOpen)}
+              className="libre text-[14px] flex items-center space-x-1 hover:text-yellow-500 transition-colors"
+              onClick={() => {
+                setIsServicesOpen(!isServicesOpen);
+                setIsStudyAbroadOpen(false);
+              }}
             >
               <span>Our Services</span>
               <svg
@@ -154,8 +165,11 @@ const Navbar = () => {
           {/* Study Abroad Dropdown */}
           <div className="relative">
             <button
-              className="libre flex items-center space-x-1 hover:text-yellow-500 transition-colors"
-              onClick={() => setIsStudyAbroadOpen(!isStudyAbroadOpen)}
+              className="libre text-[14px] flex items-center space-x-1 hover:text-yellow-500 transition-colors"
+              onClick={() => {
+                setIsStudyAbroadOpen(!isStudyAbroadOpen);
+                setIsServicesOpen(false);
+              }}
             >
               <span>Study Abroad</span>
               <svg
@@ -175,13 +189,14 @@ const Navbar = () => {
 
             {isStudyAbroadOpen && (
               <div
-                className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 z-50"
                 onMouseEnter={() => setIsStudyAbroadOpen(true)}
                 onMouseLeave={() => setIsStudyAbroadOpen(false)}
+                className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 z-50"
               >
                 <div className="absolute -top-2 left-6 w-4 h-4 bg-white transform rotate-45"></div>
                 <NavLink
                   to="/study-abroad/us"
+                  onClick={() => setIsStudyAbroadOpen(!isStudyAbroadOpen)}
                   className="hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-gray-50 transition-colors"
                 >
                   <img src={flag} alt="flag" />
@@ -189,6 +204,7 @@ const Navbar = () => {
                 </NavLink>
                 <NavLink
                   to="/study-abroad/uk"
+                  onClick={() => setIsStudyAbroadOpen(!isStudyAbroadOpen)}
                   className="hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-gray-50 transition-colors"
                 >
                   <img src={flag1} alt="flag" />
@@ -196,6 +212,7 @@ const Navbar = () => {
                 </NavLink>
                 <NavLink
                   to="/study-abroad/germany"
+                  onClick={() => setIsStudyAbroadOpen(!isStudyAbroadOpen)}
                   className="hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-gray-50 transition-colors"
                 >
                   <img src={flag2} alt="flag" />
@@ -203,6 +220,7 @@ const Navbar = () => {
                 </NavLink>
                 <NavLink
                   to="/study-abroad/austria"
+                  onClick={() => setIsStudyAbroadOpen(!isStudyAbroadOpen)}
                   className="hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-gray-50 transition-colors"
                 >
                   <img src={flag3} alt="flag" />
@@ -212,14 +230,18 @@ const Navbar = () => {
             )}
           </div>
           <NavLink
-            to="/blog"
+            to="/package"
+            onClick={() => [
+              setIsServicesOpen(false),
+              setIsStudyAbroadOpen(false),
+            ]}
             className={({ isActive }) =>
               isActive
                 ? "libre text-[14px] lg:text-[14px] font-semibold text-primary"
                 : "libre text-[14px] lg:text-[14px] text-white hover:text-primary"
             }
           >
-            Blogs
+            Package
           </NavLink>
           {/* <NavLink
             to="/contact"
@@ -283,7 +305,10 @@ const Navbar = () => {
             <div className="relative">
               <button
                 className="text-[14px] flex items-center space-x-1 hover:text-yellow-500 transition-colors"
-                onClick={() => setIsServicesOpen(!isServicesOpen)}
+                onClick={() => {
+                  setIsServicesOpen(!isServicesOpen);
+                  setIsStudyAbroadOpen(false);
+                }}
               >
                 <span>Our Services</span>
                 <svg
@@ -302,17 +327,17 @@ const Navbar = () => {
               </button>
 
               {isServicesOpen && (
-                <div
-                  className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl py-2 z-50"
-                  onMouseEnter={() => setIsServicesOpen(true)}
-                  onMouseLeave={() => setIsServicesOpen(false)}
-                  onClick={() => setIsServicesOpen(false)}
-                >
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl py-2 z-50">
                   <div className="absolute -top-2 left-6 w-4 h-4 bg-white transform rotate-45"></div>
                   {servicesItems.map((item, index) => (
                     <NavLink
                       key={index}
                       to={item.link}
+                      onClick={() => {
+                        setIsServicesOpen(false);
+                        setIsStudyAbroadOpen(false);
+                        isOpen(false);
+                      }}
                       className="flex text-[14px] items-center my-2 space-x-2 px-4 py-2 text-gray-800 hover:bg-primary/20 transition-colors"
                     >
                       <span className="text-lg">{item.icon}</span>
@@ -326,7 +351,10 @@ const Navbar = () => {
             <div className="relative">
               <button
                 className="text-[14px] flex items-center space-x-1 hover:text-yellow-500 transition-colors"
-                onClick={() => setIsStudyAbroadOpen(!isStudyAbroadOpen)}
+                onClick={() => {
+                  setIsStudyAbroadOpen(!isStudyAbroadOpen);
+                  setIsServicesOpen(false);
+                }}
               >
                 <span>Study Abroad</span>
                 <svg
@@ -345,14 +373,15 @@ const Navbar = () => {
               </button>
 
               {isStudyAbroadOpen && (
-                <div
-                  className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 z-50"
-                  onMouseEnter={() => setIsStudyAbroadOpen(true)}
-                  onMouseLeave={() => setIsStudyAbroadOpen(false)}
-                >
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 z-50">
                   <div className="absolute -top-2 left-6 w-4 h-4 bg-white transform rotate-45"></div>
                   <NavLink
                     to="/study-abroad/us"
+                    onClick={() => {
+                      setIsStudyAbroadOpen(!isStudyAbroadOpen);
+                      setIsServicesOpen(false);
+                      isOpen(false);
+                    }}
                     className="text-[14px] hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-2 text-gray-800 hover:bg-gray-50 transition-colors"
                   >
                     <img src={flag} alt="flag" />
@@ -360,6 +389,11 @@ const Navbar = () => {
                   </NavLink>
                   <NavLink
                     to="/study-abroad/uk"
+                    onClick={() => {
+                      setIsStudyAbroadOpen(!isStudyAbroadOpen);
+                      setIsServicesOpen(false);
+                      isOpen(false);
+                    }}
                     className="text-[14px] hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-2 text-gray-800 hover:bg-gray-50 transition-colors"
                   >
                     <img src={flag1} alt="flag" />
@@ -367,6 +401,11 @@ const Navbar = () => {
                   </NavLink>
                   <NavLink
                     to="/study-abroad/germany"
+                    onClick={() => {
+                      setIsStudyAbroadOpen(!isStudyAbroadOpen);
+                      setIsServicesOpen(false);
+                      isOpen(false);
+                    }}
                     className="text-[14px] hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-2 text-gray-800 hover:bg-gray-50 transition-colors"
                   >
                     <img src={flag2} alt="flag" />
@@ -374,6 +413,11 @@ const Navbar = () => {
                   </NavLink>
                   <NavLink
                     to="/study-abroad/austria"
+                    onClick={() => {
+                      setIsStudyAbroadOpen(!isStudyAbroadOpen);
+                      setIsServicesOpen(false);
+                      isOpen(false);
+                    }}
                     className="text-[14px] hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-2 text-gray-800 hover:bg-gray-50 transition-colors"
                   >
                     <img src={flag3} alt="flag" />
@@ -383,7 +427,7 @@ const Navbar = () => {
               )}
             </div>
             <NavLink
-              to="/blog"
+              to="/package"
               onClick={toggleMenu}
               className={({ isActive }) =>
                 isActive
@@ -391,7 +435,7 @@ const Navbar = () => {
                   : "text-[14px] lg:text-[14px] text-white hover:text-primary"
               }
             >
-              Blogs
+              Package
             </NavLink>
             {/* <NavLink
               to="/contact"

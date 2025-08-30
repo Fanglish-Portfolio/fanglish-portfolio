@@ -2,6 +2,8 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 import { useSpring, animated } from "@react-spring/web";
 
+import { motion } from "framer-motion";
+
 function Number({ n }) {
   const [ref, inView] = useInView();
   const { number } = useSpring({
@@ -16,12 +18,60 @@ function Number({ n }) {
 }
 
 function OurSection() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
   return (
     <div className="containers">
-      <div className="mt-10 max-w-5xl mx-auto">
-        <p className="header-text pt-20 text-center mb-20">About FuNglish</p>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={containerVariants}
+        className="mt-10 max-w-5xl mx-auto"
+      >
+        <p
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={itemVariants}
+          className="header-text pt-20 text-center mb-20"
+        >
+          About FuNglish
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
-          <div>
+          <motion.div variants={cardVariants}>
             <p className="body-text font-medium letter-spacing-[2px]">
               FuNglish began with a focus on Business English classes and has
               grown into a leading destination for international education.
@@ -30,9 +80,9 @@ function OurSection() {
               consultancy, helping students—especially from Myanmar—achieve
               their global education goals.
             </p>
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div variants={cardVariants}>
             <p className="body-text font-medium letter-spacing-[2px]">
               At FuNglish, we serve our students and clients with care, respect,
               and genuine dedication. Our founder, along with a team of
@@ -40,7 +90,7 @@ function OurSection() {
               delivering timely and reliable support tailored to each
               individual’s needs.
             </p>
-          </div>
+          </motion.div>
         </div>
 
         <div className="my-10 flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 justify-between">
@@ -72,8 +122,14 @@ function OurSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pt-10">
-          <div>
+        <div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={containerVariants}
+          className="grid grid-cols-1 md:grid-cols-2 gap-10 pt-10"
+        >
+          <motion.div variants={cardVariants}>
             <h1 className="text-[20px] md:text-[24px] lg:text-[32px] font-semibold libre mb-6">
               Trusted & Proven
             </h1>
@@ -85,9 +141,9 @@ function OurSection() {
               out of 22 applications in a single day—a truly unforgettable
               achievement.
             </p>
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div variants={cardVariants}>
             <h1 className="text-[20px] md:text-[24px] lg:text-[32px] font-semibold libre mb-6">
               Global Reach
             </h1>
@@ -100,11 +156,11 @@ function OurSection() {
               preparation, and unwavering support throughout their education
               journey.
             </p>
-          </div>
+          </motion.div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-20">
-          <div>
+          <div variants={cardVariants}>
             <h1 className="text-[20px] md:text-[24px] lg:text-[32px] font-semibold libre mb-6">
               A Lifeline for Students
             </h1>
@@ -119,7 +175,7 @@ function OurSection() {
             </p>
           </div>
 
-          <div>
+          <motion.div variants={cardVariants}>
             <h1 className="text-[20px] md:text-[24px] lg:text-[32px] font-semibold libre mb-6">
               Turning Setbacks Success
             </h1>
@@ -130,9 +186,9 @@ function OurSection() {
               attempts. These success stories are a testament to our
               persistence, expertise, and heartfelt commitment.
             </p>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

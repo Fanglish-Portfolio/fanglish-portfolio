@@ -17,6 +17,8 @@ import PackageDetail from "./pages/PaclkageDetail";
 import BlogPage from "./pages/BlogPage";
 import BlogDetailPage from "./pages/BlogDetailPage";
 import LanguageClass from "./pages/LanguageClass";
+import PrivicyPolicy from "./pages/PrivicyPolicy";
+import Package from "./pages/Package";
 
 function App() {
   return (
@@ -114,6 +116,22 @@ function App() {
               element={
                 <PageTransition>
                   <StudyAboard />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/privacy-policy"
+              element={
+                <PageTransition>
+                  <PrivicyPolicy />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/package"
+              element={
+                <PageTransition>
+                  <Package />
                 </PageTransition>
               }
             />

@@ -157,3 +157,15 @@ body {
 .university::-webkit-scrollbar-thumb:hover {
   background: #feb609;
 }
+
+.privacy-header {
+  @apply font-semibold text-[16px] md:text-[20px] lg:text-[24px] pt-10;
+}
+
+.privacy-header2 {
+  @apply text-[16px] md:text-[18px] font-semibold;
+}
+
+.privacy-text {
+  @apply text-[14px] md:text-[16px] lg:text-[16px];
+}

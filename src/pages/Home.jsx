@@ -9,7 +9,7 @@ import PackageCarousel from "../components/Home/PackageCarousel";
 
 function Home() {
   return (
-    <div className=" mx-auto">
+    <div>
       <HeroBanner />
       <Collaborate />
       <ServicesSection />

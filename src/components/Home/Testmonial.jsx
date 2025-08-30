@@ -156,7 +156,7 @@ export default function Testimonials() {
                             {testimonial.title}
                           </blockquote>
 
-                          <p className="text-white text-[20px]">
+                          <p className="text-white text-[14px] mt-3 md:text-[16px] lg:text-[20px]">
                             {testimonial.quote}
                           </p>
 

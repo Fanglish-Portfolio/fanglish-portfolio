@@ -1,11 +1,22 @@
 import { useState } from "react";
 import bg from "./../../assets/image/home/herobanner.jpg";
+import background from "./../../assets/image/home/herobg.png";
+import { useNavigate } from "react-router-dom";
 
 const HeroBanner = () => {
+  const navigate = useNavigate();
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   return (
-    <div className="text-white md:my-32 my-16">
+    <div
+      className="text-white md:py-32 py-16"
+      style={{
+        backgroundImage: `url(${background})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <div className="w-full h-full flex justify-center items-center">
         <div className="relative rounded-xl overflow-hidden">
           <img
@@ -23,7 +34,12 @@ const HeroBanner = () => {
                 We Empower learners of all levels to expand their skills , reach
                 their goals and steps onto global stage.
               </h1>
-              <button className="button mt-5">Meet Our Counselors</button>
+              <button
+                onClick={() => navigate("/booking")}
+                className="button mt-5"
+              >
+                Meet Our Counselors
+              </button>
             </div>
           </div>
         </div>

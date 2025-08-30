@@ -121,7 +121,7 @@ const serviceData = [
     title: "Upgrade your Academic English Skill with FuNglilsh ",
     text: (
       <div>
-        <h1>
+        <h1 className="text-xl font-semibold text-yellow-600 mb-6">
           📣 𝐄𝐧𝐠𝐥𝐢𝐬𝐡 𝐒𝐩𝐞𝐚𝐤𝐢𝐧𝐠 မှာဝေါဟာရကြွယ်ကြွယ် အသုံးချလိုသူတွေအတွက် 𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡
           ရဲ့ “𝟔 𝐦𝐨𝐧𝐭𝐡𝐬-𝐭𝐨-𝐭𝐡𝐞-𝐌𝐚𝐱” (𝟑-𝐢𝐧-𝟏 𝐒𝐩𝐞𝐜𝐢𝐚𝐥 𝐂𝐥𝐚𝐬𝐬 𝐒𝐞𝐫𝐢𝐞𝐬) ထဲမှ 𝐕𝐨𝐜𝐚𝐛
           𝐀𝐦𝐩𝐥𝐢𝐟𝐢𝐞𝐫 𝐂𝐥𝐚𝐬𝐬
@@ -215,7 +215,9 @@ const serviceData = [
     text: (
       <div>
         <div className="space-y-4">
-          <p>✨ Goethe Exam – ဂျာမန်ဘာသာတက်ရောက်သူတိုင်း သိထားသင့်တဲ့ Exam✨</p>
+          <p className="text-xl font-semibold text-yellow-600 mb-6">
+            ✨ Goethe Exam – ဂျာမန်ဘာသာတက်ရောက်သူတိုင်း သိထားသင့်တဲ့ Exam✨
+          </p>
 
           <p>
             Goethe-Zertifikat ဆိုတာက ဂျာမန်ဘာသာစကားကျွမ်းကျင်မှု စမ်းသပ်စာမေးပွဲ
@@ -431,7 +433,7 @@ const serviceData = [
       <div className="space-y-4">
         {/* Main title/banner */}
         <p className="text-xl font-semibold text-center text-yellow-600 mb-6">
-          🎉💛𝐒𝐚𝐯𝐞 𝐭𝐢𝐦𝐞 𝐚𝐧𝐝 𝐥𝐞𝐚𝐫𝐧 𝐞𝐟𝐟𝐞𝐜𝐭𝐢�𝐞𝐥𝐲, 𝐭𝐚𝐤𝐢𝐧𝐠 𝐲𝐨𝐮𝐫 𝐆𝐞𝐫𝐦𝐚𝐧 𝐁𝟏 𝐥𝐞𝐯𝐞𝐥 𝐰𝐢𝐭𝐡
+          🎉💛𝐒𝐚𝐯𝐞 𝐭𝐢𝐦𝐞 𝐚𝐧𝐝 𝐥𝐞𝐚𝐫𝐧 𝐞𝐟𝐟𝐞𝐜𝐭𝐢𝐜𝐞𝐥𝐲, 𝐭𝐚𝐤𝐢𝐧𝐠 𝐲𝐨𝐮𝐫 𝐆𝐞𝐫𝐦𝐚𝐧 𝐁𝟏 𝐥𝐞𝐯𝐞𝐥 𝐰𝐢𝐭𝐡
           𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡!
         </p>
 
@@ -732,7 +734,7 @@ const serviceData = [
     text: (
       <div className="space-y-4">
         {/* Main title/banner */}
-        <p className="">
+        <p className="text-xl font-semibold text-yellow-600 mb-6">
           🎉✨ 𝐋𝐢𝐭𝐭𝐥𝐞 𝐋𝐞𝐚𝐫𝐧𝐞𝐫𝐬 လေးတွေ အတွက် 𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡 ရဲ့𝐆�𝐫𝐦𝐚𝐧 𝐂𝐥𝐚𝐬𝐬-𝟐𝐧𝐝 𝐁𝐚𝐭𝐜𝐡🏆
         </p>
 
@@ -837,59 +839,130 @@ const serviceData = [
     text: (
       <div className="space-y-4">
         {/* Main title/banner */}
-        <p className="">
-          🎉✨ 𝐋𝐢𝐭𝐭𝐥𝐞 𝐋𝐞𝐚𝐫𝐧𝐞𝐫𝐬 လေးတွေ အတွက် 𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡 ရဲ့𝐆�𝐫𝐦𝐚𝐧 𝐂𝐥𝐚𝐬𝐬-𝟐𝐧𝐝 𝐁𝐚𝐭𝐜𝐡🏆
+        <p className="text-xl font-semibold text-yellow-600 mb-6">
+          ✨ Chevening Scholarship – မြန်မာနိုင်ငံ ကျောင်းသား/သူများအတွက်
+          အခွင့်အလမ်းကြီး! ✨
         </p>
 
-        {/* Introductory paragraph about the German class for young learners */}
+        {/* Introductory paragraph */}
         <p>
-          🇩🇪 မိမိတိုရဲ့ သားသားမီးမီးလေးတွေကို 𝐒𝐞𝐜𝐨𝐧𝐝 𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞 တစ်ခု အနေနဲ့
-          𝐆𝐞𝐫𝐦𝐚𝐧 𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞 သင်ပေးထားချင်ပြီး အနာဂတ်ပညာရေးလမ်းကြောင်းအတွက်လည်း
-          ဂျာမနီမှာသွားရောက် ပညာသင်ကြားစေချင်လိုတဲ့ မေမေဖေဖေတွေ အတွက် စီစဥ်
-          ပေးထားတဲ့ 𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡 ရဲ့ 𝐆𝐞𝐫𝐦𝐚𝐧 𝐂𝐥𝐚𝐬𝐬 𝐟𝐨𝐫 𝐘𝐨𝐮𝐧𝐠 𝐋𝐞𝐚𝐫𝐧𝐞𝐫𝐬 အတန်းလေးကို
-          ထပ်မံ ဖွင့်လှစ်ပေးတော့မှာ ဖြစ်ပါတယ်ရှင့်။ဒီအတန်း‌ လေးက ကျောင်းတက်ရင်း
-          နဲ့ လေ့လာချင်တဲ့ ကလေးတွေအတွက် အဆင်ပြေစေဖို 𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡 က 𝐰𝐞𝐞𝐤𝐞𝐧𝐝 𝐜𝐥𝐚𝐬𝐬
-          လေး အနေနဲ့စီစဉ်ပေးထားတာပဲဖြစ်ပါတယ်။ 🤗
+          📚 Chevening Scholarship ဆိုတာက UK Government မှ မြန်မာ
+          နိုင်ငံသားတွေကို ပေးအပ်တဲ့ 🎓 Fully Funded ပညာသင်ဆုဖြစ်ပြီး
+          မြန်မာနိုင်ငံက 🎯 နိုင်ငံတကာ အဆင့်မြင့်တက္ကသိုလ်တွင် Masters ဘွဲ့တစ်ခု
+          လေ့လာချင်သူများအတွက် 💡လုံဝလက်လွှတ်မခံသင့်တဲ့
+          အခွင့်အလမ်းအစီအစဉ်တစ်ခုဖြစ်ပါတယ်။
         </p>
 
-        {/* Details about what's covered in the class */}
-        <p>
-          🇩🇪 ဒီ 𝐆𝐞𝐫𝐦𝐚𝐧 𝐂𝐥𝐚𝐬𝐬 လေးမှာဆိုရင် ကလေးတွေအတွက် 𝐁𝐚𝐬𝐢𝐜 ကနေ စပြီး 𝐀𝟏.𝟐 အထိ
-          စနစ်တကျ သေချာလေး သင်ကြားပေးမှာဖြစ်တဲ့အပြင် 𝐂𝐥𝐚𝐬𝐬 𝐒𝐢𝐳𝐞 ကလည်း
-          ကျစ်ကျစ်လစ်လစ်နဲ့ ကျောင်းသား တစ်ယောက်ချင်းစီတိုင်းကို အနီးကပ် စနစ်တကျ
-          သင်ကြားပေးနိုင်စေရန်အတွက် 𝐋𝐢𝐦𝐢𝐭 လေး လုပ်ထားတဲ့ အတန်းလေးဖြစ်တာမို
-          ကိုယ့်ရဲ့ သားသားမီးမီးလေးတွေကို ဂျာမန်စကားကို အခြေခံကနေ
-          စတင်သင်ယူစေလိုသူတဲ့ မိဘတိုင်းအတွက် အထူးသင့်လျော်တဲ့
-          အတန်းလေးဖြစ်ပါတယ်ရှင့် ။👩🏻‍🏫
-        </p>
+        {/* Requirements section */}
+        <h2 className="font-bold text-lg mt-4">
+          🇬🇧 Chevening Scholarship လျှောက်ထားလိုသူများအတွက် လိုအပ်ချက်များ 🇬🇧
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            <span className="font-bold">1️⃣ နိုင်ငံသားဖြစ်မှု</span>
+            <br />
+            Chevening-eligible country (မြန်မာနိုင်ငံ ပါဝင်သည်) ၏ နိုင်ငံသား
+            ဖြစ်ရမယ်။
+          </li>
+          <li>
+            <span className="font-bold">2️⃣ ဘွဲ့အရည်အချင်း</span>
+            <br />
+            Bachelor’s degree (ဘွဲ့တစ်ခု) ကို အောင်မြင်ပြီး UK Master’s degree
+            သင်ယူနိုင်တဲ့အဆင့်ရှိရမယ်။ UK စနစ်အရ Upper Second-Class Honours
+            (2:1) equivalent ဖြစ်ရမယ် (မြန်မာဘွဲ့ စံနှုန်းအရ GPA 3.0+ အထက်ဆိုရင်
+            သင့်တော်ပါတယ်)
+          </li>
+          <li>
+            <span className="font-bold">
+              3️⃣ English Language requirement (IELTS/TOEFL/PTE)
+            </span>
+            <br />
+            English Language requirement (IELTS/TOEFL/PTE) ကို Chevening
+            သတ်မှတ်စံနှုန်းအတိုင်း ဖြည့်ဆည်းရမယ်။
+            <br />
+            IELTS: Overall 6.5 (No band below 5.5)
+            <br />
+            TOEFL iBT: Overall 79+ (No section below 17 Reading, 18 Listening,
+            20 Speaking, 17 Writing)
+            <br />
+            PTE Academic: Overall 58+ (No section below 42)
+          </li>
+        </ul>
 
-        {/* Class schedule and duration */}
-        <p>
-          📅 သင်ကြားမယ့်ရက်လေးတွေကတော့ ကျောင်းချိန်လွတ် 𝐒𝐚𝐭, 𝐒𝐮𝐧
-          နှစ်ရက်ဖြစ်ပြီးတော့ 𝐂𝐥𝐚𝐬𝐬 𝐃𝐮𝐫𝐚𝐭𝐢𝐨𝐧 လေးအနေနဲ့ကတော့ ၄လပဲဖြစ်ပါတယ်ရှင်။
-        </p>
+        {/* Application Components section */}
+        <h2 className="font-bold text-lg mt-4">
+          💡 လျှောက်ထားရာမှာ Application Components အနေနဲ့ ဘာတွေလိုအပ်လဲ 🤔🤔
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            <span className="font-bold">1️⃣ Online Application Form</span>
+            <br />
+            မိမိရဲ့ ကိုယ်ရေးအချက်အလတ်၊ ပညာအရည်အချင်း ပါဝင်တဲ့ Form
+            တစ်ခုပါဝင်ရပါမယ်။
+          </li>
+          <li>
+            <span className="font-bold">2️⃣ 4 Essays (~500 words each)</span>
+            <br />
+            Leadership & Influence, Networking, Studying in the UK, Career Plan
+            ဆိုတဲ့ခေါင်းစဥ် လေးခုကို Essays ရေးသားရပါမယ်။
+          </li>
+          <li>
+            <span className="font-bold">
+              3️⃣ Interview (Panel interview, English)
+            </span>
+            <br />
+            တစ်ခုဖြေဆိုရပါ့မယ်။
+          </li>
+        </ul>
 
-        {/* Teacher qualifications */}
-        <p>
-          👩🏻‍🎓 𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡 ရဲ့ 𝐆𝐞𝐫𝐦𝐚𝐧 𝐂𝐥𝐚𝐬𝐬 မှာ 𝐋𝐢𝐭𝐭𝐥𝐞 𝐋𝐞𝐚𝐫𝐧𝐞𝐫𝐬 တွေကို
-          သင်ကြားပေးမယ့်ဆရာမတွေကလည်း 𝐁𝐚𝐜𝐡𝐞𝐥𝐨𝐫 𝐨𝐟 𝐆𝐞𝐫𝐦𝐚𝐧 ရထားပြီး
-          စာသင်အတွေ့အကြုံရှိတဲ့ ဆရာမတွေကိုယ်တိုင် သင်ကြားပေးမှာ ဖြစ်ပါတယ်နော်။🇩🇪
+        {/* FunGlish course section */}
+        <p className="mt-4">
+          ✨FuNglish မှာ Chevening Scholarship လျှောက်ထားချင်တဲ့
+          ကျောင်းသား၊ကျောင်းသူတွေ အတွက် အဆင်အပြေဆုံးဖြစ်ရအောင်
+          အထူးလေ့ကျင့်သင်ကြားမဲ့ သင်တန်းလေးလဲရှိပါပြီ 🤗🤗🎉
         </p>
-
-        {/* Age group for the class */}
         <p>
-          💁🏻‍♀️ ဒီအတန်းလေးကိုတော့ အသက်၁၀နှစ်ကနေစပြီး ၁၅နှစ်ထိ
-          ကလေးငယ်တွေတက်ရောက်လိုရပါတယ်နော်။ 👧🏻
+          <span className="font-bold">
+            🎯 ကျောင်းသား၊ကျောင်းသူများအတွက် အထူးသီးသန့် Class – "6
+            Months-to-the-Max" 🚀
+          </span>
+          <br />
+          Chevening Scholarship ကို အောင်မြင်စွာ လျှောက်ထားချင်သူများအတွက် ✍️
         </p>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            ✅ English 4 Skills (Listening, Speaking, Reading, Writing) ကို
+            တိုးတက်လာစေပါမယ်
+          </li>
+          <li>✅ University Life Skills ကို အသေးစိတ်အနေနဲ့ ပြင်ဆင်ပေးတယ်</li>
+          <li>
+            ✅ Interview အတွက် တိကျသေချာသော practice နဲ့ Speaking ပြောဆိုရာမှာ
+            ချောမွေ့နေရအောင်ပြင်ဆင်ပေးပါတယ်
+          </li>
+          <li>
+            ✅ Personal Statement & Essay Writing 🖋 ကို အကောင်းဆုံးနည်းလမ်းနဲ့
+            ရေးသားတတ်အောင် သင်ကြားပေးမှာပါနော် 🤗🎉🎉
+          </li>
+        </ul>
 
-        {/* Call to action for enrollment */}
+        {/* Deadline and additional info */}
+        <p className="font-bold mt-4">
+          🎯 Application Deadline: 7th.October.2025
+        </p>
         <p>
-          ဒါ့ကြောင့်မိမိတိုရဲ့ သားသားမီးမီးလေးတွေရဲ့ 𝐆𝐞𝐫𝐦𝐚𝐧 𝐄𝐝𝐮𝐜𝐚𝐭𝐢𝐨𝐧 𝐏𝐚𝐭𝐡𝐰𝐚𝐲
-          အတွက် ကြိုတင်ပြင်ဆင်ထားချင်တယ်၊ 𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞 ကိုစနစ်တကျသင်ကြားပေးမယ့်
-          အတန်းကိုလည်းရှာဖွေနေတယ်ဆိုရင်တော့ 𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡 ရဲ့ 𝐆𝐞𝐫𝐦𝐚𝐧 𝐂𝐥𝐚𝐬𝐬 𝐅𝐨𝐫 𝐘𝐨𝐮𝐧𝐠
-          𝐋𝐞𝐚𝐫𝐧𝐞𝐫𝐬 မှာအခုပဲ စာရင်းလေးသွင်းထားလိုက်တော့နော်။ အတန်းနဲ့ပတ်သက်ပြီး
-          အသေးစိတ်လေးသိချင်တယ်ဆိုရင်တော့ 𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡 𝐏𝐚𝐠𝐞 𝐌𝐞𝐬𝐬𝐞𝐧𝐠𝐞𝐫 မှာလာရောက်
-          မေးမြန်းလိုရပါပြီရှင်။ 🤗✨
+          အသေးစိတ်အချက်အလက်ကို Link မှာလဲ ဝင်ရောက်လေ့လာနိုင်ပါတယ်👇👇
+          <a
+            href="https://www.facebook.com/share/p/1Zv73ahNYs/"
+            className=""
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://www.facebook.com/share/p/1Zv73ahNYs/
+          </a>
+        </p>
+        <p className="mt-4">
+          👍အဆင့်မြင့်ပညာသင်ယူ ဘာသာစကားကြောင့်အခက်အခဲမဖြစ်ရအောင်
+          အခုပဲသင်ကြားပြင်ဆင်ထားလိုက်ပါ။ 😉😉👍
         </p>
 
         {/* Contact Information */}
@@ -928,10 +1001,10 @@ const serviceData = [
             https://www.tiktok.com/@pinky.htut?_t=8sTrsfrO1lo&_r=1
           </a>
         </p>
-        <p>#GermanForYoungLearners</p>
-        <p>#WeekendClass #Funglish #GermanLanguage</p>
-        <p>#LanguageLearning #Education</p>
-        <p>#YoungLearners #A1German #GermanCourse</p>
+        <p>
+          #Scholarship #Chevening #studyabroad #uk #ielts #funglish #language
+          #conversationstarter #onlineclass
+        </p>
       </div>
     ),
   },
@@ -960,7 +1033,7 @@ function BlogDetailSection({ id }) {
                 <img
                   src={service.image}
                   alt="service1"
-                  className="rounded-xl"
+                  className="rounded-xl md:w-[200px] md:h-[200px] lg:w-[350px] lg:h-[350px]"
                 />
                 <p className="text-black text-[18px] sm:text-[20px] md:text-[32px] lg:text-[40px] font-semibold letter-spacing-[2px] leading-[1.5]">
                   {service.title}
