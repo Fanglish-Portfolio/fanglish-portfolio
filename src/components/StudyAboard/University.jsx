@@ -47,6 +47,8 @@ import uni38 from "./../../assets/image/university/schoolImage/aus/AusUni2.png";
 import uni39 from "./../../assets/image/university/schoolImage/aus/AusUni3.png";
 import uni40 from "./../../assets/image/university/schoolImage/aus/AusUni4.png";
 
+import dubai from "./../../assets/image/university/schoolImage/dubai/dubai.png";
+
 const countries = [
   {
     id: "us",
@@ -371,30 +373,16 @@ const countries = [
     universities: [
       {
         id: 17,
-        name: "American University of Dubai",
-        logo: "AUD",
+        name: "Comming Soon",
+        logo: dubai,
         backgroundColor: "bg-gold-600",
         type: "university",
       },
       {
         id: 18,
-        name: "Zayed University",
-        logo: "ZU",
+        name: "Comming Soon",
+        logo: dubai,
         backgroundColor: "bg-green-600",
-        type: "university",
-      },
-      {
-        id: 19,
-        name: "University of Dubai",
-        logo: "UD",
-        backgroundColor: "bg-blue-600",
-        type: "university",
-      },
-      {
-        id: 20,
-        name: "Emirates Aviation University",
-        logo: "EAU",
-        backgroundColor: "bg-red-600",
         type: "university",
       },
     ],
@@ -463,6 +451,7 @@ function University({ country }) {
                   onClick={() => {
                     setSelectedCountry(country.id);
                     setSelectedType("university");
+                    setIsMobileMenuOpen(false);
                   }}
                   className={`w-full flex items-center justify-between p-4 rounded-xl transition-all duration-300 group ${
                     selectedCountry === country.id
@@ -513,51 +502,47 @@ function University({ country }) {
               </div>
             )}
             <div className="max-w-6xl mx-auto">
-              {selectedCountry !== "dubai" ? (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  {filteredUniversities.map((university) => (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                {filteredUniversities.map((university) => (
+                  <div
+                    key={university.id}
+                    className="bg-[#161616]/20 rounded-2xl p-6 overflow-hidden border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105"
+                  >
+                    {/* Card Image */}
                     <div
-                      key={university.id}
-                      className="bg-[#161616]/20 rounded-2xl p-6 overflow-hidden border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105"
+                      className={`relative flex items-center justify-center`}
                     >
-                      {/* Card Image */}
-                      <div
-                        className={`relative flex items-center justify-center`}
-                      >
-                        <img
-                          src={university.logo}
-                          alt={university.name}
-                          className="sm:w-[100px] sm:h-[100px] lg:w-full lg:h-full object-cover rounded-xl"
-                        />
-                        <div className="absolute inset-0 bg-black bg-opacity-20 rounded-lg"></div>
-                      </div>
-
-                      {/* Card Content */}
-                      <div className="mt-6">
-                        <div className="flex items-center gap-3 mb-4">
-                          <div className="text-white">{university.icon}</div>
-                          <h3 className="text-white md:h-[50px] mb-2 text-[14px] md:text-[16px] lg:text-[18px] font-semibold">
-                            {university.name}
-                          </h3>
-                        </div>
-
-                        <button
-                          onClick={() => window.open(university.link, "_blank")}
-                          className="bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300"
-                        >
-                          View University
-                        </button>
-                      </div>
+                      <img
+                        src={university.logo}
+                        alt={university.name}
+                        className="lg:w-full lg:h-full object-cover rounded-xl"
+                      />
+                      <div className="absolute inset-0 bg-black bg-opacity-20 rounded-lg"></div>
                     </div>
-                  ))}
-                </div>
-              ) : (
-                <div className="flex items-center justify-center h-[300px]">
-                  <p className="text-white text-[24px] font-semibold">
-                    Coming Soon
-                  </p>
-                </div>
-              )}
+
+                    {/* Card Content */}
+                    <div className="mt-6">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="text-white">{university.icon}</div>
+                        <h3 className="text-white md:h-[50px] mb-2 text-[14px] md:text-[16px] lg:text-[18px] font-semibold">
+                          {university.name}
+                        </h3>
+                      </div>
+
+                      <button
+                        onClick={() => window.open(university.link, "_blank")}
+                        className={`bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium transition-all duration-300 ${
+                          country === "dubai"
+                            ? "opacity-50 cursor-not-allowed"
+                            : "hover:bg-primary hover:text-black"
+                        }`}
+                      >
+                        View University
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

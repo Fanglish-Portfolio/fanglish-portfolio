@@ -119,7 +119,7 @@ const serviceData = [
   {
     id: 2,
     image: service2,
-    title: "Upgrade your Academic English Skill with FuNglilsh ",
+    title: "Upgrade your Academic English Skill with FuNglish ",
     text: (
       <div>
         <h1 className="text-xl font-semibold text-yellow-600 mb-6">
@@ -212,7 +212,7 @@ const serviceData = [
   {
     id: 3,
     image: service3,
-    title: "Upgrade your Academic English Skill with FuNglilsh",
+    title: "About Goethe Exam",
     text: (
       <div>
         <div className="space-y-4">
@@ -1018,35 +1018,29 @@ function BlogDetailSection({ id }) {
 
   return (
     <div>
-      <div className="containers">
-        <div className="mt-20">
-          <div className="">
-            <div
-              className="px-10 py-8 flex justify-center items-center rounded-2xl overflow-hidden"
-              style={{
-                backgroundImage: `url(${bg})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              {/* <div className="absolute top-1/2 transform -translate-y-1/2 left-1/2 -translate-x-1/2 md:left-14 md:-translate-x-0 z-10 "> */}
-              <div className="flex flex-col md:flex-row gap-4 md:gap-12 justify-center items-center ">
-                <img
-                  src={service.image}
-                  alt="service1"
-                  className="rounded-xl md:w-[200px] md:h-[200px] lg:w-[350px] lg:h-[350px]"
-                />
-                <p className="text-black text-[18px] sm:text-[20px] md:text-[32px] lg:text-[40px] font-semibold letter-spacing-[2px] leading-[1.5]">
-                  {service.title}
-                </p>
-              </div>
-              {/* </div> */}
+      <div className="mt-24">
+        <div className="">
+          <div
+            className="px-10 py-8 flex justify-center items-center overflow-hidden"
+            style={{
+              backgroundImage: `url(${bg})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            {/* <div className="absolute top-1/2 transform -translate-y-1/2 left-1/2 -translate-x-1/2 md:left-14 md:-translate-x-0 z-10 "> */}
+            <div className="flex flex-col md:flex-row gap-4 md:gap-12 justify-center items-center ">
+              <img src={service.image} alt="service1" className="rounded-xl" />
+              <p className="text-black text-[18px] sm:text-[20px] md:text-[32px] lg:text-[40px] font-semibold letter-spacing-[2px] leading-[1.5] libre">
+                {service.title}
+              </p>
             </div>
+            {/* </div> */}
           </div>
         </div>
-
-        <div className="mt-20 leading-[3.5]">{service.text}</div>
       </div>
+
+      <div className="mt-20 leading-[3.5] containers">{service.text}</div>
     </div>
   );
 }

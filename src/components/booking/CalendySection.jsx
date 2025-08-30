@@ -22,11 +22,11 @@ export default function CalendySection() {
         {/* CTA section */}
         <div className="bg-primary flex flex-col text-black gap-4 pt-20 items-center h-[650px]">
           <h1 className="text-[48px] font-bold libre mt-28">
-            Ready to Start Your Journey?
+            Start Your Dream With Us!
           </h1>
           <p className="text-[32px] text-center font-semibold">
-            Consult with our experts to achieve your <br /> dream of studying
-            abroad.
+            Choose the date below to Consult with our experts to achieve your
+            dream of studying abroad.
           </p>
         </div>
         {/* Booking Card */}

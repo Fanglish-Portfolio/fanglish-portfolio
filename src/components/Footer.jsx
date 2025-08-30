@@ -12,9 +12,10 @@ import {
 } from "react-icons/fa";
 
 import { BiPhoneCall } from "react-icons/bi";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const location = useLocation();
   const navigate = useNavigate();
 
   const handleRoute = (path) => {
@@ -39,18 +40,21 @@ const Footer = () => {
           </div>
           <div className="flex gap-8 text-white cursor-pointer mt-8">
             <FaFacebook
+              className="hover:translate-x-2 hover:scale-105 transition duration-300"
               size={24}
               onClick={() =>
                 window.open("https://www.facebook.com/FunglishMyanmar?")
               }
             />
             <FaLinkedin
+              className="hover:translate-x-2 hover:scale-105 transition duration-300"
               size={24}
               onClick={() =>
                 window.open("https://www.linkedin.com/company/funglishmm/")
               }
             />
             <FaTiktok
+              className="hover:translate-x-2 hover:scale-105 transition duration-300"
               size={24}
               onClick={() =>
                 window.open(
@@ -67,24 +71,38 @@ const Footer = () => {
                 Useful Links
               </h2>
               <ul className="space-y-4 ms-2 text-[12px] font-medium">
-                <li
-                  onClick={() => handleRoute("/about")}
-                  className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
-                >
-                  About Us
-                </li>
-                {/* <li
-                  onClick={() => handleRoute("/service")}
-                  className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
-                >
-                  Privacy Policy
-                </li> */}
-                <li
-                  onClick={() => handleRoute("/blog")}
-                  className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
-                >
-                  Blogs
-                </li>
+                {location.pathname !== "/" && (
+                  <li
+                    onClick={() => handleRoute("/")}
+                    className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
+                  >
+                    Home
+                  </li>
+                )}
+                {location.pathname !== "/about" && (
+                  <li
+                    onClick={() => handleRoute("/about")}
+                    className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
+                  >
+                    About Us
+                  </li>
+                )}
+                {location.pathname !== "/privacy-policy" && (
+                  <li
+                    onClick={() => handleRoute("/privacy-policy")}
+                    className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
+                  >
+                    Privacy Policy
+                  </li>
+                )}
+                {location.pathname !== "/blog" && (
+                  <li
+                    onClick={() => handleRoute("/blog")}
+                    className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
+                  >
+                    Blogs
+                  </li>
+                )}
                 {/* <li
                   onClick={() => handleRoute("/service")}
                   className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
@@ -155,7 +173,7 @@ const Footer = () => {
                   onClick={() => handleRoute("/study-abroad/austria")}
                   className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
                 >
-                  Study in Austria
+                  Study in AUSTRIA
                 </li>
                 <li
                   onClick={() => handleRoute("/study-abroad/germany")}
@@ -175,6 +193,12 @@ const Footer = () => {
                   className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
                 >
                   Study in US
+                </li>
+                <li
+                  onClick={() => handleRoute("/study-abroad/dubai")}
+                  className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
+                >
+                  Study in DUBAI
                 </li>
               </ul>
             </div>

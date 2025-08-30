@@ -36,7 +36,7 @@ const testimonials = [
     quote:
       " After three failed attempts, I finally got approved on my 4th try at the U.S. Embassy in Rangoon with the help of FuNglish and Tr. Pinky, who supported me every step of the way. Now I’m proudly studying at East Los Angeles College in the U.S.!”",
     hasVideo: true,
-    link: "https://youtu.be/-em9-zEpBr0?si=u8u3QA8TIL1Aws04",
+    link: "https://www.facebook.com/share/v/1AC3zvbYXp/?mibextid=wwXIfr",
   },
   {
     id: 3,
@@ -103,7 +103,7 @@ export default function Testimonials() {
             <div>
               <h2 className="header-text">What Our Students Says</h2>
             </div>
-            <div className="flex md:items-center space-x-4 mt-4 md:mt-0">
+            <div className="hidden lg:flex md:items-center space-x-4 mt-4 md:mt-0">
               <button
                 onClick={handlePrev}
                 className={`p-2 rounded-full text-primary border border-primary transition-colors shadow-md hover:bg-primary hover:text-black `}

@@ -83,7 +83,7 @@ export default function PackageCarousel({ id }) {
                 Explore Our Learning Packages for Student Success!
               </h2>
             </div>
-            <div className="flex md:items-center space-x-4 mt-4 md:mt-0">
+            <div className="hidden lg:flex md:items-center space-x-4 mt-4 md:mt-0">
               <button
                 onClick={handlePrev}
                 className={`p-2 rounded-full text-primary border border-primary transition-colors shadow-md hover:bg-primary hover:text-black `}

@@ -59,14 +59,14 @@ function OurSection() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={containerVariants}
-        className="mt-10 max-w-5xl mx-auto"
+        className="max-w-5xl mx-auto"
       >
         <p
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={itemVariants}
-          className="header-text pt-20 text-center mb-20"
+          className="header-text text-center mb-20"
         >
           About FuNglish
         </p>

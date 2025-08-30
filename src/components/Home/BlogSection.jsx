@@ -29,7 +29,7 @@ const BlogSection = ({ id }) => {
     },
     {
       id: 2,
-      title: "Upgrade your Academic   English Skill with FuNglilsh ",
+      title: "Upgrade your Academic   English Skill with FuNglish ",
       image: blog2,
     },
     {

@@ -30,7 +30,7 @@ body {
 }
 
 .containers {
-  @apply mx-auto lg:max-w-[1280px] py-[64px] px-5 md:px-[64px] md:px-10 lg:px-5;
+  @apply mx-auto lg:max-w-[1280px] py-[32px] lg:py-[64px] px-5 md:px-[64px] md:px-10 lg:px-5;
 }
 
 .banner-text {

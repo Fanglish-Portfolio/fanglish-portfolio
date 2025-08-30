@@ -153,7 +153,9 @@ const Navbar = () => {
                   <NavLink
                     key={index}
                     to={item.link}
-                    className="flex items-center my-5 space-x-5 px-8 py-3 text-gray-800 hover:bg-primary/20 transition-colors"
+                    className={`flex items-center my-5 space-x-5 px-8 py-3 text-gray-800 hover:bg-primary/20 transition-colors ${
+                      location.pathname === item.link ? "bg-primary/20" : ""
+                    }`}
                   >
                     <span className="text-lg">{item.icon}</span>
                     <span className="font-medium">{item.name}</span>
@@ -197,15 +199,23 @@ const Navbar = () => {
                 <NavLink
                   to="/study-abroad/us"
                   onClick={() => setIsStudyAbroadOpen(!isStudyAbroadOpen)}
-                  className="hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-gray-50 transition-colors"
+                  className={`flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-primary/20 transition-colors ${
+                    location.pathname === "/study-abroad/us"
+                      ? "bg-primary/20"
+                      : ""
+                  }`}
                 >
                   <img src={flag} alt="flag" />
-                  Study in USA
+                  Study in US
                 </NavLink>
                 <NavLink
                   to="/study-abroad/uk"
                   onClick={() => setIsStudyAbroadOpen(!isStudyAbroadOpen)}
-                  className="hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-gray-50 transition-colors"
+                  className={`hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-gray-50 transition-colors ${
+                    location.pathname === "/study-abroad/uk"
+                      ? "bg-primary/20"
+                      : ""
+                  }`}
                 >
                   <img src={flag1} alt="flag" />
                   Study in UK
@@ -213,18 +223,38 @@ const Navbar = () => {
                 <NavLink
                   to="/study-abroad/germany"
                   onClick={() => setIsStudyAbroadOpen(!isStudyAbroadOpen)}
-                  className="hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-gray-50 transition-colors"
+                  className={`hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-gray-50 transition-colors ${
+                    location.pathname === "/study-abroad/germany"
+                      ? "bg-primary/20"
+                      : ""
+                  }`}
                 >
                   <img src={flag2} alt="flag" />
-                  Study in Germany
+                  Study in GERMANY
                 </NavLink>
                 <NavLink
                   to="/study-abroad/austria"
                   onClick={() => setIsStudyAbroadOpen(!isStudyAbroadOpen)}
-                  className="hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-gray-50 transition-colors"
+                  className={`hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-gray-50 transition-colors ${
+                    location.pathname === "/study-abroad/austria"
+                      ? "bg-primary/20"
+                      : ""
+                  }`}
                 >
                   <img src={flag3} alt="flag" />
-                  Study in Austria
+                  Study in AUSTRIA
+                </NavLink>
+                <NavLink
+                  to="/study-abroad/dubai"
+                  onClick={() => setIsStudyAbroadOpen(!isStudyAbroadOpen)}
+                  className={`hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-gray-50 transition-colors ${
+                    location.pathname === "/study-abroad/dubai"
+                      ? "bg-primary/20"
+                      : ""
+                  }`}
+                >
+                  <img src={flag4} alt="flag" />
+                  Study in DUBAI
                 </NavLink>
               </div>
             )}
@@ -255,7 +285,7 @@ const Navbar = () => {
           </NavLink> */}
         </div>
 
-        {/* Language Selector and Button */}
+        {/* Meet Our Counselors */}
         <div className="hidden lg:flex gap-8 items-center">
           <button onClick={() => navigate("/booking")} className="button">
             Meet Our Counselors
@@ -278,7 +308,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="lg:hidden transition-all duration-300">
-          <div className="flex flex-col space-y-4 px-4 py-10 w-full">
+          <div className="flex flex-col space-y-4 px-4 py-8 w-full">
             <NavLink
               to="/"
               onClick={toggleMenu}
@@ -448,6 +478,11 @@ const Navbar = () => {
             >
               Contact Us
             </NavLink> */}
+          </div>
+          <div className="px-4">
+            <button onClick={() => navigate("/booking")} className="button">
+              Meet Our Counselors
+            </button>
           </div>
         </div>
       )}
