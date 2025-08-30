@@ -52,7 +52,7 @@ body {
 }
 
 .body-text {
-  @apply text-[18px] md:text-[24px] lg:text-[32px];
+  @apply text-[16px] md:text-[18px] lg:text-[20px];
 }
 
 .button {

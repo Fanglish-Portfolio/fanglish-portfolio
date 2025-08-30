@@ -15,7 +15,7 @@ function AboutSection() {
           />
         </div>
         <div className="md:w-1/2 lg:w-2/3 md:justify-center pt-6 md:pt-0">
-          <p className="body-text text-start font-semibold leading-[1.5] letter-spacing-[2px]">
+          <p className="text-[18px] md:text-[24px] lg:text-[32px] text-start font-semibold leading-[1.5] letter-spacing-[2px]">
             At the heart of our mission is our founder, Pinky Htut, whose
             passion for education and community growth drives everything we do.
             Having studied across the UK, Japan, and Thailand, Tr. pinky brings
@@ -58,28 +58,25 @@ function AboutSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
           <div>
             <h1 className="text-[20px] md:text-[24px] lg:text-[32px] font-semibold libre mb-6">
-              Life Long Learner
+              Mentor & Guide
             </h1>
             <p className="body-text font-medium letter-spacing-[2px]">
-              With a bachelor’s degree in English from the University of West
-              Yangon, a Postgraduate Diploma and master’s in hospitality
-              management from the University of West London (UK), and an MBA
-              from Ritsumeikan Asia Pacific University (Japan), as well as a
-              third master’s degree in Thailand, our founder understands
-              firsthand the transformative power of education.
+              Through mentoring, skills development, and mindset training, Tr.
+              Pinky aspires to prepare students not only for academic success
+              but also for the global market, helping them grow into confident,
+              capable leaders who can shape the future.
             </p>
           </div>
 
           <div>
             <h1 className="text-[20px] md:text-[24px] lg:text-[32px] font-semibold libre mb-6">
-              Education for All
+              Beyond Books
             </h1>
             <p className="body-text font-medium letter-spacing-[2px]">
-              Beyond personal achievements, we are deeply committed to ensuring
-              that education is accessible to everyone—whether students choose
-              academic pathways with scholarships or vocational training. The
-              belief is simple yet powerful: learning should be continuous,
-              inclusive, and adaptable to every culture.
+              For me, education isn’t just about books, it’s about learning from
+              community, growth, and creating opportunities. That’s why I
+              dedicate myself to supporting young learners, sharing my
+              experiences no matter where they come from or where they’re going.
             </p>
           </div>
         </div>

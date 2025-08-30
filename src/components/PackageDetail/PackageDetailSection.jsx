@@ -126,7 +126,7 @@ const serviceData = [
   {
     id: 2,
     image: service2,
-    title: "FuNglish German Class for Young Learners – 2nd Batch",
+    title: "IELTS Preparation + Scholarship Mentoring Program",
     text: (
       <div className="">
         <p>
@@ -327,7 +327,7 @@ const serviceData = [
   {
     id: 4,
     image: service4,
-    title: "FuNglish IELTS Class – Achieve a High Band Score",
+    title: "IELTS Germany or Austria Packcage",
     text: (
       <div className="">
         <p>
@@ -391,7 +391,7 @@ const serviceData = [
   {
     id: 5,
     image: service5,
-    title: "FuNglish IELTS Class – Achieve a High Band Score",
+    title: "IELTS Or Duolingo Package",
     text: (
       <div className="">
         <p>

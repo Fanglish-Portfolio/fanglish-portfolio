@@ -21,7 +21,7 @@ import blog6 from "../../assets/image/home/blog/blog6.png";
 import blog7 from "../../assets/image/home/blog/blog7.png";
 import { useNavigate } from "react-router-dom";
 
-const Blog = ({ id }) => {
+const BlogSection = ({ id }) => {
   const navigate = useNavigate();
   const services = [
     {
@@ -39,28 +39,29 @@ const Blog = ({ id }) => {
       title: "About Goethe Exam",
       image: blog3,
     },
-    {
-      id: 4,
-      title:
-        "Word Power Unleashed: English Skill with FuNglish's Vocab Amplifier Class",
-      image: blog4,
-    },
-    {
-      id: 5,
-      title:
-        "Boost Your English Speaking Skill With FuNglish's Step Up Speaking For Conversation Class (Dec 20)",
-      image: blog5,
-    },
-    {
-      id: 6,
-      title: "Little Learners လေးတွေ အတွက် FuNglish ရဲ့ German Class-2nd Batch",
-      image: blog6,
-    },
-    {
-      id: 7,
-      title: "Chevening Scholarship",
-      image: blog7,
-    },
+    // {
+    //   id: 4,
+    //   title:
+    //     "Word Power Unleashed: English Skill with FuNglish's Vocab Amplifier Class",
+    //   image: blog4,
+    // },
+    // {
+    //   id: 5,
+    //   title:
+    //     "𝐁𝐨𝐨𝐬𝐭 𝐘𝐨𝐮𝐫 𝐄𝐧𝐠𝐥𝐢𝐬𝐡 𝐒𝐩𝐞𝐚𝐤𝐢𝐧𝐠 𝐒𝐤𝐢𝐥𝐥 𝐖𝐢𝐭𝐡 𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡'𝐬 𝐒𝐭𝐞𝐩-𝐔𝐩 𝐒𝐩𝐞𝐚𝐤𝐢𝐧𝐠 𝐅𝐨𝐫 𝐂𝐨𝐧𝐯𝐞𝐫𝐬𝐚𝐭𝐢𝐨𝐧 𝐂𝐥𝐚𝐬𝐬 (Dec 20)",
+    //   image: blog5,
+    // },
+    // {
+    //   id: 6,
+    //   title:
+    //     "𝐋𝐢𝐭𝐭𝐥𝐞 𝐋𝐞𝐚𝐫𝐧𝐞𝐫𝐬 လေးတွေ အတွက် 𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡 ရဲ့𝐆𝐞𝐫𝐦𝐚𝐧 𝐂𝐥𝐚𝐬𝐬-𝟐𝐧𝐝 𝐁𝐚𝐭𝐜𝐡(no starting date)",
+    //   image: blog6,
+    // },
+    // {
+    //   id: 7,
+    //   title: "Chevening Scholarship",
+    //   image: blog7,
+    // },
   ];
 
   const filteredServices = services.filter((service) => service.id != id);
@@ -69,7 +70,10 @@ const Blog = ({ id }) => {
     <section>
       <div className="containers">
         {/* Section Header */}
-        <h2 className="header-text mb-12">Our Blogs</h2>
+        <div className="flex items-center justify-between mb-12">
+          <h2 className="header-text">Our Blogs</h2>
+          <button className="button">View Other Blogs</button>
+        </div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -111,4 +115,4 @@ const Blog = ({ id }) => {
   );
 };
 
-export default Blog;
+export default BlogSection;

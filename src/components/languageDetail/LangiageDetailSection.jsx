@@ -61,6 +61,7 @@ const serviceData = [
             <li>Days: Monday to Thursday</li>
             <li>Duration: 2 hours per day, 4 days per week</li>
             <li>Time: 8:30 PM – 10:30 PM</li>
+            <li>Start Date: 16th September 2025</li>
           </ul>
         </div>
 
@@ -200,6 +201,7 @@ const serviceData = [
         <div className="mb-6">
           <h1 className="font-semibold text-primary">Class Details:</h1>
           <ul>
+            <li>Start Date: 11th August 2025</li>
             <li>Duration: 1 months</li>
             <li>Mode: Online</li>
             <li>Class Size: Limited to ensure personalized attention</li>

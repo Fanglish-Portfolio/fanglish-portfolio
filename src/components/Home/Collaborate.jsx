@@ -25,7 +25,7 @@ const Collaborate = () => {
             <Number n={1500} /> +
           </p>
           <h3 className="text-[16px] md:text-[24px] font-semibold">
-            Students Get <br /> Our Servivces
+            Students Get <br /> Our Services
           </h3>
         </div>
 

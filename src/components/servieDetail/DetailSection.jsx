@@ -18,93 +18,65 @@ const serviceData = [
       <div>
         {/* Title */}
         <h1>
-          Dream Big, Apply Smarter - Unlock Your Future with Fulbright’s Dual
-          Track Package
+          Personalized one-on-one guidance for students and working
+          professionals
         </h1>
 
         {/* Intro */}
         <p>
-          Are you concerned about the declining U.S. F-1 visa approval rates and
-          worried about relying on only one country?
+          Interest in Germany and Austria is rising among students and
+          professionals seeking high-quality education and strong career
+          pathways. Whether you plan to apply to a university or pursue a work
+          route, FuNglish helps you prepare the right documents, timelines, and
+          strategy—efficiently and confidently.
         </p>
+        <p>For Students: University Applications</p>
+        <p>Academic background and program fit</p>
+        <p>Application timelines and required documents</p>
+        <p>Budget planning (tuition, living costs, insurance, etc.)</p>
         <p>
-          Do you feel uncertain whether German universities will accept your
-          academic background?
-        </p>
-        <p>
-          Are you interested in studying in the UK but unsure how to begin the
-          application process?
-        </p>
-        <p>
-          Do you fear wasting both time and money if one country rejects your
-          application and you have to start over in another?
-        </p>
-        <p>
-          Fulbright’s Dual Track Package is designed to take these challenges
-          head-on.
+          We help you shortlist suitable programs and build a realistic,
+          step-by-step plan to submit competitive applications.
         </p>
 
         {/* Section Header */}
-        <h2 className="">What is the Dual Track Package?</h2>
+        <h2 className="">For Working Professionals: Career Pathways</h2>
         <p>
-          The Dual Track Package allows you to apply to two countries at the
-          same time—U.S., Germany, and the UK (any two of your choice). This
-          means fewer risks, more opportunities, and greater chances of success.
+          Germany, in particular, provides attractive options such as Ausbildung
+          and the Opportunity Card. Choosing the right route depends on:
         </p>
 
         {/* Package details */}
-        <h3 className="">If you apply for Germany</h3>
-        <p>Fulbright will also apply to the UK for you free of charge.</p>
-
-        <h3 className="">If you apply for the U.S.</h3>
-        <p>Fulbright will also apply to the UK for you free of charge.</p>
-
+        <h3 className="">Eligibility criteria for your field</h3>
+        <p>Your education level and work experience</p>
+        <p>Language expectations and documentation</p>
         <p>
-          You only need to pay tuition fees for the U.S. and Germany
-          applications. The UK application fee is waived. This saves you money
-          while doubling your chances of success.
+          You’ll receive guidance on which path best matches your profile—and
+          what to prepare next.
+        </p>
+        <p>One-on-One Consultation with Tr. Pinky (Founder)</p>
+        <p>
+          A structured session designed to clarify your pathway and save time
+          and costs.
+        </p>
+
+        <h3 className="">What you’ll get</h3>
+        <p>Up to 45 minutes of tailored advice</p>
+
+        <p>Review of your academic/work background</p>
+        <p>A clear pathway recommendation (study or work)</p>
+        <p>
+          A prioritized preparation checklist (documents, timeline, next steps)
         </p>
 
         {/* Benefits */}
-        <h2 className="">Benefits of the Dual Track Package:</h2>
+        <h2 className="">Why FuNglish</h2>
         <ul className="list-disc pl-6 space-y-2">
-          <li>
-            No extra tuition fees—you only pay for the first application
-            country.
-          </li>
-          <li>
-            Double your chances of acceptance by applying to two countries
-            simultaneously.
-          </li>
-          <li>Increase your backup options in case of visa rejection.</li>
-          <li>
-            Seamless process handled by Fulbright’s experienced counselors.
-          </li>
-          <li>
-            Free UK application processed professionally without additional
-            charges.
-          </li>
+          <li>Clear, structured planning from the first conversation</li>
+          <li>Program and pathway matching based on your profile</li>
+          <li>Cost- and time-efficient guidance</li>
+          <li>Experience with Germany and Austria application ecosystems</li>
         </ul>
-
-        {/* Call to Action */}
-        <p>
-          If you are planning to apply to a university in the U.S. or Germany,
-          don’t waste a crucial chance. Enroll now in Fulbright’s Dual Track
-          Package to secure your academic future.
-        </p>
-
-        <p>
-          With Fulbright, you’re always one step ahead in your application
-          journey.
-        </p>
-
-        {/* Extra */}
-        <p className="">
-          In addition, Fulbright offers specialized attention for students
-          preparing to study abroad.
-        </p>
-
-        <p>Includes: IELTS Class led by a British Council examiner.</p>
       </div>
     ),
   },
@@ -120,7 +92,7 @@ const serviceData = [
     title: "Ausbildung",
     text: (
       <div>
-        <div className="flex justify-center">
+        <div className="flex justify-center mb-8">
           <iframe
             width="560"
             height="315"
@@ -281,7 +253,7 @@ const serviceData = [
     title: "Duales Stadium Program",
     text: (
       <div>
-        <div className="flex justify-center">
+        <div className="flex justify-center mb-8">
           <iframe
             width="560"
             height="315"

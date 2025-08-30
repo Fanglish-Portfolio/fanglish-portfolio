@@ -28,7 +28,7 @@ const classes = [
   },
   {
     id: 2,
-    title: "German Language A1 to C2 Intensive Clasee ",
+    title: "German Language A1 to C2 Intensive Classes ",
     image: language2,
     icon: <Languages className="w-6 h-6" />,
     type: "German",

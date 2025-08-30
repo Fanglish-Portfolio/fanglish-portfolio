@@ -425,7 +425,8 @@ const serviceData = [
   {
     id: 4,
     image: service4,
-    title: "Upgrade your Academic   English Skill with FuNglilsh ",
+    title:
+      "Word Power Unleashed: English Skill with FuNglish's Vocab Amplifier Class",
     text: (
       <div className="space-y-4">
         {/* Main title/banner */}
@@ -955,7 +956,7 @@ function BlogDetailSection({ id }) {
               }}
             >
               {/* <div className="absolute top-1/2 transform -translate-y-1/2 left-1/2 -translate-x-1/2 md:left-14 md:-translate-x-0 z-10 "> */}
-              <div className="flex flex-col md:flex-row gap-4 md:gap-12 max-w-md justify-center items-center ">
+              <div className="flex flex-col md:flex-row gap-4 md:gap-12 justify-center items-center ">
                 <img
                   src={service.image}
                   alt="service1"

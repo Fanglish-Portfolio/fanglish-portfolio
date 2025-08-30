@@ -4,7 +4,7 @@ import MiddleSection from "../components/Home/MiddleSection";
 import ServicesSection from "../components/Home/ServiceSection";
 import LanguageClassCarousel from "../components/Home/LanguageClassCarousel";
 import Testimonials from "../components/Home/Testmonial";
-import Blog from "../components/Home/Blog";
+import BlogSection from "../components/Home/BlogSection";
 import PackageCarousel from "../components/Home/PackageCarousel";
 
 function Home() {
@@ -16,7 +16,7 @@ function Home() {
       <PackageCarousel />
       <LanguageClassCarousel />
       <Testimonials />
-      <Blog />
+      <BlogSection />
       <MiddleSection />
     </div>
   );
