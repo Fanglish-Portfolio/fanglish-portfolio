@@ -27,6 +27,7 @@ const testimonials = [
     quote:
       "With their All-in-One Service,I didn’t have to worry about anything— from documents to interview prep. I was accepted as a Bachelor of Environmental Science major, and with my GPA 5 and Honors Student background, my case was successfully approved at the U.S. Embassy in Cambodia. I’m so grateful for their guidance and support every step of the way!",
     hasVideo: true,
+    link: "https://youtu.be/-em9-zEpBr0?si=u8u3QA8TIL1Aws04",
   },
   {
     id: 2,
@@ -35,6 +36,7 @@ const testimonials = [
     quote:
       " After three failed attempts, I finally got approved on my 4th try at the U.S. Embassy in Rangoon with the help of FuNglish and Tr. Pinky, who supported me every step of the way. Now I’m proudly studying at East Los Angeles College in the U.S.!”",
     hasVideo: true,
+    link: "https://youtu.be/-em9-zEpBr0?si=u8u3QA8TIL1Aws04",
   },
   {
     id: 3,
@@ -43,6 +45,7 @@ const testimonials = [
     quote:
       "My case was successfully approved at the U.S. Embassy in Rangoon just before . I’m now a student in the U.S!”",
     hasVideo: true,
+    link: "https://youtu.be/NBqqCcVKkOY?si=NkXlnqs-4ssrR_UM",
   },
   {
     id: 4,
@@ -51,6 +54,7 @@ const testimonials = [
     quote:
       "I got my U.S. visa approved at the Chiang Mai Embassy with FuNglish’s All-in-One Service. Their support made everything simple and stress-free, and now I’m studying at Los Angeles City College!",
     hasVideo: true,
+    link: "https://youtu.be/b98iBOzP5x4?si=rp3CXxVduzSpLRN4",
   },
   {
     id: 5,
@@ -60,6 +64,7 @@ const testimonials = [
     quote:
       "With FuNglish’s All-in-One Service. Tr.Pinky and the team guided me through every step and never gave up on me. Now I’m so excited to start my journey at Mt. San Antonio College!",
     hasVideo: true,
+    link: "https://youtu.be/2aKCtzWcTEc?si=XDJzj04c0iMuqg0J",
   },
   {
     id: 6,
@@ -69,6 +74,7 @@ const testimonials = [
     quote:
       "I can’t believe I’m achieveing my dreams to study in the U.S Borough of Manhattan College—thank you FuNglish for helping my dreams of studying in the U.S.",
     hasVideo: true,
+    link: "https://fb.watch/BAXYAXSBes/?",
   },
 ];
 

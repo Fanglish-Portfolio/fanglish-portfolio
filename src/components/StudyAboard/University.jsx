@@ -34,6 +34,7 @@ import uni28 from "./../../assets/image/university/schoolImage/uk/ukUni7.png";
 import uni29 from "./../../assets/image/university/schoolImage/uk/ukUni8.png";
 import uni30 from "./../../assets/image/university/schoolImage/uk/ukUni9.png";
 import uni31 from "./../../assets/image/university/schoolImage/uk/ukUni10.png";
+import uni117 from "./../../assets/image/university/schoolImage/uk/ukUni.png";
 
 import uni32 from "./../../assets/image/university/schoolImage/germany/GerUni1.png";
 import uni33 from "./../../assets/image/university/schoolImage/germany/GerUni2.png";
@@ -63,6 +64,7 @@ function University({ country }) {
           logo: uni1,
           backgroundColor: "bg-white",
           type: "university",
+          link: "https://www.weber.edu/map",
         },
         {
           id: 2,
@@ -70,6 +72,7 @@ function University({ country }) {
           logo: uni2,
           backgroundColor: "bg-red-700",
           type: "university",
+          link: "https://www.ltu.edu/",
         },
         {
           id: 3,
@@ -77,6 +80,7 @@ function University({ country }) {
           logo: uni3,
           backgroundColor: "bg-white",
           type: "university",
+          link: "https://www.txst.edu/",
         },
         {
           id: 4,
@@ -91,6 +95,7 @@ function University({ country }) {
           logo: uni5,
           backgroundColor: "bg-white",
           type: "university",
+          link: "https://www.sjsu.edu/",
         },
         {
           id: 9,
@@ -98,6 +103,7 @@ function University({ country }) {
           logo: uni10,
           backgroundColor: "bg-white",
           type: "college",
+          link: "https://www.deanza.edu/",
         },
         {
           id: 10,
@@ -105,6 +111,7 @@ function University({ country }) {
           logo: uni11,
           backgroundColor: "bg-white",
           type: "college",
+          link: "https://www.ohlone.edu/",
         },
         {
           id: 11,
@@ -112,6 +119,7 @@ function University({ country }) {
           logo: uni12,
           backgroundColor: "bg-white",
           type: "college",
+          link: "https://orangecoastcollege.edu/",
         },
         {
           id: 12,
@@ -119,6 +127,7 @@ function University({ country }) {
           logo: uni13,
           backgroundColor: "bg-white",
           type: "college",
+          link: "https://skylinecollege.edu/",
         },
 
         {
@@ -127,6 +136,7 @@ function University({ country }) {
           logo: uni15,
           backgroundColor: "bg-white",
           type: "college",
+          link: "https://www.hccs.edu/",
         },
         {
           id: 15,
@@ -134,13 +144,15 @@ function University({ country }) {
           logo: uni16,
           backgroundColor: "bg-white",
           type: "college",
+          link: "https://www.smc.edu/",
         },
         {
           id: 16,
-          name: "San Jose State University",
+          name: " East Los Angeles College",
           logo: uni17,
           backgroundColor: "bg-white",
           type: "college",
+          link: "https://www.elac.edu/",
         },
         {
           id: 17,
@@ -148,6 +160,7 @@ function University({ country }) {
           logo: uni18,
           backgroundColor: "bg-white",
           type: "college",
+          link: "https://www.lacc.edu/",
         },
         {
           id: 18,
@@ -155,6 +168,7 @@ function University({ country }) {
           logo: uni19,
           backgroundColor: "bg-white",
           type: "college",
+          link: "https://www.qc.cuny.edu/",
         },
         {
           id: 19,
@@ -162,6 +176,7 @@ function University({ country }) {
           logo: uni20,
           backgroundColor: "bg-white",
           type: "college",
+          link: "https://www.mtsac.edu/",
         },
         {
           id: 20,
@@ -169,6 +184,7 @@ function University({ country }) {
           logo: uni21,
           backgroundColor: "Borough of Manhattan Community College, CUNY",
           type: "college",
+          link: "https://www.bmcc.cuny.edu/",
         },
       ],
     },
@@ -178,11 +194,20 @@ function University({ country }) {
       flag: flag1,
       universities: [
         {
+          id: 117,
+          name: "University Of Bristo",
+          logo: uni117,
+          backgroundColor: "bg-blue-900",
+          type: "university",
+          link: "https://www.bristol.ac.uk/",
+        },
+        {
           id: 17,
           name: "University of Edinbrugh",
           logo: uni22,
           backgroundColor: "bg-blue-900",
           type: "university",
+          link: "https://www.ed.ac.uk/",
         },
         {
           id: 18,
@@ -190,6 +215,7 @@ function University({ country }) {
           logo: uni23,
           backgroundColor: "bg-blue-900",
           type: "university",
+          link: "https://www.birmingham.ac.uk/",
         },
         {
           id: 19,
@@ -197,6 +223,7 @@ function University({ country }) {
           logo: uni24,
           backgroundColor: "bg-blue-900",
           type: "university",
+          link: "https://www.southampton.ac.uk/",
         },
         {
           id: 20,
@@ -204,6 +231,7 @@ function University({ country }) {
           logo: uni25,
           backgroundColor: "bg-blue-900",
           type: "university",
+          link: "https://www.mmu.ac.uk/",
         },
         {
           id: 21,
@@ -211,6 +239,7 @@ function University({ country }) {
           logo: uni26,
           backgroundColor: "bg-blue-900",
           type: "university",
+          link: "https://www.herts.ac.uk/",
         },
         {
           id: 22,
@@ -218,6 +247,7 @@ function University({ country }) {
           logo: uni27,
           backgroundColor: "bg-blue-900",
           type: "university",
+          link: "https://www.essex.ac.uk/",
         },
         {
           id: 23,
@@ -225,6 +255,7 @@ function University({ country }) {
           logo: uni28,
           backgroundColor: "bg-blue-900",
           type: "university",
+          link: "https://www.sussex.ac.uk/",
         },
         {
           id: 24,
@@ -232,6 +263,7 @@ function University({ country }) {
           logo: uni29,
           backgroundColor: "bg-blue-900",
           type: "university",
+          link: "https://www.leeds.ac.uk/",
         },
         {
           id: 25,
@@ -239,6 +271,7 @@ function University({ country }) {
           logo: uni30,
           backgroundColor: "bg-blue-900",
           type: "university",
+          link: "https://www.gla.ac.uk/",
         },
         {
           id: 26,
@@ -246,6 +279,7 @@ function University({ country }) {
           logo: uni31,
           backgroundColor: "bg-blue-900",
           type: "university",
+          link: "https://www.london.ac.uk/",
         },
       ],
     },
@@ -260,6 +294,7 @@ function University({ country }) {
           logo: uni32,
           backgroundColor: "bg-blue-600",
           type: "university",
+          link: "https://www.hs-bremen.de/en/study/before/step-by-step-to-university  ",
         },
         {
           id: 28,
@@ -267,6 +302,7 @@ function University({ country }) {
           logo: uni33,
           backgroundColor: "bg-red-600",
           type: "university",
+          link: "https://www.hs-nordhausen.de/en/",
         },
         {
           id: 29,
@@ -274,6 +310,7 @@ function University({ country }) {
           logo: uni34,
           backgroundColor: "bg-green-600",
           type: "university",
+          link: "https://hm.edu/en/index.en.html",
         },
         {
           id: 30,
@@ -281,6 +318,7 @@ function University({ country }) {
           logo: uni35,
           backgroundColor: "bg-blue-700",
           type: "university",
+          link: "https://ec.dit.edu/why-study-at-dit",
         },
         {
           id: 31,
@@ -288,6 +326,7 @@ function University({ country }) {
           logo: uni36,
           backgroundColor: "bg-red-700",
           type: "university",
+          link: "https://www.th-koeln.de/en/homepage_26.php",
         },
       ],
     },
@@ -302,6 +341,7 @@ function University({ country }) {
           logo: uni37,
           backgroundColor: "bg-blue-800",
           type: "university",
+          link: "https://fh-ooe.at/en",
         },
         {
           id: 33,
@@ -309,6 +349,7 @@ function University({ country }) {
           logo: uni38,
           backgroundColor: "bg-red-600",
           type: "university",
+          link: "https://www.univie.ac.at/en/",
         },
         {
           id: 34,
@@ -316,6 +357,7 @@ function University({ country }) {
           logo: uni39,
           backgroundColor: "bg-green-700",
           type: "university",
+          link: "https://www.uni-graz.at/en/",
         },
         {
           id: 35,
@@ -323,6 +365,7 @@ function University({ country }) {
           logo: uni40,
           backgroundColor: "bg-purple-600",
           type: "university",
+          link: "https://hochschule-burgenland.at/en/",
         },
       ],
     },
@@ -497,7 +540,10 @@ function University({ country }) {
                           </h3>
                         </div>
 
-                        <button className="bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300">
+                        <button
+                          onClick={() => window.open(university.link, "_blank")}
+                          className="bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300"
+                        >
                           View University
                         </button>
                       </div>

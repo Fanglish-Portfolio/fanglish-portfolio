@@ -26,8 +26,8 @@ const Footer = () => {
         <div className="w-full lg:w-1/3">
           <div className="flex items-center gap-2">
             <img src={logo} alt="logo" width={32} height={32} />
-            <p className="text-[16px] font-medium text-primary">
-              FuNglish Global
+            <p className="text-[18px] font-medium text-primary">
+              FuNglish Global Max
             </p>
           </div>
           <div className="flex w-full text-[8px] font-medium gap-2 mt-2">
@@ -38,9 +38,26 @@ const Footer = () => {
             <span>Professional Development</span>
           </div>
           <div className="flex gap-8 text-white cursor-pointer mt-8">
-            <FaFacebook size={24} />
-            <FaLinkedin size={24} />
-            <FaTiktok size={24} />
+            <FaFacebook
+              size={24}
+              onClick={() =>
+                window.open("https://www.facebook.com/FunglishMyanmar?")
+              }
+            />
+            <FaLinkedin
+              size={24}
+              onClick={() =>
+                window.open("https://www.linkedin.com/company/funglishmm/")
+              }
+            />
+            <FaTiktok
+              size={24}
+              onClick={() =>
+                window.open(
+                  "https://www.tiktok.com/@pinky.htut?_=8sTrsfrO1lo&_r=1"
+                )
+              }
+            />
           </div>
         </div>
         <div className="w-full grid grid-cols-1 lg:grid-cols-4 gap-2 mt-10 lg:mt-0 space-y-10 lg:space-y-0">

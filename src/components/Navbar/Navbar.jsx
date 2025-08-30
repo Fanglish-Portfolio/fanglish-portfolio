@@ -81,7 +81,7 @@ const Navbar = () => {
           <div className="flex items-center gap-2">
             <img src={logo} alt="logo" width={32} height={32} />
             <p className="text-[16px] font-medium text-primary">
-              FuNglish Global
+              FuNglish Global Max
             </p>
           </div>
         </Link>
