@@ -180,9 +180,9 @@ function University({ country }) {
         },
         {
           id: 20,
-          name: "Mt. San Antonio College",
+          name: "Borough of Manhattan Community College, CUNY",
           logo: uni21,
-          backgroundColor: "Borough of Manhattan Community College, CUNY",
+          backgroundColor: "bg-white",
           type: "college",
           link: "https://www.bmcc.cuny.edu/",
         },
@@ -507,7 +507,7 @@ function University({ country }) {
                   disabled={selectedCountry !== "us"}
                   onClick={() => setSelectedType("college")}
                 >
-                  Collage
+                  College
                 </button>
               </div>
             )}
