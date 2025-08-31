@@ -6,6 +6,7 @@ import language1 from "./../../assets/image/home/languageClass/language1.png";
 import language2 from "./../../assets/image/home/languageClass/language2.png";
 import language3 from "./../../assets/image/home/languageClass/language3.png";
 import language4 from "./../../assets/image/home/languageClass/language4.png";
+import service7 from "../../assets/image/service/service/service7.png";
 // Import Swiper modules
 import { Navigation, Pagination } from "swiper/modules";
 import { useState } from "react";
@@ -17,6 +18,7 @@ import "swiper/css/pagination";
 
 import { ChevronLeft, ChevronRight, Languages } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { MdOutlineHotelClass } from "react-icons/md";
 
 const classes = [
   {
@@ -47,15 +49,24 @@ const classes = [
     icon: <Languages className="w-6 h-6" />,
     type: "IELTS",
   },
+  {
+    id: 7,
+    title: "6 Months To The Max",
+    image: service7,
+    icon: <MdOutlineHotelClass className="w-6 h-6" />,
+    type: "IELTS",
+  },
 ];
 
-export default function LanguageClassCarousel() {
+export default function LanguageClassCarousel({ id }) {
   const swiperRef = useRef(null);
   const navigate = useNavigate();
 
   const [activeType, setActiveType] = useState("IELTS");
 
-  const filteredClasses = classes.filter(
+  const idremoveClass = classes.filter((service) => service.id != id);
+
+  const filteredClasses = idremoveClass.filter(
     (service) => service.type === activeType
   );
 
@@ -110,7 +121,7 @@ export default function LanguageClassCarousel() {
                   : "text-primary"
               }`}
             >
-              IELTS
+              English
             </button>
             <button
               onClick={() => setActiveType("German")}

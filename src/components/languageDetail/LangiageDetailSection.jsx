@@ -4,6 +4,8 @@ import service2 from "../../assets/image/home/languageClass/language2.png";
 import service3 from "../../assets/image/home/languageClass/language3.png";
 import service4 from "../../assets/image/home/languageClass/language4.png";
 
+import service7 from "../../assets/image/service/service/service7.png";
+
 import bg from "../../assets/image/Pattern-6.png";
 
 const serviceData = [
@@ -267,6 +269,133 @@ const serviceData = [
           For more details about the IELTS Class, please contact us via FuNglish
           Page Messenger.
         </p>
+      </div>
+    ),
+  },
+  {
+    id: 7,
+    image: service7,
+    title: "6 Months To The Max",
+    text: (
+      <div>
+        {/* Main content container with consistent spacing */}
+        <div className="space-y-4">
+          <h1 className="text-xl font-semibold text-yellow-600 mb-6">
+            6-Months-to-the-Max: 3-in-1 English Class Package
+          </h1>
+
+          <p>
+            Are you struggling with fluency, grammar, or confidence when
+            speaking English? Do you want to prepare for studying or working
+            abroad with strong language skills?
+          </p>
+          <p>
+            FuNglish offers the “6-Months-to-the-Max” Power Skills Series – a
+            structured 3-in-1 package designed to take you from building
+            vocabulary and mastering grammar to achieving fluency in
+            conversation.
+          </p>
+          <p>
+            Unlike general English classes, this program focuses on practical
+            communication skills, using a detailed syllabus and step-by-step
+            learning across three interconnected classes.
+          </p>
+
+          <h2 className="font-bold text-lg mt-4">
+            1. Vocabulary Amplifier Class
+          </h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              Designed for students, professionals, and anyone who wants to
+              expand vocabulary for daily life and the workplace.
+            </li>
+            <li>
+              Learn practical vocabulary through bite-sized lessons and
+              interactive activities.
+            </li>
+            <li>
+              Improve your word choice for everyday communication and academic
+              or professional use.
+            </li>
+          </ul>
+          <h3 className="font-semibold mt-2">Class Information</h3>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Start Date: 17th August 2025</li>
+            <li>Duration: 2 months</li>
+            <li>Schedule: Saturday & Sunday, 8:30 – 10:00 PM (MMT)</li>
+          </ul>
+
+          <h2 className="font-bold text-lg mt-4">2. Grammar Monster Series</h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              Ideal for learners who want to build a strong grammar foundation
+              for both communication and exams.
+            </li>
+            <li>Master grammar from the basics to advanced use.</li>
+            <li>Strengthen daily communication and academic writing.</li>
+            <li>
+              Suitable for IGCSE, GED, IELTS, Duolingo, and other test
+              preparation.
+            </li>
+          </ul>
+          <h3 className="font-semibold mt-2">Class Information</h3>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Start Date: 17th October 2025</li>
+            <li>Duration: 2 months</li>
+            <li>Schedule: Monday & Friday, 8:00 – 9:30 PM (MMT)</li>
+          </ul>
+
+          <h2 className="font-bold text-lg mt-4">
+            3. Step-Up Speaking for Conversation Skills
+          </h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              Aimed at learners who already have a grammar and vocabulary
+              foundation.
+            </li>
+            <li>
+              Develop fluency and confidence through real-life conversations.
+            </li>
+            <li>Practice weekly themes and interactive speaking activities.</li>
+            <li>
+              Classes are taught by both local and native teachers for balanced
+              learning.
+            </li>
+          </ul>
+          <h3 className="font-semibold mt-2">Class Information</h3>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Start Date: 20th December 2025</li>
+            <li>Duration: 2 months</li>
+          </ul>
+          <h3 className="font-semibold mt-2">Entry Requirements</h3>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Students must take a level test before joining.</li>
+            <li>
+              Only Pre-Intermediate level and above are eligible for enrollment.
+            </li>
+          </ul>
+
+          <h2 className="font-bold text-lg mt-4">
+            Flexible Options & Discounts
+          </h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Join a single class or the full 3-in-1 package.</li>
+            <li>
+              Special promotional discounts are available for students who
+              register for the full package.
+            </li>
+          </ul>
+
+          <h2 className="font-bold text-lg mt-4">Why Choose FuNglish?</h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              Structured program covering vocabulary, grammar, and speaking.
+            </li>
+            <li>Practical, real-life communication focus.</li>
+            <li>Taught by both local and native teachers.</li>
+            <li>Affordable pricing with fast results.</li>
+          </ul>
+        </div>
       </div>
     ),
   },

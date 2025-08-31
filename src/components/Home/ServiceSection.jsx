@@ -19,7 +19,6 @@ import service3 from "../../assets/image/service/service/service3.png";
 import service4 from "../../assets/image/service/service/service4.png";
 import service5 from "../../assets/image/service/service/service5.png";
 import service6 from "../../assets/image/service/service/service6.png";
-import service7 from "../../assets/image/service/service/service7.png";
 
 const services = [
   {
@@ -74,13 +73,6 @@ const services = [
     ),
     link: "/study-abroad/us",
   },
-  // {
-  //   id: 7,
-  //   title: "6 Months To The Max",
-  //   image: service7,
-  //   icon: <MdOutlineHotelClass className="w-6 h-6" />,
-  //   link: "/service-detail/7",
-  // },
 ];
 
 import { useNavigate } from "react-router-dom";
