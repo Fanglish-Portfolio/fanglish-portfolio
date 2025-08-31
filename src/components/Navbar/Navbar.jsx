@@ -43,7 +43,7 @@ const Navbar = () => {
       link: "/service-detail/4",
     },
     {
-      name: "Duales Stadium",
+      name: "Duales Studium",
       icon: <MdOutlineSchool />,
       link: "/service-detail/5",
     },
@@ -452,6 +452,18 @@ const Navbar = () => {
                   >
                     <img src={flag3} alt="flag" />
                     Study in Austria
+                  </NavLink>
+                  <NavLink
+                    to="/study-abroad/dubai"
+                    onClick={() => {
+                      setIsStudyAbroadOpen(!isStudyAbroadOpen);
+                      setIsServicesOpen(false);
+                      isOpen(false);
+                    }}
+                    className="text-[14px] hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-2 text-gray-800 hover:bg-gray-50 transition-colors"
+                  >
+                    <img src={flag4} alt="flag" />
+                    Study in Dubai
                   </NavLink>
                 </div>
               )}

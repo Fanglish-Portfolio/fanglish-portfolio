@@ -21,16 +21,16 @@ export default function CalendySection() {
       <div className="w-full relative">
         {/* CTA section */}
         <div className="bg-primary flex flex-col text-black gap-4 pt-20 items-center h-[650px]">
-          <h1 className="text-[48px] font-bold libre mt-28">
+          <h1 className="text-[28px] md:text-[38px] lg:text-[48px] font-bold libre mt-28">
             Start Your Dream With Us!
           </h1>
-          <p className="text-[32px] text-center font-semibold">
+          <p className="text-[20px] md:text-[24px] lg:text-[32px] max-w-[600px] text-center font-semibold">
             Choose the date below to Consult with our experts to achieve your
             dream of studying abroad.
           </p>
         </div>
         {/* Booking Card */}
-        <div className="overflow-hidden w-full mx-auto absolute top-[400px]">
+        <div className="overflow-hidden w-full mx-auto absolute top-[420px] sm:top-[400px]">
           {/* Calendly Embed Container */}
           <div className="">
             <div

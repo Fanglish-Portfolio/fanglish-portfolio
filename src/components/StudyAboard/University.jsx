@@ -406,7 +406,7 @@ function University({ country }) {
     <section className="containers">
       <div className="mt-20"></div>
       <h1 className="header-text mb-10">Study Abroad</h1>
-      <div className="min-h-screen">
+      <div className="">
         <div className="lg:hidden mb-6 px-6 bg-[#1a1a1a] py-5 sticky top-[80px] z-10">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

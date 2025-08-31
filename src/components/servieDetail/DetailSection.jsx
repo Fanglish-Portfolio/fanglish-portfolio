@@ -315,7 +315,7 @@ const serviceData = [
   {
     id: 5,
     image: service5,
-    title: "Duales Stadium Program",
+    title: "Duales Studium Program",
     text: (
       <div>
         <div className="flex justify-center mb-8">

@@ -103,6 +103,14 @@ const Footer = () => {
                     Blogs
                   </li>
                 )}
+                {location.pathname !== "/package" && (
+                  <li
+                    onClick={() => handleRoute("/package")}
+                    className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
+                  >
+                    Package
+                  </li>
+                )}
                 {/* <li
                   onClick={() => handleRoute("/service")}
                   className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"

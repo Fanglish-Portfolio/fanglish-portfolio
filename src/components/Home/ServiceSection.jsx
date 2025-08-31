@@ -52,7 +52,7 @@ const services = [
   },
   {
     id: 5,
-    title: "Duales Stadium",
+    title: "Duales Studium",
     image: service5,
     icon: <MdOutlineSchool className="w-6 h-6" />,
     link: "/service-detail/5",
