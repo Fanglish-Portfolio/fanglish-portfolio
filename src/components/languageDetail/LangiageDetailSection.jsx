@@ -173,7 +173,7 @@ const serviceData = [
   {
     id: 3,
     image: service3,
-    title: "English Language Class",
+    title: "FuNglish Duolingo Intensive Class",
     text: (
       <div className="">
         <p>
@@ -275,7 +275,7 @@ const serviceData = [
   {
     id: 7,
     image: service7,
-    title: "6 Months To The Max",
+    title: "6-Months-To-The-Max",
     text: (
       <div>
         {/* Main content container with consistent spacing */}

@@ -37,7 +37,7 @@ const classes = [
   },
   {
     id: 3,
-    title: "English Language Class",
+    title: "FuNglish Duolingo Intensive Class",
     image: language3,
     icon: <Languages className="w-6 h-6" />,
     type: "IELTS",
@@ -51,7 +51,7 @@ const classes = [
   },
   {
     id: 7,
-    title: "6 Months To The Max",
+    title: "6-Months-To-The-Max",
     image: service7,
     icon: <MdOutlineHotelClass className="w-6 h-6" />,
     type: "IELTS",
