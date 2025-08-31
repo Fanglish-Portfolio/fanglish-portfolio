@@ -23,7 +23,7 @@ import { useNavigate } from "react-router-dom";
 const classes = [
   {
     id: 1,
-    title: "Dual Tack Package",
+    title: "Dual Track Package",
     image: package1,
     icon: <MdLibraryBooks className="w-6 h-6" />,
   },
@@ -47,7 +47,7 @@ const classes = [
   },
   {
     id: 5,
-    title: "IELTS Or Duolingo Package",
+    title: "IELTS or Duolingo + UK",
     image: package5,
     icon: <MdLibraryBooks className="w-6 h-6" />,
   },

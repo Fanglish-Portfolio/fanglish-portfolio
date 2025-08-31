@@ -391,7 +391,7 @@ const serviceData = [
   {
     id: 5,
     image: service5,
-    title: "IELTS Or Duolingo Package",
+    title: "IELTS or Duolingo + UK",
     text: (
       <div className="">
         <p>

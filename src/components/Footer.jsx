@@ -9,6 +9,7 @@ import {
   FaTiktok,
   FaViber,
   FaWhatsapp,
+  FaYoutube,
 } from "react-icons/fa";
 
 import { BiPhoneCall } from "react-icons/bi";
@@ -60,6 +61,13 @@ const Footer = () => {
                 window.open(
                   "https://www.tiktok.com/@pinky.htut?_=8sTrsfrO1lo&_r=1"
                 )
+              }
+            />
+            <FaYoutube
+              className="hover:translate-x-2 hover:scale-105 transition duration-300"
+              size={24}
+              onClick={() =>
+                window.open("https://www.youtube.com/@FuNglishtotheMax1")
               }
             />
           </div>
@@ -162,12 +170,12 @@ const Footer = () => {
                 >
                   Study Abroad
                 </li>
-                <li
+                {/* <li
                   onClick={() => handleRoute("/service-detail/7")}
                   className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
                 >
                   6 Months To The Max
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

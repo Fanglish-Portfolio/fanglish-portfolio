@@ -171,7 +171,7 @@ const serviceData = [
   {
     id: 3,
     image: service3,
-    title: "FuNglish Duolingo Intensive Class (Online)",
+    title: "English Language Class",
     text: (
       <div className="">
         <p>

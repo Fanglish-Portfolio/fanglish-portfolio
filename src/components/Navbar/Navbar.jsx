@@ -62,11 +62,11 @@ const Navbar = () => {
       ),
       link: "/study-abroad/us",
     },
-    {
-      name: "6 Months To The Max",
-      icon: <MdOutlineHotelClass />,
-      link: "/service-detail/7",
-    },
+    // {
+    //   name: "6 Months To The Max",
+    //   icon: <MdOutlineHotelClass />,
+    //   link: "/service-detail/7",
+    // },
   ];
 
   const toggleMenu = () => {

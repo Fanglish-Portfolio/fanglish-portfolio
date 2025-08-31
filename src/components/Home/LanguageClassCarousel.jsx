@@ -35,7 +35,7 @@ const classes = [
   },
   {
     id: 3,
-    title: "FuNglish Duolingo Intensive Class",
+    title: "English Language Class",
     image: language3,
     icon: <Languages className="w-6 h-6" />,
     type: "IELTS",

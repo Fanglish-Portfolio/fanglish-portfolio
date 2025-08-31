@@ -171,7 +171,7 @@ export default function Testimonials() {
                               onClick={() =>
                                 window.open(testimonial.link, "_blank")
                               }
-                              className="w-[160px] mt-2 button-outline"
+                              className="md:w-[160px] mt-5 lg:mt-2 button-outline"
                             >
                               Watch Interview
                             </button>

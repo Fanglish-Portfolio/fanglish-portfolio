@@ -26,10 +26,10 @@ const serviceData = [
         </ul>
 
         <p>
-          Fulbright’s{" "}
+          Fulbright’s
           <span className="font-semibold">
             6 months-to-the-Max (3-in-1 Power Series)
-          </span>{" "}
+          </span>
           includes Grammar Monster Class designed to maximize your learning
           results. 💯🔥
         </p>
@@ -40,11 +40,11 @@ const serviceData = [
         </h2>
         <p>
           Grammar Monster is a 6-month structured program designed to strengthen
-          communication, academic, and test grammar foundation. It includes{" "}
+          communication, academic, and test grammar foundation. It includes
           <span className="italic">
             Sentence Structures, Writing Grammar, Professional Communication
             Grammar
-          </span>{" "}
+          </span>
           and also prepares you for exams like IGCSE, GED, IELTS, Duolingo, and
           more.
         </p>
@@ -104,7 +104,7 @@ const serviceData = [
           <p>📞 Viber/Phone No: +959469699721</p>
           <p>📧 Mail: info@fulbright.com</p>
           <p>
-            💬 ChatBox:{" "}
+            💬 ChatBox:
             <a
               href="https://www.facebook.com/messages/t/11363420318764"
               className="text-blue-400 underline"
@@ -197,7 +197,7 @@ const serviceData = [
         <p>☎️ Viber Phone: +66969949572</p>
         <p>📩 Mail: pinky.htut@funglishedu.org</p>
         <p>
-          📫 ChatBox:{" "}
+          📫 ChatBox:
           <a
             href="https://www.facebook.com/messages/t/111653420518784"
             target="_blank"
@@ -214,214 +214,179 @@ const serviceData = [
     image: service3,
     title: "About Goethe Exam",
     text: (
-      <div>
-        <div className="space-y-4">
-          <p className="text-xl font-semibold text-yellow-600 mb-6">
-            ✨ Goethe Exam – ဂျာမန်ဘာသာတက်ရောက်သူတိုင်း သိထားသင့်တဲ့ Exam✨
-          </p>
-
-          <p>
-            Goethe-Zertifikat ဆိုတာက ဂျာမန်ဘာသာစကားကျွမ်းကျင်မှု စမ်းသပ်စာမေးပွဲ
-            ဖြစ်ပြီး၊ Goethe-Institut ကနေ တရားဝင်ထုတ်ပေးတာပါ။
-          </p>
-          <p>
-            အဆင့်တွေက A1, A2, B1, B2, C1, C2 လိုအဆင့်တွေနဲ့ ခွဲထားပြီး ✏️
-            မိမိရဲ့ ဘာသာစကားတတ်ကျွမ်းမှုအဆင့်အလိုက် အဆင့်ဆင့်ဖြေဆိုရမှာ
-            ဖြစ်ပါတယ်။
-          </p>
-
-          <h2 className="font-bold">📌 Goethe Exam မှာ ဘာတွေဖြေရမလဲ❓</h2>
-          <p>📝 စာမေးပွဲ tasks 4 မျိုး ဖြေဆိုရပါမယ်။</p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>
-              Lesen (Reading) 📖 – ပုံမှန်စာပိုဒ်၊ ကြော်ငြာ၊ သတင်းစာစတာကို
-              ဖတ်ပြီး အကြောင်းအရာနားလည်မှုစမ်းသပ်မယ်။
-            </li>
-            <li>
-              Hören (Listening) 🎧 – Audio clips, conversation, announcements
-              တွေနားထောင်ပြီး Test ဖြေရမယ်။
-            </li>
-            <li>
-              Schreiben (Writing) ✍️ – စာအရေးအသားကောင်းမွန်မှု၊
-              စာပေရေးသားမှုဆိုင်ရာ Test အစရှိသဖြင့် တွေဖြေဆိုရမယ်။
-            </li>
-            <li>
-              Sprechen (Speaking) 🗣️ – မိတ်ဆက်ခြင်း၊ အကြောင်းအရာတစ်ခုကို
-              ရှင်းပြခြင်း၊ Topic တစ်ခုခုကို ဆွေးနွေးပြောဆိုခြင်းတို့
-              လုပ်ဆောင်ရပါမယ်။
-            </li>
-          </ul>
-
-          <h2 className="font-bold">📊 အမှတ်ပေးစည်းမျဥ်း (Marking System)</h2>
-          <p>စုစုပေါင်း 100 marks</p>
-          <ul className="list-disc pl-6">
-            <li>Lesen – 25 Marks</li>
-            <li>Hören – 25 Marks</li>
-            <li>Schreiben – 25 Marks</li>
-            <li>Sprechen – 25 Marks</li>
-          </ul>
-
-          <h2 className="font-bold">
-            ✅ Pass ဖြစ်အောင် အမှတ်ဘယ်လောက်လိုအပ်လဲ? 🤔
-          </h2>
-          <p>
-            အောင်မှတ်အတွက်က Level အားလုံးမှာ 60% အနည်းဆုံး ရပါမယ် 👉 ဉပမာ –
-            စုစုပေါင်း 100 မှ 60 Marks
-          </p>
-          <p>
-            💡 တချို့ အဆင့် (B1, B2 နှင့် အထက်) မှာတော့ ပျမ်းမျှ အမှတ် 60% အပြင်
-            skill တစ်ခုချင်းစီမှာ အမှတ် 60% ကျော်ရရှိဖို့လိုအပ်ပါတယ် ၊
-            အဆင့်အလိုက် အမှတ်ပေးစည်းမျဥ်း marking rules ကွာခြားမှုရှိနိုင်ပါတယ်။
-          </p>
-
-          <h2 className="font-bold">
-            🏆 ဘာလို့ Goethe Exam ကို ဝင်ရောက်ဖြေဆိုသင့်သလဲ❓
-          </h2>
-          <p>
-            Germany / Austria / Switzerland တက္ကသိုလ်တွေမှာ ဝင်ခွင့်ရရန် အတွက်
-            Goethe အောင်လက်မှတ်က အရမ်းအရေးကြီးပါတယ်။
-          </p>
-          <p>
-            Visa Application လျှောက်ထားရာမှာလဲ အထောက်အထားတစ်ခုအနေနဲ့
-            အသုံးဝင်ပါတယ်။ အလုပ်အကိုင်အခွင့်အလမ်းကောင်း ရရှိဖို့ရာအတွက်လဲ
-            များစွာအသုံးဝင်ပါတယ်။
-          </p>
-
-          <h2 className="font-bold">
-            Goethe Exam ဘယ်နေရာတွေမှာ ဖြေဆိုရမလဲ 🤔❓
-          </h2>
-          <p>
-            Goethe-Institut ဂျာမန်ဘာသာစကား စာမေးပွဲတွေကို (A1 မှ C2 အဆင့်အထိ)
-            ကမ္ဘာအနှံ့ မှတ်ပုံတင်ထားတဲ့ စာမေးပွဲစင်တာတွေမှာ သွားရောက်ဖြေဆိုရမှာ
-            ဖြစ်ပါတယ်။🛬
-          </p>
-          <p>
-            လက်ရှိအချိန်အထိ Goethe-Institut ရဲ့ စာမေးပွဲတွေကို တရားဝင် Exam
-            Centre🏢 တွေမှာ တက်ရောက်ပြီး ဖြေရမယ့် စနစ်အဖြစ် သက်မှတ်ထားပါတယ်။
-          </p>
-          <p>
-            🌐 အချို့ နိုင်ငံတွေမှာ Online Format စမ်းသပ်ဖြေဆို နေသော်လည်း
-            နိုင်ငံတိုင်းမှာ Online (remote) Exam ဖြေဆိုခွင့်မရရှိသေးတာကြောင့်
-            နိုင်ငံအလိုက် Goethe-Institut တွေမှာ ဆက်သွယ်စုံစမ်းပြီး Online Test
-            ဖြေဆိုခွင့်တောင်းခံရမှာ ဖြစ်ပါတယ်။
-          </p>
-
-          <p>အရှေ့တောင်အာရှ နိုင်ငံအချို့မှာ ရှိတဲ့ Goethe Exam Centre တွေ👇</p>
-          <ul className="list-disc pl-6 space-y-1">
-            <li>
-              🇲🇾 မလေးရှား (Malaysia) – Kuala Lumpur (Menara IQ, TRX အနီး) <br />
-              <a
-                href="https://maps.app.goo.gl/rLWV34wCKJqyfYcZ7"
-                className="text-blue-600 underline"
-              >
-                https://maps.app.goo.gl/rLWV34wCKJqyfYcZ7
-              </a>
-            </li>
-            <li>
-              🇸🇬 စင်္ကာပူ (Singapore) – Goethe-Institut Singapore <br />
-              <a
-                href="https://maps.app.goo.gl/Hf1ZzTRKuBVhHvVo8"
-                className="text-blue-600 underline"
-              >
-                https://maps.app.goo.gl/Hf1ZzTRKuBVhHvVo8
-              </a>
-            </li>
-            <li>
-              🇹🇭 ထိုင်းနိုင်ငံ (Thailand) – Bangkok (Goethe-Institut Thailand){" "}
-              <br />
-              <a
-                href="https://maps.app.goo.gl/V3mf9U43pzX8tSGp8"
-                className="text-blue-600 underline"
-              >
-                https://maps.app.goo.gl/V3mf9U43pzX8tSGp8
-              </a>
-            </li>
-            <li>
-              🇲🇲 မြန်မာ (Myanmar) – ရန်ကုန်၊ Bahan Township (Goethe-Institut
-              Myanmar) <br />
-              <a
-                href="https://maps.app.goo.gl/8WS4FtWxdCx8213S6"
-                className="text-blue-600 underline"
-              >
-                https://maps.app.goo.gl/8WS4FtWxdCx8213S6
-              </a>
-            </li>
-          </ul>
-
-          <p>
-            👉 မိမိ သိလိုတဲ့ နိုင်ငံအလိုက် Goethe Exam Centre တွေ နဲ့
-            အခြားဆက်သွယ်ရန် လိပ်စာအပြည့်အစုံကိုတော့ Goethe-Institut ဝဘ်ဆိုဒ်
-            (goethe.de) မှာလည်း သွားရောက် စုံစမ်းနိုင်ပါတယ်
-          </p>
-
-          <p>
-            ✨ Goethe အတွက်ပဲဖြစ်ဖြစ်၊ ဂျာမန်ဘာသာရပ်ကို စိတ်ဝင်စားပြီး Austria
-            🇦🇹 / Germany နိုင်ငံတွေမှာ ပညာသင်ကြားဖို့ အတွက် ဂျာမန်ဘာသာ
-            လေ့လာချင်တွေအတွက်ပဲဖြစ်ဖြစ် Funglish က ဖွင့်လှစ်ထားတဲ့
-            အတန်းလေးတွေမှာလဲ တတ်ရောက်သင်ကြားလို့ရနေပြီနော် 🤗📚
-          </p>
-
-          <p>
-            📖 𝐆𝐞𝐫𝐦𝐚𝐧 𝐈𝐧𝐭𝐞𝐧𝐬𝐢𝐯𝐞 𝐂𝐥𝐚𝐬𝐬 လေးမှာ ➡️ A1 ကနေ B1 အထိ လေ့လာနိုင်ပြီး ✨
-            Exam Tips 📑 တွေနဲ့အတူ သင်ကြားပေးသွားမှာပါ။
-          </p>
-          <p>
-            👩‍🏫 လူဦးရေအကန့်အကတ်နဲ့ လက်ခံမယ့်အတွက် လူပြည့်လဲ မြန်တာကြောင့် ⏳
-            September လ မှာ ဖွင့်မယ့်အတန်းအတွက် အမြန်လေး Register လုပ်ထားဖို့
-            အကြံပြုလိုက်ပါတယ်နော် ✅
-          </p>
-
-          <p>
-            🔗 အောက်က link လေးမှာ အစုံအလင် လေ့လာလို့ရပါတယ် 👇👇
+      <div className="space-y-4">
+        <p className="text-xl font-semibold text-yellow-600 mb-6">
+          ✨ Goethe Exam – A Must-Know for Every German Language Learner✨
+        </p>
+        <p>
+          The Goethe-Zertifikat is an internationally recognized German language
+          proficiency examination, officially issued by the Goethe-Institut.
+        </p>
+        <p>
+          The exam is divided into six levels: A1, A2, B1, B2, C1, and C2, which
+          test your German language skills progressively. Candidates are
+          required to take the examination level by level according to their
+          proficiency.
+        </p>
+        <h2 className="font-bold">📌 What does the Goethe Exam include?❓</h2>
+        <p>📝 The exam consists of four key tasks:</p>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            Lesen (Reading) 📖 – Understanding written texts such as
+            advertisements, articles, and newspaper passages.
+          </li>
+          <li>
+            Hören (Listening) 🎧 – Comprehension of audio clips, conversations,
+            and announcements.
+          </li>
+          <li>
+            Schreiben (Writing) ✍️ – Assessment of writing skills, including
+            structured and practical written tasks.
+          </li>
+          <li>
+            Sprechen (Speaking) 🗣️ – Oral communication skills including
+            self-introduction, giving explanations, and discussing selected
+            topics.
+          </li>
+        </ul>
+        <h2 className="font-bold">📊 Marking System</h2>
+        <p>The exam is scored out of 100 marks:</p>
+        <ul className="list-disc pl-6">
+          <li>Reading – 25 marks</li>
+          <li>Listening – 25 marks</li>
+          <li>Writing – 25 marks</li>
+          <li>Speaking – 25 marks</li>
+        </ul>
+        <h2 className="font-bold">✅ Passing Criteria 🤔</h2>
+        <p>
+          To pass the exam, a minimum of 60% is required across all levels. 👉
+          For example: 60 marks out of 100.
+        </p>
+        <p>
+          💡 For certain levels (B1, B2, and higher), not only is an overall
+          score of 60% required, but candidates must also achieve at least 60%
+          in each individual skill. Marking rules may vary slightly depending on
+          the level.
+        </p>
+        <h2 className="font-bold">🏆 Why should you take the Goethe Exam?❓</h2>
+        <p>
+          It is a key requirement for admission to universities in Germany,
+          Austria, and Switzerland.
+        </p>
+        <p>
+          It is an essential document for visa applications. It significantly
+          increases career and employment opportunities both locally and
+          internationally.
+        </p>
+        <h2 className="font-bold">Where can you take the Goethe Exam? 🤔❓</h2>
+        <p>
+          The Goethe-Institut offers examinations (A1–C2) at official exam
+          centers worldwide.
+        </p>
+        <p>
+          Currently, exams are held exclusively at registered Goethe-Institut
+          examination centers.🏢 While some countries are piloting online
+          formats, availability depends on the country, and candidates must
+          confirm directly with their local Goethe-Institut for online exam
+          options.
+        </p>
+        <p>Goethe Exam Centers in Southeast Asia include:</p>
+        <ul className="list-disc pl-6 space-y-1">
+          <li>
+            Malaysia (Kuala Lumpur) – Menara IQ, TRX Area
             <br />
-            👉{" "}
-            <a
-              href="https://www.facebook.com/share/p/1FZqoPQrJh/"
-              className="text-blue-600 underline"
-            >
-              https://www.facebook.com/share/p/1FZqoPQrJh/
+            <a href="https://maps.app.goo.gl/rLWV34wCKJqyfYcZ7" className="">
+              https://maps.app.goo.gl/rLWV34wCKJqyfYcZ7
             </a>
-          </p>
-
-          <p>
-            👧👦 ဒီ class လေးကတော့ Little Learner လေးတွေ👩‍👧👨‍👦 အတွက် အထူး Class
-            လေး ပါ 🏫💡
-          </p>
-          <p>
-            📌 သားသားမီးမီးလေးတွေအတွက် ဂျာမန်ဘာသာကိူ အခြေခံကနေ သေသေချာချာသင်ကြား
-            ဥ်ကြားပေးသွားမှာပါ။ class detail အသေးစိတ်ကိုလဲ အောက်က link မှာ
-            လေ့လာနိုင်ပါတယ် 👇👇
+          </li>
+          <li>
+            Singapore – Goethe-Institut Singapore <br />
+            <a href="https://maps.app.goo.gl/Hf1ZzTRKuBVhHvVo8" className="">
+              https://maps.app.goo.gl/Hf1ZzTRKuBVhHvVo8
+            </a>
+          </li>
+          <li>
+            Thailand (Bangkok) – Goethe-Institut Thailand
             <br />
-            👉{" "}
-            <a
-              href="https://www.facebook.com/share/p/1BFiDN6xqT/"
-              className="text-blue-600 underline"
-            >
-              https://www.facebook.com/share/p/1BFiDN6xqT/
+            <a href="https://maps.app.goo.gl/V3mf9U43pzX8tSGp8" className="">
+              https://maps.app.goo.gl/V3mf9U43pzX8tSGp8
             </a>
-          </p>
-
-          <p>☎️𝐕𝐢𝐛𝐞𝐫 𝐏𝐡𝐨𝐧𝐞 𝐍𝐨.- +66969949572</p>
-          <p>📩 𝐌𝐚𝐢𝐥 - pinky.htut@funglishedu.org</p>
-          <p>
-            📫 𝐂𝐡𝐚𝐭𝐁𝐨𝐱 -{" "}
-            <a
-              href="https://www.facebook.com/messages/t/111653420518784"
-              className="text-blue-600 underline"
-            >
-              https://www.facebook.com/messages/t/111653420518784
+          </li>
+          <li>
+            Myanmar (Yangon, Bahan Township) – Goethe-Institut Myanmar <br />
+            <a href="https://maps.app.goo.gl/8WS4FtWxdCx8213S6" className="">
+              https://maps.app.goo.gl/8WS4FtWxdCx8213S6
             </a>
-          </p>
-          <p>
-            🎥𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡 𝐘𝐨𝐮𝐭𝐮ဗ𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥:{" "}
-            <a
-              href="https://youtube.com/@funglishtothemax1?si=mTCvw-0kukMLcni5"
-              className="text-blue-600 underline"
-            >
-              https://youtube.com/@funglishtothemax1?si=mTCvw-0kukMLcni5
-            </a>
-          </p>
-        </div>
+          </li>
+        </ul>
+        <p>
+          👉 For a complete list of exam centers and contact details by country,
+          please visit the official Goethe-Institut website at goethe.de.
+        </p>
+        <p>✨ German Language Courses with Funglish</p>
+        <p>
+          At Funglish, we provide structured German language courses designed to
+          prepare learners for academic and professional pathways in Germany and
+          Austria.
+        </p>
+        <p>
+          📖 Our German Intensive Class offers training from A1 to B1 levels,
+          including essential exam strategies and tips.
+        </p>
+        <p>
+          👩‍🏫 Seats are limited and classes fill quickly. We recommend
+          registering early for the upcoming September intake.
+        </p>
+        <p>🔗 Full details are available here: Germany and Austria. </p>
+        <p>
+          📖 Our German Intensive Class offers training from A1 to B1 levels,
+          including essential exam strategies and tips.
+        </p>
+        <p>
+          👩‍🏫 Seats are limited and classes fill quickly. We recommend
+          registering early for the upcoming September intake.⏳
+        </p>
+        <p>🔗 Full details are available here:👇👇</p>
+        <p>
+          👉
+          <a href="https://www.facebook.com/share/p/1FZqoPQrJh/" className="">
+            https://www.facebook.com/share/p/1FZqoPQrJh/
+          </a>
+        </p>
+        <p>👧👦 German Classes for Young Learners 👩‍👧👨‍👦</p>
+        <p>
+          📌 We also offer a special Little Learners Class for children,
+          focusing on strong German language foundations with clear, structured
+          teaching. 🏫💡
+        </p>
+        <p>
+          More details can be found here:👇👇
+          <br />
+          👉
+          <a href="https://www.facebook.com/share/p/1BFiDN6xqT/" className="">
+            https://www.facebook.com/share/p/1BFiDN6xqT/
+          </a>
+        </p>
+        <p>☎️𝐕𝐢𝐛𝐞𝐫 𝐏𝐡𝐨𝐧𝐞 𝐍𝐨.- +66969949572</p>
+        <p>📩 𝐌𝐚𝐢𝐥 - pinky.htut@funglishedu.org</p>
+        <p>
+          📫 𝐂𝐡𝐚𝐭𝐁𝐨𝐱 -
+          <a
+            href="https://www.facebook.com/messages/t/111653420518784"
+            className=""
+          >
+            https://www.facebook.com/messages/t/111653420518784
+          </a>
+        </p>
+        <p>
+          🎥𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡 𝐘𝐨𝐮𝐭𝐮𝐛𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥:
+          <a
+            href="https://youtube.com/@funglishtothemax1?si=mTCvw-0kukMLcni5"
+            className=""
+          >
+            https://youtube.com/@funglishtothemax1?si=mTCvw-0kukMLcni5
+          </a>
+        </p>
       </div>
     ),
   },
@@ -537,7 +502,7 @@ const serviceData = [
         <p>☎️𝐕𝐢𝐛𝐞𝐫 𝐏𝐡𝐨𝐧𝐞 𝐍𝐨.- +66969949572</p>
         <p>📩 𝐌𝐚𝐢𝐥 - pinky.htut@funglishedu.org</p>
         <p>
-          📫 𝐂𝐡𝐚𝐭𝐁𝐨𝐱 -{" "}
+          📫 𝐂𝐡𝐚𝐭𝐁𝐨𝐱 -
           <a
             href="https://www.facebook.com/messages/t/111653420518784"
             className=""
@@ -548,7 +513,7 @@ const serviceData = [
           </a>
         </p>
         <p>
-          🎥𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡 𝐘𝐨𝐮𝐭𝐮ဗ𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥:{" "}
+          🎥𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡 𝐘𝐨𝐮𝐭𝐮ဗ𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥:
           <a
             href="https://youtube.com/@funglishtothemax1?si=mTCvw-0kukMLcni5"
             className=""
@@ -559,7 +524,7 @@ const serviceData = [
           </a>
         </p>
         <p>
-          🎵𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡 𝐓𝐢𝐤𝐓𝐨𝐤:{" "}
+          🎵𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡 𝐓𝐢𝐤𝐓𝐨𝐤:
           <a
             href="https://www.tiktok.com/@pinky.htut?_t=8sTrsfrO1lo&_r=1"
             className=""
@@ -692,7 +657,7 @@ const serviceData = [
         <p>☎️𝐕𝐢𝐛𝐞𝐫 𝐏𝐡𝐨𝐧𝐞 𝐍𝐨.- +66969949572</p>
         <p>📩 𝐌𝐚𝐢𝐥 - pinky.htut@funglishedu.org</p>
         <p>
-          📫 𝐂𝐡𝐚𝐭𝐁𝐨𝐱 -{" "}
+          📫 𝐂𝐡𝐚𝐭𝐁𝐨𝐱 -
           <a
             href="https://www.facebook.com/messages/t/111653420518784"
             className=""
@@ -703,7 +668,7 @@ const serviceData = [
           </a>
         </p>
         <p>
-          🎥𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡 𝐘𝐨𝐮𝐭𝐮𝐛𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥:{" "}
+          🎥𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡 𝐘𝐨𝐮𝐭𝐮𝐛𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥:
           <a
             href="https://youtube.com/@funglishtothemax1?si=mTCvw-0kukMLcni5"
             className=""
@@ -714,7 +679,7 @@ const serviceData = [
           </a>
         </p>
         <p>
-          🎵𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡 𝐓𝐢𝐤𝐓𝐨𝐤:{" "}
+          🎵𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡 𝐓𝐢𝐤𝐓𝐨𝐤:
           <a
             href="https://www.tiktok.com/@pinky.htut?_t=8sTrsfrO1lo&_r=1"
             className=""
@@ -794,7 +759,7 @@ const serviceData = [
         <p>☎️𝐕𝐢𝐛𝐞𝐫 𝐏𝐡𝐨𝐧𝐞 𝐍𝐨.- +66969949572</p>
         <p>📩 𝐌𝐚𝐢𝐥 - pinky.htut@funglishedu.org</p>
         <p>
-          📫 𝐂𝐡𝐚𝐭𝐁𝐨𝐱 -{" "}
+          📫 𝐂𝐡𝐚𝐭𝐁𝐨𝐱 -
           <a
             href="https://www.facebook.com/messages/t/111653420518784"
             className=""
@@ -805,7 +770,7 @@ const serviceData = [
           </a>
         </p>
         <p>
-          🎥𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡 𝐘𝐨𝐮𝐭𝐮𝐛𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥:{" "}
+          🎥𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡 𝐘𝐨𝐮𝐭𝐮𝐛𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥:
           <a
             href="https://youtube.com/@funglishtothemax1?si=mTCvw-0kukMLcni5"
             className=""
@@ -816,7 +781,7 @@ const serviceData = [
           </a>
         </p>
         <p>
-          🎵𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡 𝐓𝐢𝐤𝐓𝐨𝐤:{" "}
+          🎵𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡 𝐓𝐢𝐤𝐓𝐨𝐤:
           <a
             href="https://www.tiktok.com/@pinky.htut?_t=8sTrsfrO1lo&_r=1"
             className=""
@@ -970,7 +935,7 @@ const serviceData = [
         <p>☎️𝐕𝐢𝐛𝐞𝐫 𝐏𝐡𝐨𝐧𝐞 𝐍𝐨.- +66969949572</p>
         <p>📩 𝐌𝐚𝐢𝐥 - pinky.htut@funglishedu.org</p>
         <p>
-          📫 𝐂𝐡𝐚𝐭𝐁𝐨𝐱 -{" "}
+          📫 𝐂𝐡𝐚𝐭𝐁𝐨𝐱 -
           <a
             href="https://www.facebook.com/messages/t/111653420518784"
             className=""
@@ -981,7 +946,7 @@ const serviceData = [
           </a>
         </p>
         <p>
-          🎥𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡 𝐘𝐨𝐮𝐭𝐮𝐛𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥:{" "}
+          🎥𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡 𝐘𝐨𝐮𝐭𝐮𝐛𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥:
           <a
             href="https://youtube.com/@funglishtothemax1?si=mTCvw-0kukMLcni5"
             className=""
@@ -992,7 +957,7 @@ const serviceData = [
           </a>
         </p>
         <p>
-          🎵𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡 𝐓𝐢𝐤𝐓𝐨𝐤:{" "}
+          🎵𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡 𝐓𝐢𝐤𝐓𝐨𝐤:
           <a
             href="https://www.tiktok.com/@pinky.htut?_t=8sTrsfrO1lo&_r=1"
             className=""

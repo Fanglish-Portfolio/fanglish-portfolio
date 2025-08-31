@@ -36,11 +36,11 @@ export default function CalendySection() {
             <div
               className="calendly-inline-widget"
               data-url="https://calendly.com/funglishachievemax/30min?background_color=1a1a1a&text_color=ffffff&primary_color=feb609"
-              style={{ minWidth: "320px", height: "800px" }}
+              style={{ minWidth: "320px", height: "1000px" }}
             ></div>
           </div>
         </div>
-        <div className="h-[550px]"></div>
+        <div className="h-[750px] sm:h-[700px] md:h-[650px]"></div>
       </div>
     </div>
   );
