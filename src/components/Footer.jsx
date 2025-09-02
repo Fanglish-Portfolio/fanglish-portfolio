@@ -28,7 +28,7 @@ const Footer = () => {
         <div className="w-full lg:w-1/3">
           <div className="flex items-center gap-2">
             <img src={logo} alt="logo" width={32} height={32} />
-            <p className="text-[18px] font-medium text-primary">
+            <p className="text-[18px] libre font-medium text-primary">
               FuNglish Global Max
             </p>
           </div>
