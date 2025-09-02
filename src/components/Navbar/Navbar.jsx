@@ -257,7 +257,7 @@ const Navbar = () => {
                   <img src={flag4} alt="flag" />
                   Study in DUBAI
                 </NavLink>
-                <NavLink
+                {/* <NavLink
                   to="/study-abroad/malta"
                   onClick={() => setIsStudyAbroadOpen(!isStudyAbroadOpen)}
                   className={`hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-gray-50 transition-colors ${
@@ -268,7 +268,7 @@ const Navbar = () => {
                 >
                   <img src={flag5} alt="flag" />
                   Study in MALTA
-                </NavLink>
+                </NavLink> */}
               </div>
             )}
           </div>
