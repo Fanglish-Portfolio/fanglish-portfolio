@@ -373,41 +373,41 @@ const countries = [
     universities: [
       {
         id: 17,
-        name: "Comming Soon",
+        name: "Coming Soon",
         logo: dubai,
         backgroundColor: "bg-gold-600",
         type: "university",
       },
       {
         id: 18,
-        name: "Comming Soon",
+        name: "Coming Soon",
         logo: dubai,
         backgroundColor: "bg-green-600",
         type: "university",
       },
     ],
   },
-  {
-    id: "malta",
-    name: "Study in MALTA",
-    flag: flag4,
-    universities: [
-      {
-        id: 19,
-        name: "Comming Soon",
-        logo: dubai,
-        backgroundColor: "bg-gold-600",
-        type: "university",
-      },
-      {
-        id: 20,
-        name: "Comming Soon",
-        logo: dubai,
-        backgroundColor: "bg-green-600",
-        type: "university",
-      },
-    ],
-  },
+  // {
+  //   id: "malta",
+  //   name: "Study in MALTA",
+  //   flag: flag4,
+  //   universities: [
+  //     {
+  //       id: 19,
+  //       name: "Comming Soon",
+  //       logo: dubai,
+  //       backgroundColor: "bg-gold-600",
+  //       type: "university",
+  //     },
+  //     {
+  //       id: 20,
+  //       name: "Comming Soon",
+  //       logo: dubai,
+  //       backgroundColor: "bg-green-600",
+  //       type: "university",
+  //     },
+  //   ],
+  // },
 ];
 
 function University({ country }) {
@@ -415,7 +415,7 @@ function University({ country }) {
   const [selectedType, setSelectedType] = useState("university");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
-  console.log(imageLoaded);
+  console.log(selectedCountry);
 
   const currentCountry = countries.find(
     (country) => country.id === selectedCountry
@@ -463,7 +463,11 @@ function University({ country }) {
           <div
             className={`
             lg:w-80 lg:block px-6 md:px-0
-            ${isMobileMenuOpen ? "block" : "hidden lg:block"}
+            ${
+              isMobileMenuOpen
+                ? " sticky top-[90px] bg-[#1a1a1a] z-10"
+                : "hidden lg:block"
+            }
           `}
           >
             <div className="space-y-10">
@@ -557,12 +561,12 @@ function University({ country }) {
                       <button
                         onClick={() => window.open(university.link, "_blank")}
                         className={`bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium transition-all duration-300 ${
-                          country === "dubai"
+                          selectedCountry === "dubai"
                             ? "opacity-50 cursor-not-allowed"
                             : "hover:bg-primary hover:text-black"
                         }`}
                       >
-                        View University
+                        View {selectedType}
                       </button>
                     </div>
                   </div>
