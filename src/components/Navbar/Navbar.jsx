@@ -16,6 +16,7 @@ import flag1 from "../../assets/image/university/Flags1.png";
 import flag2 from "../../assets/image/university/Flags2.png";
 import flag3 from "../../assets/image/university/Flags3.png";
 import flag4 from "../../assets/image/university/Flags4.png";
+import flag5 from "../../assets/image/university/Flags5.png";
 
 import { Languages } from "lucide-react";
 
@@ -256,6 +257,18 @@ const Navbar = () => {
                   <img src={flag4} alt="flag" />
                   Study in DUBAI
                 </NavLink>
+                <NavLink
+                  to="/study-abroad/malta"
+                  onClick={() => setIsStudyAbroadOpen(!isStudyAbroadOpen)}
+                  className={`hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-gray-50 transition-colors ${
+                    location.pathname === "/study-abroad/malta"
+                      ? "bg-primary/20"
+                      : ""
+                  }`}
+                >
+                  <img src={flag5} alt="flag" />
+                  Study in MALTA
+                </NavLink>
               </div>
             )}
           </div>
@@ -464,6 +477,18 @@ const Navbar = () => {
                   >
                     <img src={flag4} alt="flag" />
                     Study in Dubai
+                  </NavLink>
+                  <NavLink
+                    to="/study-abroad/malta"
+                    onClick={() => {
+                      setIsStudyAbroadOpen(!isStudyAbroadOpen);
+                      setIsServicesOpen(false);
+                      isOpen(false);
+                    }}
+                    className="text-[14px] hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-2 text-gray-800 hover:bg-gray-50 transition-colors"
+                  >
+                    <img src={flag5} alt="flag" />
+                    Study in Malta
                   </NavLink>
                 </div>
               )}

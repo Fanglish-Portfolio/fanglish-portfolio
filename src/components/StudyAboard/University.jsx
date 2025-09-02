@@ -387,12 +387,35 @@ const countries = [
       },
     ],
   },
+  {
+    id: "malta",
+    name: "Study in MALTA",
+    flag: flag4,
+    universities: [
+      {
+        id: 19,
+        name: "Comming Soon",
+        logo: dubai,
+        backgroundColor: "bg-gold-600",
+        type: "university",
+      },
+      {
+        id: 20,
+        name: "Comming Soon",
+        logo: dubai,
+        backgroundColor: "bg-green-600",
+        type: "university",
+      },
+    ],
+  },
 ];
 
 function University({ country }) {
   const [selectedCountry, setSelectedCountry] = useState(country);
   const [selectedType, setSelectedType] = useState("university");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
+  console.log(imageLoaded);
 
   const currentCountry = countries.find(
     (country) => country.id === selectedCountry
@@ -452,6 +475,7 @@ function University({ country }) {
                     setSelectedCountry(country.id);
                     setSelectedType("university");
                     setIsMobileMenuOpen(false);
+                    setImageLoaded(false);
                   }}
                   className={`w-full flex items-center justify-between p-4 rounded-xl transition-all duration-300 group ${
                     selectedCountry === country.id
@@ -460,7 +484,7 @@ function University({ country }) {
                   }`}
                 >
                   <div className="flex items-center space-x-3">
-                    <img src={country.flag} alt="" />
+                    <img src={country.flag} alt="flag" />
                     <span className="font-medium text-left">
                       {country.name}
                     </span>
@@ -472,35 +496,34 @@ function University({ country }) {
 
           {/* Main Content Area */}
           <div className="flex-1 px-8 overflow-y-auto md:h-[600px] pb-50 university">
-            {selectedCountry !== "dubai" && (
-              <div className="flex gap-4 mb-10">
-                <button
-                  className={` px-6 py-2 rounded-full border border-primary transition-all duration-300 ${
-                    selectedType === "university"
-                      ? "bg-primary text-black"
-                      : " text-primary text-primary"
-                  }`}
-                  onClick={() => setSelectedType("university")}
-                >
-                  University
-                </button>
-                <button
-                  className={`${
-                    selectedCountry !== "us"
-                      ? "opacity-50 cursor-not-allowed"
-                      : ""
-                  }  px-6 py-2 rounded-full border border-primary transition-all duration-300 ${
-                    selectedType === "college"
-                      ? "bg-primary text-black"
-                      : "text-primary"
-                  }`}
-                  disabled={selectedCountry !== "us"}
-                  onClick={() => setSelectedType("college")}
-                >
-                  College
-                </button>
-              </div>
-            )}
+            <div className="flex gap-4 mb-10">
+              <button
+                className={` px-6 py-2 rounded-full border border-primary transition-all duration-300 ${
+                  selectedType === "university"
+                    ? "bg-primary text-black"
+                    : " text-primary text-primary"
+                }`}
+                onClick={() => setSelectedType("university")}
+              >
+                University
+              </button>
+              <button
+                className={`${
+                  selectedCountry !== "us"
+                    ? "opacity-50 cursor-not-allowed"
+                    : ""
+                }  px-6 py-2 rounded-full border border-primary transition-all duration-300 ${
+                  selectedType === "college"
+                    ? "bg-primary text-black"
+                    : "text-primary"
+                }`}
+                disabled={selectedCountry !== "us"}
+                onClick={() => setSelectedType("college")}
+              >
+                College
+              </button>
+            </div>
+
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 {filteredUniversities.map((university) => (
@@ -509,15 +532,17 @@ function University({ country }) {
                     className="bg-[#161616]/20 rounded-2xl p-6 overflow-hidden border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105"
                   >
                     {/* Card Image */}
-                    <div
-                      className={`relative flex items-center justify-center`}
-                    >
+                    <div className="relative flex items-center justify-center">
+                      {!imageLoaded ||
+                        (!university.logo && (
+                          <div className="w-full h-40 bg-gray-700 rounded-xl animate-pulse" />
+                        ))}
                       <img
                         src={university.logo}
                         alt={university.name}
-                        className="lg:w-full lg:h-full object-cover rounded-xl"
+                        loading="lazy"
+                        onLoad={() => setImageLoaded(true)}
                       />
-                      <div className="absolute inset-0 bg-black bg-opacity-20 rounded-lg"></div>
                     </div>
 
                     {/* Card Content */}

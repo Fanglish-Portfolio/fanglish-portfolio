@@ -1,5 +1,5 @@
 import { useState } from "react";
-import bg from "./../../assets/image/home/herobanner.jpg";
+import bg from "./../../assets/image/home/herobanner.webp";
 import background from "./../../assets/image/home/herobg.png";
 import { useNavigate } from "react-router-dom";
 import Collaborate from "./Collaborate";
