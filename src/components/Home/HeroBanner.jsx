@@ -10,7 +10,7 @@ const HeroBanner = () => {
 
   return (
     <div
-      className="text-white md:mt-24 mt-16"
+      className="text-white mt-0 md:mt-24 "
       style={{
         backgroundImage: `url(${background})`,
         backgroundSize: "cover",
