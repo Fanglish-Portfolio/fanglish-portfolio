@@ -17,7 +17,7 @@ const pageVariants = {
 
 const PageTransition = ({ children }) => {
   const location = useLocation();
-  console.log(location);
+  // console.log(location);
 
   return (
     <motion.div

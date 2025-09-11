@@ -80,7 +80,7 @@ const HeroBanner = () => {
               </SwiperSlide>
             ))}
             {banner.map((banner) => (
-              <SwiperSlide key={banner.id}>
+              <SwiperSlide key={banner._id}>
                 <div className="relative h-[500px] md:h-full">
                   <img
                     src={banner.imageUrl}

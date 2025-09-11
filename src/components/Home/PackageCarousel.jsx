@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { MdLibraryBooks } from "react-icons/md";
 import package1 from "./../../assets/image/home/packageImage/package1.png";
@@ -19,45 +19,59 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { useNavigate } from "react-router-dom";
+import { getAllCategory } from "../../api/banner/getAllCategory";
 
-const classes = [
-  {
-    id: 1,
-    title: "Dual Track Package",
-    image: package1,
-    icon: <MdLibraryBooks className="w-6 h-6" />,
-  },
-  {
-    id: 2,
-    title: "IELTS Preparation + Scholarship Mentoring Program",
-    image: package2,
-    icon: <MdLibraryBooks className="w-6 h-6" />,
-  },
-  {
-    id: 3,
-    title: "German Dream Package",
-    image: package3,
-    icon: <MdLibraryBooks className="w-6 h-6" />,
-  },
-  {
-    id: 4,
-    title: "IELTS Germany or Austria",
-    image: package4,
-    icon: <MdLibraryBooks className="w-6 h-6" />,
-  },
-  {
-    id: 5,
-    title: "IELTS or Duolingo + UK",
-    image: package5,
-    icon: <MdLibraryBooks className="w-6 h-6" />,
-  },
-];
+// const classes = [
+//   {
+//     id: 1,
+//     title: "Dual Track Package",
+//     image: package1,
+//     icon: <MdLibraryBooks className="w-6 h-6" />,
+//   },
+//   {
+//     id: 2,
+//     title: "IELTS Preparation + Scholarship Mentoring Program",
+//     image: package2,
+//     icon: <MdLibraryBooks className="w-6 h-6" />,
+//   },
+//   {
+//     id: 3,
+//     title: "German Dream Package",
+//     image: package3,
+//     icon: <MdLibraryBooks className="w-6 h-6" />,
+//   },
+//   {
+//     id: 4,
+//     title: "IELTS Germany or Austria",
+//     image: package4,
+//     icon: <MdLibraryBooks className="w-6 h-6" />,
+//   },
+//   {
+//     id: 5,
+//     title: "IELTS or Duolingo + UK",
+//     image: package5,
+//     icon: <MdLibraryBooks className="w-6 h-6" />,
+//   },
+// ];
 
 export default function PackageCarousel({ id }) {
   const swiperRef = useRef(null);
   const navigate = useNavigate();
 
-  const filteredClasses = classes.filter((service) => service.id != id);
+  const [packages, setPackages] = useState([]);
+
+  useEffect(() => {
+    const fetchPackages = async () => {
+      const response = await getAllCategory("packages");
+      const filteredPackages = response.filter(
+        (packages) => packages._id != id
+      );
+      setPackages(filteredPackages);
+    };
+    fetchPackages();
+  }, []);
+
+  // const filteredClasses = classes.filter((service) => service.id != id);
 
   // Custom previous button click handler
   const handlePrev = () => {
@@ -131,7 +145,7 @@ export default function PackageCarousel({ id }) {
                 "--swiper-pagination-bullet-inactive-opacity": "1",
               }}
             >
-              {filteredClasses.map((service) => (
+              {packages.map((service) => (
                 <SwiperSlide key={service.id}>
                   <div className="bg-[#161616]/20 rounded-2xl p-6 overflow-hidden border border-gray-700 hover:border-gray-600 transition-all duration-300">
                     {/* Card Image */}
@@ -139,9 +153,9 @@ export default function PackageCarousel({ id }) {
                       className={`relative flex items-center justify-center`}
                     >
                       <img
-                        src={service.image}
+                        src={service.image?.imageUrl}
                         alt={service.title}
-                        className="w-full h-full object-cover rounded-xl"
+                        className="md:w-[350px] md:h-[345px] w-full h-full object-cover rounded-xl"
                       />
                       <div className="absolute inset-0 bg-black bg-opacity-20 rounded-lg"></div>
                     </div>
@@ -149,16 +163,14 @@ export default function PackageCarousel({ id }) {
                     {/* Card Content */}
                     <div className="mt-6">
                       <div className="flex items-center gap-3 mb-4 h-[60px]">
-                        <div className="text-white">{service.icon}</div>
+                        {/* <div className="text-white">{service.icon}</div> */}
                         <h3 className="text-white text-[14px] sm:text-[26px] md:text-[16px] font-semibold">
                           {service.title}
                         </h3>
                       </div>
 
                       <button
-                        onClick={() =>
-                          navigate(`/package-detail/${service.id}`)
-                        }
+                        onClick={() => navigate(`/detail/${service._id}`)}
                         className="w-full text-[12px] md:text-[16px] bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300"
                       >
                         View Package

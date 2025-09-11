@@ -17,53 +17,23 @@ import blog2 from "../../assets/image/home/blog/blog2.png";
 import blog3 from "../../assets/image/home/blog/blog3.png";
 
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { getAllCategory } from "../../api/banner/getAllCategory";
 
 const BlogSection = ({ id }) => {
   const navigate = useNavigate();
-  const services = [
-    {
-      id: 1,
-      title:
-        "Upgrade Your Academic English Skill With FuNglish‘s Be a Grammar Monster Series",
-      image: blog1,
-    },
-    {
-      id: 2,
-      title: "Upgrade your Academic   English Skill with FuNglish ",
-      image: blog2,
-    },
-    {
-      id: 3,
-      title: "About Goethe Exam",
-      image: blog3,
-    },
-    // {
-    //   id: 4,
-    //   title:
-    //     "Word Power Unleashed: English Skill with FuNglish's Vocab Amplifier Class",
-    //   image: blog4,
-    // },
-    // {
-    //   id: 5,
-    //   title:
-    //     "𝐁𝐨𝐨𝐬𝐭 𝐘𝐨𝐮𝐫 𝐄𝐧𝐠𝐥𝐢𝐬𝐡 𝐒𝐩𝐞𝐚𝐤𝐢𝐧𝐠 𝐒𝐤𝐢𝐥𝐥 𝐖𝐢𝐭𝐡 𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡'𝐬 𝐒𝐭𝐞𝐩-𝐔𝐩 𝐒𝐩𝐞𝐚𝐤𝐢𝐧𝐠 𝐅𝐨𝐫 𝐂𝐨𝐧𝐯𝐞𝐫𝐬𝐚𝐭𝐢𝐨𝐧 𝐂𝐥𝐚𝐬𝐬 (Dec 20)",
-    //   image: blog5,
-    // },
-    // {
-    //   id: 6,
-    //   title:
-    //     "𝐋𝐢𝐭𝐭𝐥𝐞 𝐋𝐞𝐚𝐫𝐧𝐞𝐫𝐬 လေးတွေ အတွက် 𝐅𝐮𝐍𝐠𝐥𝐢𝐬𝐡 ရဲ့𝐆𝐞𝐫𝐦𝐚𝐧 𝐂𝐥𝐚𝐬𝐬-𝟐𝐧𝐝 𝐁𝐚𝐭𝐜𝐡(no starting date)",
-    //   image: blog6,
-    // },
-    // {
-    //   id: 7,
-    //   title: "Chevening Scholarship",
-    //   image: blog7,
-    // },
-  ];
 
-  const filteredServices = services.filter((service) => service.id != id);
+  const [blogs, setBlogs] = useState([]);
 
+  useEffect(() => {
+    const fetchServices = async () => {
+      const response = await getAllCategory("blog");
+      // console.log(response);
+      const filteredBlogs = response.filter((blog) => blog._id != id);
+      setBlogs(filteredBlogs);
+    };
+    fetchServices();
+  }, []);
   return (
     <section>
       <div className="containers">
@@ -77,7 +47,7 @@ const BlogSection = ({ id }) => {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service) => (
+          {blogs.slice(0, 3).map((service) => (
             <div
               key={service.id}
               className="bg-[#161616]/20 rounded-2xl p-6 overflow-hidden border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105"
@@ -85,9 +55,9 @@ const BlogSection = ({ id }) => {
               {/* Card Image */}
               <div className={`flex items-center justify-center`}>
                 <img
-                  src={service.image}
+                  src={service.image?.imageUrl}
                   alt={service.title}
-                  className="w-full h-full object-cover rounded-xl"
+                  className="w-full h-full md:w-[350px] md:h-[345px] object-cover rounded-xl"
                 />
               </div>
 
@@ -100,7 +70,7 @@ const BlogSection = ({ id }) => {
                 </div>
 
                 <button
-                  onClick={() => navigate(`/blog-detail/${service.id}`)}
+                  onClick={() => navigate(`/detail/${service._id}`)}
                   className="w-full text-[12px] md:text-[16px] bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300"
                 >
                   Read Blog

@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import language1 from "./../../assets/image/home/languageClass/language1.png";
 import language2 from "./../../assets/image/home/languageClass/language2.png";
@@ -19,55 +19,66 @@ import "swiper/css/pagination";
 import { ChevronLeft, ChevronRight, Languages } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { MdOutlineHotelClass } from "react-icons/md";
+import { getAllCategory } from "../../api/banner/getAllCategory";
 
-const classes = [
-  {
-    id: 1,
-    title: "German For Young Leaners",
-    image: language1,
-    icon: <Languages className="w-6 h-6" />,
-    type: "German",
-  },
-  {
-    id: 2,
-    title: "German Language A1 to C2 Intensive Classes ",
-    image: language2,
-    icon: <Languages className="w-6 h-6" />,
-    type: "German",
-  },
-  {
-    id: 3,
-    title: "FuNglish Duolingo Intensive Class",
-    image: language3,
-    icon: <Languages className="w-6 h-6" />,
-    type: "IELTS",
-  },
-  {
-    id: 4,
-    title: "FuNglish IELTS Class – Achieve a High Band Score",
-    image: language4,
-    icon: <Languages className="w-6 h-6" />,
-    type: "IELTS",
-  },
-  {
-    id: 7,
-    title: "6-Months-To-The-Max",
-    image: service7,
-    icon: <MdOutlineHotelClass className="w-6 h-6" />,
-    type: "IELTS",
-  },
-];
+// const classes = [
+//   {
+//     id: 1,
+//     title: "German For Young Leaners",
+//     image: language1,
+//     icon: <Languages className="w-6 h-6" />,
+//     type: "German",
+//   },
+//   {
+//     id: 2,
+//     title: "German Language A1 to C2 Intensive Classes ",
+//     image: language2,
+//     icon: <Languages className="w-6 h-6" />,
+//     type: "German",
+//   },
+//   {
+//     id: 3,
+//     title: "FuNglish Duolingo Intensive Class",
+//     image: language3,
+//     icon: <Languages className="w-6 h-6" />,
+//     type: "IELTS",
+//   },
+//   {
+//     id: 4,
+//     title: "FuNglish IELTS Class – Achieve a High Band Score",
+//     image: language4,
+//     icon: <Languages className="w-6 h-6" />,
+//     type: "IELTS",
+//   },
+//   {
+//     id: 7,
+//     title: "6-Months-To-The-Max",
+//     image: service7,
+//     icon: <MdOutlineHotelClass className="w-6 h-6" />,
+//     type: "IELTS",
+//   },
+// ];
 
 export default function LanguageClassCarousel({ id }) {
   const swiperRef = useRef(null);
   const navigate = useNavigate();
 
-  const [activeType, setActiveType] = useState("IELTS");
+  const [activeType, setActiveType] = useState("english");
+  const [classes, setClasses] = useState([]);
 
-  const idremoveClass = classes.filter((service) => service.id != id);
+  useEffect(() => {
+    const fetchClasses = async () => {
+      const response = await getAllCategory("language-class");
+      const filteredClasses = response.filter((service) => service._id != id);
+      setClasses(filteredClasses);
+    };
+    fetchClasses();
+  }, []);
 
-  const filteredClasses = idremoveClass.filter(
-    (service) => service.type === activeType
+  console.log(classes);
+
+  const filteredClasses = classes.filter(
+    (service) => service.language === activeType
   );
 
   // Custom previous button click handler
@@ -114,9 +125,9 @@ export default function LanguageClassCarousel({ id }) {
           {/* Swiper Slider */}
           <div className="flex space-x-4 mt-10 ">
             <button
-              onClick={() => setActiveType("IELTS")}
+              onClick={() => setActiveType("english")}
               className={`border font-semibold border-primary py-2 px-8 rounded-3xl transition-all duration-300 ${
-                activeType === "IELTS"
+                activeType === "english"
                   ? "bg-primary text-black"
                   : "text-primary"
               }`}
@@ -124,9 +135,9 @@ export default function LanguageClassCarousel({ id }) {
               English
             </button>
             <button
-              onClick={() => setActiveType("German")}
+              onClick={() => setActiveType("german")}
               className={`border font-semibold border-primary py-2 px-8 rounded-3xl transition-all duration-300 ${
-                activeType === "German"
+                activeType === "german"
                   ? "bg-primary text-black"
                   : "text-primary"
               }`}
@@ -163,42 +174,50 @@ export default function LanguageClassCarousel({ id }) {
                 "--swiper-pagination-bullet-inactive-opacity": "1",
               }}
             >
-              {filteredClasses.map((service) => (
-                <SwiperSlide key={service.id}>
-                  <div className="bg-[#161616]/20 rounded-2xl p-6 overflow-hidden border border-gray-700 hover:border-gray-600 transition-all duration-300">
-                    {/* Card Image */}
-                    <div
-                      className={`relative flex items-center justify-center`}
-                    >
-                      <img
-                        src={service.image}
-                        alt={service.title}
-                        className="w-full h-full object-cover rounded-xl "
-                      />
-                      <div className="absolute inset-0 bg-black bg-opacity-20 rounded-lg"></div>
-                    </div>
-
-                    {/* Card Content */}
-                    <div className="mt-6">
-                      <div className="flex items-center gap-3 mb-4 h-[60px]">
-                        <div className="text-white">{service.icon}</div>
-                        <h3 className="text-white text-[14px] sm:text-[26px] md:text-[16px] font-semibold">
-                          {service.title}
-                        </h3>
+              {filteredClasses.length === 0 && (
+                // <SwiperSlide>
+                <div className="bg-[#161616]/20 text-center w-full rounded-2xl p-6 overflow-hidden  hover:border-gray-600 transition-all duration-300">
+                  <h3 className="text-white text-[14px] sm:text-[26px] md:text-[36px] font-semibold">
+                    No classes found
+                  </h3>
+                </div>
+                // </SwiperSlide>
+              )}
+              {filteredClasses.length > 0 &&
+                filteredClasses.map((service) => (
+                  <SwiperSlide key={service.id}>
+                    <div className="bg-[#161616]/20 rounded-2xl p-6 overflow-hidden border border-gray-700 hover:border-gray-600 transition-all duration-300">
+                      {/* Card Image */}
+                      <div
+                        className={`relative flex items-center justify-center`}
+                      >
+                        <img
+                          src={service.image?.imageUrl}
+                          alt={service.title}
+                          className="w-full h-full md:w-[350px] md:h-[345px] object-cover rounded-xl "
+                        />
+                        <div className="absolute inset-0 bg-black bg-opacity-20 rounded-lg"></div>
                       </div>
 
-                      <button
-                        onClick={() =>
-                          navigate(`/language-detail/${service.id}`)
-                        }
-                        className="w-full text-[12px] md:text-[16px] bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300"
-                      >
-                        Discover Class
-                      </button>
+                      {/* Card Content */}
+                      <div className="mt-6">
+                        <div className="flex items-center gap-3 mb-4 h-[60px]">
+                          {/* <div className="text-white">{service.icon}</div>   */}
+                          <h3 className="text-white text-[14px] sm:text-[26px] md:text-[16px] font-semibold">
+                            {service.title}
+                          </h3>
+                        </div>
+
+                        <button
+                          onClick={() => navigate(`/detail/${service._id}`)}
+                          className="w-full text-[12px] md:text-[16px] bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300"
+                        >
+                          Discover Class
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                </SwiperSlide>
-              ))}
+                  </SwiperSlide>
+                ))}
             </Swiper>
           </div>
         </div>

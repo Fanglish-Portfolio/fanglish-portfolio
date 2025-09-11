@@ -20,44 +20,17 @@ import service4 from "../../assets/image/service/service/service4.png";
 import service5 from "../../assets/image/service/service/service5.png";
 import service6 from "../../assets/image/service/service/service6.png";
 
-const services = [
+const service = [
   {
     id: 1,
-    title: "Consulting Service",
-    image: service1,
-    icon: <MdOutlineForum className="w-6 h-6" />,
-    link: "/service-detail/1",
-  },
-  {
-    id: 2,
     title: "Language Class",
     image: service2,
     icon: <Languages className="w-6 h-6" />,
     link: "/language-class",
   },
+
   {
-    id: 3,
-    title: "Ausbildung",
-    image: service3,
-    icon: <MdOutlineLocalLibrary className="w-6 h-6" />,
-    link: "/service-detail/3",
-  },
-  {
-    id: 4,
-    title: "Scholar  Application Support Program",
-    image: service4,
-    icon: <MdOutlineCases className="w-6 h-6" />,
-    link: "/service-detail/4",
-  },
-  {
-    id: 5,
-    title: "Duales Studium",
-    image: service5,
-    icon: <MdOutlineSchool className="w-6 h-6" />,
-    link: "/service-detail/5",
-  },
-  {
-    id: 6,
+    id: 2,
     title: "Study Abroad",
     image: service6,
     icon: (
@@ -76,10 +49,24 @@ const services = [
 ];
 
 import { useNavigate } from "react-router-dom";
+import { getAllCategory } from "../../api/banner/getAllCategory";
+import { useEffect, useState } from "react";
 
 const ServicesSection = ({ id }) => {
   const navigate = useNavigate();
-  const filteredServices = services.filter((service) => service.id != id);
+  const [services, setServices] = useState([]);
+
+  useEffect(() => {
+    const fetchServices = async () => {
+      const response = await getAllCategory("services");
+      // console.log(response);
+      const filteredServices = response.filter((service) => service._id != id);
+      setServices(filteredServices);
+    };
+    fetchServices();
+  }, []);
+
+  // console.log(services);
 
   return (
     <section>
@@ -89,7 +76,7 @@ const ServicesSection = ({ id }) => {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service) => (
+          {service.map((service) => (
             <div
               key={service.id}
               className="bg-[#161616]/20 rounded-2xl p-6 overflow-hidden border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105"
@@ -97,7 +84,7 @@ const ServicesSection = ({ id }) => {
               {/* Card Image */}
               <div className={`relative flex items-center justify-center`}>
                 <img
-                  src={service.image}
+                  src={service?.image}
                   alt={service.title}
                   className="w-full h-full object-cover rounded-xl"
                 />
@@ -115,6 +102,39 @@ const ServicesSection = ({ id }) => {
 
                 <button
                   onClick={() => navigate(service.link)}
+                  className="w-full text-[12px] md:text-[16px] bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300"
+                >
+                  View Service Details
+                </button>
+              </div>
+            </div>
+          ))}
+          {services.map((service) => (
+            <div
+              key={service._id}
+              className="bg-[#161616]/20 rounded-2xl p-6 overflow-hidden border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105"
+            >
+              {/* Card Image */}
+              <div className={`relative flex items-center justify-center`}>
+                <img
+                  src={service?.image?.imageUrl}
+                  alt={service.title}
+                  className="w-[350px] h-[345px] object-cover rounded-xl"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-20 rounded-lg"></div>
+              </div>
+
+              {/* Card Content */}
+              <div className="mt-6">
+                <div className="flex items-center h-[60px] gap-3 mb-4">
+                  <div className="text-white">{service.icon}</div>
+                  <h3 className="text-white text-[14px] sm:text-[26px] md:text-[20px] font-semibold">
+                    {service.title}
+                  </h3>
+                </div>
+
+                <button
+                  onClick={() => navigate(`/detail/${service._id}`)}
                   className="w-full text-[12px] md:text-[16px] bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-black transition-all duration-300"
                 >
                   View Service Details

@@ -56,7 +56,7 @@ function App() {
               }
             />
             <Route
-              path="/service-detail/:id"
+              path="/detail/:id"
               element={
                 <PageTransition>
                   <ServiceDetail />

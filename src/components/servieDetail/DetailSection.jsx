@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import service1 from "../../assets/image/service/service/service1.png";
 import service2 from "../../assets/image/service/service/service2.png";
 import service3 from "../../assets/image/service/service/service3.png";
@@ -6,8 +6,10 @@ import service4 from "../../assets/image/service/service/service4.png";
 import service5 from "../../assets/image/service/service/service5.png";
 import service6 from "../../assets/image/service/service/service6.png";
 import service7 from "../../assets/image/service/service/service7.png";
+import parse from "html-react-parser";
 
 import bg from "../../assets/image/Pattern-6.png";
+import { getACategory } from "../../api/banner/getACategory";
 
 const serviceData = [
   {
@@ -416,9 +418,28 @@ const serviceData = [
 ];
 
 function DetailSection({ id }) {
-  const service = serviceData.find((service) => service.id == id);
+  const [service, setService] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    const fetchService = async () => {
+      const response = await getACategory(id);
+      console.log("detail section", response);
+      setService(response.data);
+      setLoading(false);
+    };
+    fetchService();
+  }, [id]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  // const service = serviceData.find((service) => service.id == id);
 
   return (
+    // <div>hello</div>
     <div>
       <div className="mt-24">
         <div className="">
@@ -432,9 +453,13 @@ function DetailSection({ id }) {
           >
             {/* <div className="absolute top-1/2 transform -translate-y-1/2 left-1/2 -translate-x-1/2 md:left-14 md:-translate-x-0 z-10 "> */}
             <div className="flex flex-col md:flex-row gap-4 md:gap-12 justify-center items-center ">
-              <img src={service.image} alt="service1" className="rounded-xl" />
+              <img
+                src={service?.image?.imageUrl}
+                alt="service1"
+                className="rounded-xl w-[340px] h-[335px]"
+              />
               <p className="libre text-black text-[18px] sm:text-[20px] md:text-[32px] lg:text-[40px] font-semibold letter-spacing-[2px] leading-[1.5]">
-                {service.title}
+                {service?.title}
               </p>
             </div>
             {/* </div> */}
@@ -442,7 +467,37 @@ function DetailSection({ id }) {
         </div>
       </div>
 
-      <div className="mt-20 leading-[3.5] containers">{service.text}</div>
+      <div className="mt-20 leading-[3.5] containers">
+        {service?.youtubeLink && (
+          <div className="flex justify-center mb-8">
+            <iframe
+              width="560"
+              height="315"
+              src={
+                service.youtubeLink.includes("embed")
+                  ? service.youtubeLink
+                  : service.youtubeLink
+                      .replace("youtu.be/", "youtube.com/embed/")
+                      .replace("watch?v=", "embed/")
+              }
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="rounded-lg"
+            ></iframe>
+          </div>
+        )}
+        <div
+          className="prose prose-lg max-w-none [&_h1]:text-lg [&_h1]:lg:text-xl [&_h1]:font-bold [&_h1]:mb-4 
+                     [&_h2]:text-lg [&_h2]:mt-8 [&_h2]:mb-3 [&_h2]:font-bold
+                     [&_h3]:text-lg [&_h3]:mt-8 [&_h3]:mb-3 [&_h3]:font-bold
+                     [&_p]:mb-4 [&_ul]:list-disc [&_ul]:pl-6 [&_li]:mb-2"
+        >
+          {service?.text ? parse(service.text) : <p>No content available</p>}
+        </div>
+      </div>
     </div>
   );
 }
