@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { getAllbanner } from "../../api/banner/getAllbanner";
+import { getAllbanner } from "../../api/getAllbanner";
 
 const HeroBanner = () => {
   const navigate = useNavigate();
@@ -85,10 +85,25 @@ const HeroBanner = () => {
                   <img
                     src={banner.imageUrl}
                     alt={banner.title}
-                    className="h-[500px] md:w-full md:h-full object-cover"
+                    className="h-[500px] md:w-full md:h-[700px] object-cover"
                     onLoadCapture={() => setIsImageLoaded(true)}
                     onError={() => setIsImageLoaded(true)}
                   />
+                  <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-0"></div>
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 md:w-[60%] w-[80%]">
+                    <div className="flex flex-col items-center justify-center gap-4">
+                      <h1 className="banner-text text-center libre">
+                        We Empower learners of all levels to expand their skills
+                        , reach their goals and steps onto global stage.
+                      </h1>
+                      <button
+                        onClick={() => navigate("/booking ")}
+                        className="button mt-5"
+                      >
+                        Meet Our Counselors
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </SwiperSlide>
             ))}

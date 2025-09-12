@@ -19,7 +19,7 @@ import "swiper/css/pagination";
 import { ChevronLeft, ChevronRight, Languages } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { MdOutlineHotelClass } from "react-icons/md";
-import { getAllCategory } from "../../api/banner/getAllCategory";
+import { getAllCategory } from "../../api/getAllCategory";
 
 // const classes = [
 //   {

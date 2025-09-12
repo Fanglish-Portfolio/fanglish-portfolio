@@ -19,7 +19,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { useNavigate } from "react-router-dom";
-import { getAllCategory } from "../../api/banner/getAllCategory";
+import { getAllCategory } from "../../api/getAllCategory";
 
 // const classes = [
 //   {
@@ -146,7 +146,7 @@ export default function PackageCarousel({ id }) {
               }}
             >
               {packages.map((service) => (
-                <SwiperSlide key={service.id}>
+                <SwiperSlide key={service._id}>
                   <div className="bg-[#161616]/20 rounded-2xl p-6 overflow-hidden border border-gray-700 hover:border-gray-600 transition-all duration-300">
                     {/* Card Image */}
                     <div

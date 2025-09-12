@@ -49,7 +49,7 @@ const service = [
 ];
 
 import { useNavigate } from "react-router-dom";
-import { getAllCategory } from "../../api/banner/getAllCategory";
+import { getAllCategory } from "../../api/getAllCategory";
 import { useEffect, useState } from "react";
 
 const ServicesSection = ({ id }) => {

@@ -18,7 +18,7 @@ import blog3 from "../../assets/image/home/blog/blog3.png";
 
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { getAllCategory } from "../../api/banner/getAllCategory";
+import { getAllCategory } from "../../api/getAllCategory";
 
 const BlogSection = ({ id }) => {
   const navigate = useNavigate();

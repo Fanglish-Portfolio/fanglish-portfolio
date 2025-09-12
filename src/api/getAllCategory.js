@@ -1,7 +1,7 @@
-import api from "../axios";
+import api from "./axios";
 
 export const getAllCategory = async (type) => {
-  console.log(type);
+  // console.log(type);
   try {
     const response = await api.get("/service-categories");
     // console.log(response.data.data);

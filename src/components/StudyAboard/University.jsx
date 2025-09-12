@@ -1,429 +1,132 @@
-import React, { useState } from "react";
-import flag from "../../assets/image/university/Flags.png";
-import flag1 from "../../assets/image/university/Flags1.png";
-import flag2 from "../../assets/image/university/Flags2.png";
-import flag3 from "../../assets/image/university/Flags3.png";
-import flag4 from "../../assets/image/university/Flags4.png";
-
-import uni1 from "./../../assets/image/university/schoolImage/us/usUni7.png";
-import uni2 from "./../../assets/image/university/schoolImage/us/usUni2.png";
-import uni3 from "./../../assets/image/university/schoolImage/us/usUni6.png";
-import uni4 from "./../../assets/image/university/schoolImage/us/usUni4.png";
-import uni5 from "./../../assets/image/university/schoolImage/us/usUni8.png";
-
-import uni10 from "./../../assets/image/university/schoolImage/us/usCollage1.png";
-import uni11 from "./../../assets/image/university/schoolImage/us/usCollage2.png";
-import uni12 from "./../../assets/image/university/schoolImage/us/usCollage3.png";
-import uni13 from "./../../assets/image/university/schoolImage/us/usCollage4.png";
-import uni14 from "./../../assets/image/university/schoolImage/us/usCollage5.png";
-import uni15 from "./../../assets/image/university/schoolImage/us/usCollage6.png";
-import uni16 from "./../../assets/image/university/schoolImage/us/usCollage7.png";
-import uni17 from "./../../assets/image/university/schoolImage/us/usCollage8.png";
-import uni18 from "./../../assets/image/university/schoolImage/us/usCollage9.png";
-import uni19 from "./../../assets/image/university/schoolImage/us/usCollage10.png";
-import uni20 from "./../../assets/image/university/schoolImage/us/usCollage11.png";
-import uni21 from "./../../assets/image/university/schoolImage/us/usCollage12.png";
-
-import uni22 from "./../../assets/image/university/schoolImage/uk/ukUni1.png";
-import uni23 from "./../../assets/image/university/schoolImage/uk/ukUni2.png";
-import uni24 from "./../../assets/image/university/schoolImage/uk/ukUni3.png";
-import uni25 from "./../../assets/image/university/schoolImage/uk/ukUni4.png";
-import uni26 from "./../../assets/image/university/schoolImage/uk/ukUni5.png";
-import uni27 from "./../../assets/image/university/schoolImage/uk/ukUni6.png";
-import uni28 from "./../../assets/image/university/schoolImage/uk/ukUni7.png";
-import uni29 from "./../../assets/image/university/schoolImage/uk/ukUni8.png";
-import uni30 from "./../../assets/image/university/schoolImage/uk/ukUni9.png";
-import uni31 from "./../../assets/image/university/schoolImage/uk/ukUni10.png";
-import uni117 from "./../../assets/image/university/schoolImage/uk/ukUni.png";
-
-import uni32 from "./../../assets/image/university/schoolImage/germany/GerUni1.png";
-import uni33 from "./../../assets/image/university/schoolImage/germany/GerUni2.png";
-import uni34 from "./../../assets/image/university/schoolImage/germany/GerUni3.png";
-import uni35 from "./../../assets/image/university/schoolImage/germany/GerUni4.png";
-import uni36 from "./../../assets/image/university/schoolImage/germany/GerUni5.png";
-
-import uni37 from "./../../assets/image/university/schoolImage/aus/AusUni1.png";
-import uni38 from "./../../assets/image/university/schoolImage/aus/AusUni2.png";
-import uni39 from "./../../assets/image/university/schoolImage/aus/AusUni3.png";
-import uni40 from "./../../assets/image/university/schoolImage/aus/AusUni4.png";
-
-import dubai from "./../../assets/image/university/schoolImage/dubai/dubai.png";
-
-const countries = [
-  {
-    id: "us",
-    name: "Study in US",
-    flag: flag,
-    universities: [
-      {
-        id: 1,
-        name: "Weber State University",
-        logo: uni1,
-        backgroundColor: "bg-white",
-        type: "university",
-        link: "https://www.weber.edu/map",
-      },
-      {
-        id: 2,
-        name: "Lawrence Technological University",
-        logo: uni2,
-        backgroundColor: "bg-red-700",
-        type: "university",
-        link: "https://www.ltu.edu/",
-      },
-      {
-        id: 3,
-        name: "Texas State University",
-        logo: uni3,
-        backgroundColor: "bg-white",
-        type: "university",
-        link: "https://www.txst.edu/",
-      },
-      {
-        id: 4,
-        name: "Skyline College",
-        logo: uni4,
-        backgroundColor: "bg-white",
-        type: "College",
-      },
-      {
-        id: 5,
-        name: "San Jose State University",
-        logo: uni5,
-        backgroundColor: "bg-white",
-        type: "university",
-        link: "https://www.sjsu.edu/",
-      },
-      {
-        id: 9,
-        name: "De Anza College",
-        logo: uni10,
-        backgroundColor: "bg-white",
-        type: "college",
-        link: "https://www.deanza.edu/",
-      },
-      {
-        id: 10,
-        name: "Ohlone College",
-        logo: uni11,
-        backgroundColor: "bg-white",
-        type: "college",
-        link: "https://www.ohlone.edu/",
-      },
-      {
-        id: 11,
-        name: "Orange Coast College",
-        logo: uni12,
-        backgroundColor: "bg-white",
-        type: "college",
-        link: "https://orangecoastcollege.edu/",
-      },
-      {
-        id: 12,
-        name: "Skyline College",
-        logo: uni13,
-        backgroundColor: "bg-white",
-        type: "college",
-        link: "https://skylinecollege.edu/",
-      },
-
-      {
-        id: 14,
-        name: "Houston Community College ",
-        logo: uni15,
-        backgroundColor: "bg-white",
-        type: "college",
-        link: "https://www.hccs.edu/",
-      },
-      {
-        id: 15,
-        name: "Santa Monica College",
-        logo: uni16,
-        backgroundColor: "bg-white",
-        type: "college",
-        link: "https://www.smc.edu/",
-      },
-      {
-        id: 16,
-        name: " East Los Angeles College",
-        logo: uni17,
-        backgroundColor: "bg-white",
-        type: "college",
-        link: "https://www.elac.edu/",
-      },
-      {
-        id: 17,
-        name: "Los Angeles City College",
-        logo: uni18,
-        backgroundColor: "bg-white",
-        type: "college",
-        link: "https://www.lacc.edu/",
-      },
-      {
-        id: 18,
-        name: " Queens College, CUNY",
-        logo: uni19,
-        backgroundColor: "bg-white",
-        type: "college",
-        link: "https://www.qc.cuny.edu/",
-      },
-      {
-        id: 19,
-        name: "Mt. San Antonio College",
-        logo: uni20,
-        backgroundColor: "bg-white",
-        type: "college",
-        link: "https://www.mtsac.edu/",
-      },
-      {
-        id: 20,
-        name: "Borough of Manhattan Community College, CUNY",
-        logo: uni21,
-        backgroundColor: "bg-white",
-        type: "college",
-        link: "https://www.bmcc.cuny.edu/",
-      },
-    ],
-  },
-  {
-    id: "uk",
-    name: "Study in UK",
-    flag: flag1,
-    universities: [
-      {
-        id: 117,
-        name: "University Of Bristo",
-        logo: uni117,
-        backgroundColor: "bg-blue-900",
-        type: "university",
-        link: "https://www.bristol.ac.uk/",
-      },
-      {
-        id: 17,
-        name: "University of Edinbrugh",
-        logo: uni22,
-        backgroundColor: "bg-blue-900",
-        type: "university",
-        link: "https://www.ed.ac.uk/",
-      },
-      {
-        id: 18,
-        name: "University of Birmingham",
-        logo: uni23,
-        backgroundColor: "bg-blue-900",
-        type: "university",
-        link: "https://www.birmingham.ac.uk/",
-      },
-      {
-        id: 19,
-        name: "University of Southampton",
-        logo: uni24,
-        backgroundColor: "bg-blue-900",
-        type: "university",
-        link: "https://www.southampton.ac.uk/",
-      },
-      {
-        id: 20,
-        name: "Manchester Metropolitan University",
-        logo: uni25,
-        backgroundColor: "bg-blue-900",
-        type: "university",
-        link: "https://www.mmu.ac.uk/",
-      },
-      {
-        id: 21,
-        name: "University of Hertfordshire",
-        logo: uni26,
-        backgroundColor: "bg-blue-900",
-        type: "university",
-        link: "https://www.herts.ac.uk/",
-      },
-      {
-        id: 22,
-        name: "University of Essex",
-        logo: uni27,
-        backgroundColor: "bg-blue-900",
-        type: "university",
-        link: "https://www.essex.ac.uk/",
-      },
-      {
-        id: 23,
-        name: " University of Sussex",
-        logo: uni28,
-        backgroundColor: "bg-blue-900",
-        type: "university",
-        link: "https://www.sussex.ac.uk/",
-      },
-      {
-        id: 24,
-        name: "University of Leeds",
-        logo: uni29,
-        backgroundColor: "bg-blue-900",
-        type: "university",
-        link: "https://www.leeds.ac.uk/",
-      },
-      {
-        id: 25,
-        name: " University of Glasgow",
-        logo: uni30,
-        backgroundColor: "bg-blue-900",
-        type: "university",
-        link: "https://www.gla.ac.uk/",
-      },
-      {
-        id: 26,
-        name: "University of London",
-        logo: uni31,
-        backgroundColor: "bg-blue-900",
-        type: "university",
-        link: "https://www.london.ac.uk/",
-      },
-    ],
-  },
-  {
-    id: "germany",
-    name: "Study in GERMANY",
-    flag: flag2,
-    universities: [
-      {
-        id: 27,
-        name: "HSB Hochschule Bremen",
-        logo: uni32,
-        backgroundColor: "bg-blue-600",
-        type: "university",
-        link: "https://www.hs-bremen.de/en/study/before/step-by-step-to-university  ",
-      },
-      {
-        id: 28,
-        name: "Nordhausen University of Applied Science",
-        logo: uni33,
-        backgroundColor: "bg-red-600",
-        type: "university",
-        link: "https://www.hs-nordhausen.de/en/",
-      },
-      {
-        id: 29,
-        name: "Hochschule München University of Applied Sciences",
-        logo: uni34,
-        backgroundColor: "bg-green-600",
-        type: "university",
-        link: "https://hm.edu/en/index.en.html",
-      },
-      {
-        id: 30,
-        name: "Deggendorf Institute Technology",
-        logo: uni35,
-        backgroundColor: "bg-blue-700",
-        type: "university",
-        link: "https://ec.dit.edu/why-study-at-dit",
-      },
-      {
-        id: 31,
-        name: "Technology Arts Science TH Köln",
-        logo: uni36,
-        backgroundColor: "bg-red-700",
-        type: "university",
-        link: "https://www.th-koeln.de/en/homepage_26.php",
-      },
-    ],
-  },
-  {
-    id: "austria",
-    name: "Study in AUSTRIA",
-    flag: flag3,
-    universities: [
-      {
-        id: 32,
-        name: "FH University of Applied Science Upper Austria",
-        logo: uni37,
-        backgroundColor: "bg-blue-800",
-        type: "university",
-        link: "https://fh-ooe.at/en",
-      },
-      {
-        id: 33,
-        name: "University of Vienna",
-        logo: uni38,
-        backgroundColor: "bg-red-600",
-        type: "university",
-        link: "https://www.univie.ac.at/en/",
-      },
-      {
-        id: 34,
-        name: "University of Graz",
-        logo: uni39,
-        backgroundColor: "bg-green-700",
-        type: "university",
-        link: "https://www.uni-graz.at/en/",
-      },
-      {
-        id: 35,
-        name: "University of Applied Sciences, Burgenland",
-        logo: uni40,
-        backgroundColor: "bg-purple-600",
-        type: "university",
-        link: "https://hochschule-burgenland.at/en/",
-      },
-    ],
-  },
-  {
-    id: "dubai",
-    name: "Study in DUBAI",
-    flag: flag4,
-    universities: [
-      {
-        id: 17,
-        name: "Coming Soon",
-        logo: dubai,
-        backgroundColor: "bg-gold-600",
-        type: "university",
-      },
-      {
-        id: 18,
-        name: "Coming Soon",
-        logo: dubai,
-        backgroundColor: "bg-green-600",
-        type: "university",
-      },
-    ],
-  },
-  // {
-  //   id: "malta",
-  //   name: "Study in MALTA",
-  //   flag: flag4,
-  //   universities: [
-  //     {
-  //       id: 19,
-  //       name: "Comming Soon",
-  //       logo: dubai,
-  //       backgroundColor: "bg-gold-600",
-  //       type: "university",
-  //     },
-  //     {
-  //       id: 20,
-  //       name: "Comming Soon",
-  //       logo: dubai,
-  //       backgroundColor: "bg-green-600",
-  //       type: "university",
-  //     },
-  //   ],
-  // },
-];
+import React, { useState, useEffect } from "react";
+import { getStudyAbroad } from "../../api/getStudyAbroad";
+import { countries as countryData } from "../../utils/country";
 
 function University({ country }) {
   const [selectedCountry, setSelectedCountry] = useState(country);
   const [selectedType, setSelectedType] = useState("university");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
-  console.log(selectedCountry);
+  const [studyAbroadData, setStudyAbroadData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const response = await getStudyAbroad();
+        setStudyAbroadData(response.data);
+        setError(null);
+      } catch (err) {
+        setError("Failed to load study abroad data");
+        console.error("Error fetching study abroad data:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const countries = React.useMemo(() => {
+    const countryMap = {};
+    studyAbroadData.forEach((item) => {
+      if (!countryMap[item.country]) {
+        // Find the country data from our country list
+        const countryInfo = countryData.find((c) => {
+          const apiCountry = item.country.toLowerCase();
+          const countryName = c.name.toLowerCase();
+
+          // Direct match
+          if (countryName === apiCountry) return true;
+
+          // Handle common variations
+          if (apiCountry === "uk" && countryName === "united kingdom")
+            return true;
+          if (apiCountry === "usa" && countryName === "united states")
+            return true;
+          if (apiCountry === "uae" && countryName === "united arab emirates")
+            return true;
+          if (apiCountry === "south korea" && countryName === "south korea")
+            return true;
+          if (apiCountry === "north korea" && countryName === "north korea")
+            return true;
+
+          return false;
+        });
+
+        countryMap[item.country] = {
+          id: item.country.toLowerCase(),
+          name: `Study in ${item.country}`,
+          countryName: item.country,
+          flag:
+            countryInfo?.flag ||
+            `https://flagcdn.com/w40/${item.country.toLowerCase()}.png`,
+          universities: [],
+        };
+      }
+      countryMap[item.country].universities.push({
+        id: item._id,
+        name: item.name,
+        logo: item.image?.url,
+        backgroundColor: "bg-white",
+        type: item.type,
+        link: item.url,
+      });
+    });
+    return Object.values(countryMap);
+  }, [studyAbroadData]);
 
   const currentCountry = countries.find(
     (country) => country.id === selectedCountry
   );
 
-  const filteredUniversities = currentCountry.universities.filter(
-    (university) => university.type === selectedType
-  );
+  const filteredUniversities =
+    currentCountry?.universities?.filter(
+      (university) => university.type === selectedType
+    ) || [];
+
+  if (loading) {
+    return (
+      <section className="containers">
+        <div className="mt-20"></div>
+        <h1 className="header-text mb-10">Study Abroad</h1>
+        <div className="flex justify-center items-center h-64">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+        </div>
+      </section>
+    );
+  }
+
+  if (error) {
+    return (
+      <section className="containers">
+        <div className="mt-20"></div>
+        <h1 className="header-text mb-10">Study Abroad</h1>
+        <div className="flex justify-center items-center h-64">
+          <div className="text-red-500 text-center">
+            <p className="text-lg font-semibold mb-2">Error loading data</p>
+            <p className="text-sm">{error}</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  if (!currentCountry) {
+    return (
+      <section className="containers">
+        <div className="mt-20"></div>
+        <h1 className="header-text mb-10">Study Abroad</h1>
+        <div className="flex justify-center items-center h-64">
+          <div className="text-gray-500 text-center">
+            <p className="text-lg font-semibold">No data available</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="containers">
@@ -436,7 +139,11 @@ function University({ country }) {
             className="w-full flex items-center justify-between p-4 bg-gray-800 rounded-xl border border-gray-700"
           >
             <div className="flex items-center space-x-3">
-              <img src={currentCountry.flag} alt="" />
+              <img
+                src={currentCountry.flag}
+                alt={`${currentCountry.countryName} flag`}
+                className="w-6 h-4 object-cover rounded-sm"
+              />
               <span className="font-medium text-left">
                 {currentCountry.name}
               </span>
@@ -474,7 +181,6 @@ function University({ country }) {
               {countries.map((country) => (
                 <button
                   key={country.id}
-                  va
                   onClick={() => {
                     setSelectedCountry(country.id);
                     setSelectedType("university");
@@ -488,7 +194,11 @@ function University({ country }) {
                   }`}
                 >
                   <div className="flex items-center space-x-3">
-                    <img src={country.flag} alt="flag" />
+                    <img
+                      src={country.flag}
+                      alt={`${country.countryName} flag`}
+                      className="w-6 h-4 object-cover rounded-sm"
+                    />
                     <span className="font-medium text-left">
                       {country.name}
                     </span>
@@ -513,7 +223,9 @@ function University({ country }) {
               </button>
               <button
                 className={`${
-                  selectedCountry !== "us"
+                  !currentCountry?.universities?.some(
+                    (uni) => uni.type === "college"
+                  )
                     ? "opacity-50 cursor-not-allowed"
                     : ""
                 }  px-6 py-2 rounded-full border border-primary transition-all duration-300 ${
@@ -521,7 +233,11 @@ function University({ country }) {
                     ? "bg-primary text-black"
                     : "text-primary"
                 }`}
-                disabled={selectedCountry !== "us"}
+                disabled={
+                  !currentCountry?.universities?.some(
+                    (uni) => uni.type === "college"
+                  )
+                }
                 onClick={() => setSelectedType("college")}
               >
                 College
@@ -536,17 +252,23 @@ function University({ country }) {
                     className="bg-[#161616]/20 rounded-2xl p-6 overflow-hidden border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105"
                   >
                     {/* Card Image */}
-                    <div className="relative flex items-center justify-center">
-                      {!imageLoaded ||
-                        (!university.logo && (
-                          <div className="w-full h-40 bg-gray-700 rounded-xl animate-pulse" />
-                        ))}
-                      <img
-                        src={university.logo}
-                        alt={university.name}
-                        loading="lazy"
-                        onLoad={() => setImageLoaded(true)}
-                      />
+                    <div className="relative flex items-center justify-center h-40">
+                      {!university.logo && (
+                        <div className="w-full h-40 bg-gray-700 rounded-xl animate-pulse" />
+                      )}
+                      {university.logo && (
+                        <img
+                          src={university.logo}
+                          alt={university.name}
+                          loading="lazy"
+                          className="max-h-40 object-contain"
+                          onError={(e) => {
+                            e.target.style.display = "none";
+                            e.target.nextSibling.style.display = "block";
+                          }}
+                        />
+                      )}
+                      <div className="w-full h-40 bg-gray-700 rounded-xl animate-pulse hidden" />
                     </div>
 
                     {/* Card Content */}
@@ -559,9 +281,13 @@ function University({ country }) {
                       </div>
 
                       <button
-                        onClick={() => window.open(university.link, "_blank")}
+                        onClick={() =>
+                          university.link &&
+                          window.open(university.link, "_blank")
+                        }
+                        disabled={!university.link}
                         className={`bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium transition-all duration-300 ${
-                          selectedCountry === "dubai"
+                          !university.link
                             ? "opacity-50 cursor-not-allowed"
                             : "hover:bg-primary hover:text-black"
                         }`}

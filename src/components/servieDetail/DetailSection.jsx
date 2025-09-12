@@ -9,7 +9,7 @@ import service7 from "../../assets/image/service/service/service7.png";
 import parse from "html-react-parser";
 
 import bg from "../../assets/image/Pattern-6.png";
-import { getACategory } from "../../api/banner/getACategory";
+import { getACategory } from "../../api/getACategory";
 
 const serviceData = [
   {

@@ -20,7 +20,7 @@ import blog5 from "../../assets/image/home/blog/blog5.png";
 import blog6 from "../../assets/image/home/blog/blog6.png";
 import blog7 from "../../assets/image/home/blog/blog7.png";
 import { useNavigate } from "react-router-dom";
-import { getAllCategory } from "../../api/banner/getAllCategory";
+import { getAllCategory } from "../../api/getAllCategory";
 import { useEffect, useState } from "react";
 
 const Blog = ({ id }) => {
