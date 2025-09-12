@@ -1,5 +1,5 @@
 // src/ShowroomInfo.js
-import React from "react";
+import React, { useState, useEffect } from "react";
 import logo from "./../assets/image/logo/logo.png";
 import {
   FaFacebook,
@@ -14,14 +14,87 @@ import {
 
 import { BiPhoneCall } from "react-icons/bi";
 import { useLocation, useNavigate } from "react-router-dom";
+import { getAllCategory } from "../api/getAllCategory";
+import { getStudyAbroad } from "../api/getStudyAbroad";
+import { countries as countryData } from "../utils/country";
 
 const Footer = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const [servicesItems, setServicesItems] = useState([]);
+  const [studyAbroadItems, setStudyAbroadItems] = useState([]);
+  const [isLoadingServices, setIsLoadingServices] = useState(true);
+  const [isLoadingStudyAbroad, setIsLoadingStudyAbroad] = useState(true);
+
+  const defaultServices = [
+    { name: "Language Class", link: "/language-class" },
+    { name: "Study Abroad", link: "/study-abroad/us" },
+  ];
 
   const handleRoute = (path) => {
     navigate(path);
   };
+
+  useEffect(() => {
+    const fetchServices = async () => {
+      try {
+        setIsLoadingServices(true);
+        const services = await getAllCategory("services");
+        setServicesItems(services);
+      } catch (error) {
+        console.error("Error fetching services:", error);
+        setServicesItems([]);
+      } finally {
+        setIsLoadingServices(false);
+      }
+    };
+
+    const fetchStudyAbroad = async () => {
+      try {
+        setIsLoadingStudyAbroad(true);
+        const studyAbroadData = await getStudyAbroad();
+
+        const countryMap = {};
+        studyAbroadData.data.forEach((item) => {
+          if (!countryMap[item.country]) {
+            const countryInfo = countryData.find((c) => {
+              const apiCountry = item.country.toLowerCase();
+              const countryName = c.name.toLowerCase();
+
+              if (countryName === apiCountry) return true;
+              if (apiCountry === "uk" && countryName === "united kingdom")
+                return true;
+              if (apiCountry === "usa" && countryName === "united states")
+                return true;
+              if (
+                apiCountry === "uae" &&
+                countryName === "united arab emirates"
+              )
+                return true;
+
+              return false;
+            });
+
+            countryMap[item.country] = {
+              name: `Study in ${item.country.toUpperCase()}`,
+              countryName: item.country,
+              link: `/study-abroad/${item.country.toLowerCase()}`,
+            };
+          }
+        });
+
+        setStudyAbroadItems(Object.values(countryMap));
+      } catch (error) {
+        console.error("Error fetching study abroad data:", error);
+        setStudyAbroadItems([]);
+      } finally {
+        setIsLoadingStudyAbroad(false);
+      }
+    };
+
+    fetchServices();
+    fetchStudyAbroad();
+  }, []);
   return (
     <section className="max-w-[1280px] mx-auto">
       <div className="text-white py-20 px-5 flex flex-col lg:flex-row gap-4">
@@ -134,48 +207,32 @@ const Footer = () => {
                 Our Services
               </h2>
               <ul className="space-y-4 ms-2 text-[12px] font-medium">
-                <li
-                  onClick={() => handleRoute("/service-detail/1")}
-                  className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
-                >
-                  Consultation
-                </li>
-                <li
-                  onClick={() => handleRoute("/language-class")}
-                  className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
-                >
-                  Language Class
-                </li>
-                <li
-                  onClick={() => handleRoute("/service-detail/3")}
-                  className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
-                >
-                  Ausbildung
-                </li>
-                <li
-                  onClick={() => handleRoute("/service-detail/4")}
-                  className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
-                >
-                  Scholarship Programs
-                </li>
-                <li
-                  onClick={() => handleRoute("/service-detail/5")}
-                  className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
-                >
-                  Duales Stadium
-                </li>
-                <li
-                  onClick={() => handleRoute("/study-abroad/us")}
-                  className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
-                >
-                  Study Abroad
-                </li>
-                {/* <li
-                  onClick={() => handleRoute("/service-detail/7")}
-                  className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
-                >
-                  6 Months To The Max
-                </li> */}
+                {isLoadingServices ? (
+                  <li className="flex items-center justify-center py-2">
+                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-primary"></div>
+                  </li>
+                ) : (
+                  <>
+                    {defaultServices.map((item, index) => (
+                      <li
+                        key={index}
+                        onClick={() => handleRoute(item.link)}
+                        className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
+                      >
+                        {item.name}
+                      </li>
+                    ))}
+                    {servicesItems.map((item, index) => (
+                      <li
+                        key={index}
+                        onClick={() => handleRoute("/detail/" + item._id)}
+                        className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
+                      >
+                        {item.title}
+                      </li>
+                    ))}
+                  </>
+                )}
               </ul>
             </div>
           </div>
@@ -185,43 +242,21 @@ const Footer = () => {
                 Study Abroad
               </h2>
               <ul className="space-y-4 ms-2 text-[12px] font-medium">
-                <li
-                  onClick={() => handleRoute("/study-abroad/austria")}
-                  className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
-                >
-                  Study in AUSTRIA
-                </li>
-                <li
-                  onClick={() => handleRoute("/study-abroad/germany")}
-                  className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
-                >
-                  Study in GERMANY
-                </li>
-
-                <li
-                  onClick={() => handleRoute("/study-abroad/uk")}
-                  className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
-                >
-                  Study in UK
-                </li>
-                <li
-                  onClick={() => handleRoute("/study-abroad/us")}
-                  className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
-                >
-                  Study in US
-                </li>
-                <li
-                  onClick={() => handleRoute("/study-abroad/dubai")}
-                  className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
-                >
-                  Study in DUBAI
-                </li>
-                {/* <li
-                  onClick={() => handleRoute("/study-abroad/malta")}
-                  className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
-                >
-                  Study in MALTA
-                </li> */}
+                {isLoadingStudyAbroad ? (
+                  <li className="flex items-center justify-center py-2">
+                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-primary"></div>
+                  </li>
+                ) : (
+                  studyAbroadItems.map((item, index) => (
+                    <li
+                      key={index}
+                      onClick={() => handleRoute(item.link)}
+                      className="cursor-pointer hover:translate-x-2 hover:scale-105 transition duration-300"
+                    >
+                      {item.name}
+                    </li>
+                  ))
+                )}
               </ul>
             </div>
           </div>

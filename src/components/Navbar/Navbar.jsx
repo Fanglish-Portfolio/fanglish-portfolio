@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { IoMenuSharp } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
@@ -11,43 +11,43 @@ import {
   MdOutlineSchool,
   MdOutlineHotelClass,
 } from "react-icons/md";
-import flag from "../../assets/image/university/Flags.png";
-import flag1 from "../../assets/image/university/Flags1.png";
-import flag2 from "../../assets/image/university/Flags2.png";
-import flag3 from "../../assets/image/university/Flags3.png";
-import flag4 from "../../assets/image/university/Flags4.png";
-import flag5 from "../../assets/image/university/Flags5.png";
-
 import { Languages } from "lucide-react";
+import { getAllCategory } from "../../api/getAllCategory";
+import { getStudyAbroad } from "../../api/getStudyAbroad";
+import { countries as countryData } from "../../utils/country";
 
 const Navbar = () => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isStudyAbroadOpen, setIsStudyAbroadOpen] = useState(false);
+  const [servicesItems, setServicesItems] = useState([]);
+  const [studyAbroadItems, setStudyAbroadItems] = useState([]);
+  const [isLoadingServices, setIsLoadingServices] = useState(true);
+  const [isLoadingStudyAbroad, setIsLoadingStudyAbroad] = useState(true);
 
-  const servicesItems = [
-    { name: "Consulting", icon: <MdOutlineForum />, link: "/service-detail/1" },
+  const iconMap = {
+    consulting: <MdOutlineForum />,
+    "language-class": <Languages />,
+    ausbildung: <MdOutlineLocalLibrary />,
+    "scholar-application": <MdOutlineCases />,
+    "duales-studium": <MdOutlineSchool />,
+    "study-abroad": (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="24px"
+        viewBox="0 -960 960 960"
+        width="24px"
+        fill="currentColor"
+      >
+        <path d="M123-440q-1-10-1.5-20t-.5-20q0-75 28-140.5t77-114q49-48.5 114-77T480-840q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-480q0 10-.5 20t-1.5 20h-81q2-10 2.5-20t.5-20q0-10-.5-20t-2.5-20H639q1 10 1 20v40q0 10-1 20h-79v-33q0-12-.5-24t-1.5-23H403q-1 11-1.5 23t-.5 24v33h-79q-1-10-1-20v-40q0-10 1-20H204q-2 10-2.5 20t-.5 20q0 10 .5 20t2.5 20h-81Zm105-160h103q8-43 20-77.5t26-62.5q-48 18-87 54.5T228-600Zm186 0h132q-10-43-25-84t-41-76q-26 35-41.5 76T414-600Zm216 0h103q-23-49-62.5-85.5T583-740q14 30 26.5 63.5T630-600ZM440-120v-40q0-50-35-85t-85-35H80v-80h240q48 0 89.5 21t70.5 59q29-38 70.5-59t89.5-21h240v80H640q-50 0-85 35t-35 85v40h-80Z" />
+      </svg>
+    ),
+    "6-months-to-the-max": <MdOutlineHotelClass />,
+  };
+
+  const defaultServices = [
     { name: "Language Class", icon: <Languages />, link: "/language-class" },
-    {
-      name: "Ausbildung",
-      icon: <MdOutlineLocalLibrary />,
-      link: "/service-detail/3",
-    },
-    {
-      name: (
-        <p>
-          Scholar Application <br /> Support Program
-        </p>
-      ),
-      icon: <MdOutlineCases />,
-      link: "/service-detail/4",
-    },
-    {
-      name: "Duales Studium",
-      icon: <MdOutlineSchool />,
-      link: "/service-detail/5",
-    },
     {
       name: "Study Abroad",
       icon: (
@@ -63,12 +63,73 @@ const Navbar = () => {
       ),
       link: "/study-abroad/us",
     },
-    // {
-    //   name: "6 Months To The Max",
-    //   icon: <MdOutlineHotelClass />,
-    //   link: "/service-detail/7",
-    // },
   ];
+
+  useEffect(() => {
+    const fetchServices = async () => {
+      try {
+        setIsLoadingServices(true);
+        const services = await getAllCategory("services");
+        setServicesItems(services);
+      } catch (error) {
+        console.error("Error fetching services:", error);
+        setServicesItems([]);
+      } finally {
+        setIsLoadingServices(false);
+      }
+    };
+
+    const fetchStudyAbroad = async () => {
+      try {
+        setIsLoadingStudyAbroad(true);
+        const studyAbroadData = await getStudyAbroad();
+
+        const countryMap = {};
+        studyAbroadData.data.forEach((item) => {
+          if (!countryMap[item.country]) {
+            const countryInfo = countryData.find((c) => {
+              const apiCountry = item.country.toLowerCase();
+              const countryName = c.name.toLowerCase();
+
+              if (countryName === apiCountry) return true;
+              if (apiCountry === "uk" && countryName === "united kingdom")
+                return true;
+              if (apiCountry === "usa" && countryName === "united states")
+                return true;
+              if (
+                apiCountry === "uae" &&
+                countryName === "united arab emirates"
+              )
+                return true;
+
+              return false;
+            });
+
+            countryMap[item.country] = {
+              name: `Study in ${item.country.toUpperCase()}`,
+              countryName: item.country,
+              flag:
+                countryInfo?.flag ||
+                `https://flagcdn.com/w40/${item.country.toLowerCase()}.png`,
+              link: `/study-abroad/${item.country.toLowerCase()}`,
+            };
+          }
+        });
+
+        setStudyAbroadItems(Object.values(countryMap));
+      } catch (error) {
+        console.error("Error fetching study abroad data:", error);
+        setStudyAbroadItems([]);
+      } finally {
+        setIsLoadingStudyAbroad(false);
+      }
+    };
+
+    fetchServices();
+    fetchStudyAbroad();
+  }, []);
+
+  console.log(servicesItems);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -150,18 +211,38 @@ const Navbar = () => {
                 onClick={() => setIsServicesOpen(false)}
               >
                 <div className="absolute -top-2 left-6 w-4 h-4 bg-white transform rotate-45"></div>
-                {servicesItems.map((item, index) => (
-                  <NavLink
-                    key={index}
-                    to={item.link}
-                    className={`flex items-center my-5 space-x-5 px-8 py-3 text-gray-800 hover:bg-primary/20 transition-colors ${
-                      location.pathname === item.link ? "bg-primary/20" : ""
-                    }`}
-                  >
-                    <span className="text-lg">{item.icon}</span>
-                    <span className="font-medium">{item.name}</span>
-                  </NavLink>
-                ))}
+                {isLoadingServices ? (
+                  <div className="flex items-center justify-center py-8">
+                    <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-primary"></div>
+                  </div>
+                ) : (
+                  <div>
+                    {defaultServices.map((item, index) => (
+                      <NavLink
+                        key={index}
+                        to={item.link}
+                        className={`flex items-center my-5 space-x-5 px-8 py-3 text-gray-800 hover:bg-primary/20 transition-colors ${
+                          location.pathname === item.link ? "bg-primary/20" : ""
+                        }`}
+                      >
+                        <span className="text-lg">{item.icon}</span>
+                        <span className="font-medium">{item.name}</span>
+                      </NavLink>
+                    ))}
+                    {servicesItems.map((item, index) => (
+                      <NavLink
+                        key={index}
+                        to={"/detail/" + item._id}
+                        className={`flex items-center my-5 space-x-5 px-8 py-3 text-gray-800 hover:bg-primary/20 transition-colors ${
+                          location.pathname === item.link ? "bg-primary/20" : ""
+                        }`}
+                      >
+                        {/* <span className="text-lg">{item.icon}</span> */}
+                        <span className="font-medium">{item.title}</span>
+                      </NavLink>
+                    ))}
+                  </div>
+                )}
               </div>
             )}
           </div>
@@ -197,78 +278,29 @@ const Navbar = () => {
                 className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 z-50"
               >
                 <div className="absolute -top-2 left-6 w-4 h-4 bg-white transform rotate-45"></div>
-                <NavLink
-                  to="/study-abroad/us"
-                  onClick={() => setIsStudyAbroadOpen(!isStudyAbroadOpen)}
-                  className={`flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-primary/20 transition-colors ${
-                    location.pathname === "/study-abroad/us"
-                      ? "bg-primary/20"
-                      : ""
-                  }`}
-                >
-                  <img src={flag} alt="flag" />
-                  Study in US
-                </NavLink>
-                <NavLink
-                  to="/study-abroad/uk"
-                  onClick={() => setIsStudyAbroadOpen(!isStudyAbroadOpen)}
-                  className={`hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-gray-50 transition-colors ${
-                    location.pathname === "/study-abroad/uk"
-                      ? "bg-primary/20"
-                      : ""
-                  }`}
-                >
-                  <img src={flag1} alt="flag" />
-                  Study in UK
-                </NavLink>
-                <NavLink
-                  to="/study-abroad/germany"
-                  onClick={() => setIsStudyAbroadOpen(!isStudyAbroadOpen)}
-                  className={`hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-gray-50 transition-colors ${
-                    location.pathname === "/study-abroad/germany"
-                      ? "bg-primary/20"
-                      : ""
-                  }`}
-                >
-                  <img src={flag2} alt="flag" />
-                  Study in GERMANY
-                </NavLink>
-                <NavLink
-                  to="/study-abroad/austria"
-                  onClick={() => setIsStudyAbroadOpen(!isStudyAbroadOpen)}
-                  className={`hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-gray-50 transition-colors ${
-                    location.pathname === "/study-abroad/austria"
-                      ? "bg-primary/20"
-                      : ""
-                  }`}
-                >
-                  <img src={flag3} alt="flag" />
-                  Study in AUSTRIA
-                </NavLink>
-                <NavLink
-                  to="/study-abroad/dubai"
-                  onClick={() => setIsStudyAbroadOpen(!isStudyAbroadOpen)}
-                  className={`hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-gray-50 transition-colors ${
-                    location.pathname === "/study-abroad/dubai"
-                      ? "bg-primary/20"
-                      : ""
-                  }`}
-                >
-                  <img src={flag4} alt="flag" />
-                  Study in DUBAI
-                </NavLink>
-                {/* <NavLink
-                  to="/study-abroad/malta"
-                  onClick={() => setIsStudyAbroadOpen(!isStudyAbroadOpen)}
-                  className={`hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-gray-50 transition-colors ${
-                    location.pathname === "/study-abroad/malta"
-                      ? "bg-primary/20"
-                      : ""
-                  }`}
-                >
-                  <img src={flag5} alt="flag" />
-                  Study in MALTA
-                </NavLink> */}
+                {isLoadingStudyAbroad ? (
+                  <div className="flex items-center justify-center py-8">
+                    <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-primary"></div>
+                  </div>
+                ) : (
+                  studyAbroadItems.map((item, index) => (
+                    <NavLink
+                      key={index}
+                      to={item.link}
+                      onClick={() => setIsStudyAbroadOpen(!isStudyAbroadOpen)}
+                      className={`flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-primary/20 transition-colors ${
+                        location.pathname === item.link ? "bg-primary/20" : ""
+                      }`}
+                    >
+                      <img
+                        src={item.flag}
+                        alt={`${item.countryName} flag`}
+                        className="w-6 h-4 object-cover rounded-sm"
+                      />
+                      {item.name}
+                    </NavLink>
+                  ))
+                )}
               </div>
             )}
           </div>
@@ -372,21 +404,27 @@ const Navbar = () => {
               {isServicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl py-2 z-50">
                   <div className="absolute -top-2 left-6 w-4 h-4 bg-white transform rotate-45"></div>
-                  {servicesItems.map((item, index) => (
-                    <NavLink
-                      key={index}
-                      to={item.link}
-                      onClick={() => {
-                        setIsServicesOpen(false);
-                        setIsStudyAbroadOpen(false);
-                        isOpen(false);
-                      }}
-                      className="flex text-[14px] items-center my-2 space-x-2 px-4 py-2 text-gray-800 hover:bg-primary/20 transition-colors"
-                    >
-                      <span className="text-lg">{item.icon}</span>
-                      <span className="font-medium">{item.name}</span>
-                    </NavLink>
-                  ))}
+                  {isLoadingServices ? (
+                    <div className="flex items-center justify-center py-8">
+                      <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-primary"></div>
+                    </div>
+                  ) : (
+                    servicesItems.map((item, index) => (
+                      <NavLink
+                        key={index}
+                        to={item.link}
+                        onClick={() => {
+                          setIsServicesOpen(false);
+                          setIsStudyAbroadOpen(false);
+                          setIsOpen(false);
+                        }}
+                        className="flex text-[14px] items-center my-2 space-x-2 px-4 py-2 text-gray-800 hover:bg-primary/20 transition-colors"
+                      >
+                        <span className="text-lg">{item.icon}</span>
+                        <span className="font-medium">{item.name}</span>
+                      </NavLink>
+                    ))
+                  )}
                 </div>
               )}
             </div>
@@ -418,78 +456,31 @@ const Navbar = () => {
               {isStudyAbroadOpen && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 z-50">
                   <div className="absolute -top-2 left-6 w-4 h-4 bg-white transform rotate-45"></div>
-                  <NavLink
-                    to="/study-abroad/us"
-                    onClick={() => {
-                      setIsStudyAbroadOpen(!isStudyAbroadOpen);
-                      setIsServicesOpen(false);
-                      isOpen(false);
-                    }}
-                    className="text-[14px] hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-2 text-gray-800 hover:bg-gray-50 transition-colors"
-                  >
-                    <img src={flag} alt="flag" />
-                    Study in USA
-                  </NavLink>
-                  <NavLink
-                    to="/study-abroad/uk"
-                    onClick={() => {
-                      setIsStudyAbroadOpen(!isStudyAbroadOpen);
-                      setIsServicesOpen(false);
-                      isOpen(false);
-                    }}
-                    className="text-[14px] hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-2 text-gray-800 hover:bg-gray-50 transition-colors"
-                  >
-                    <img src={flag1} alt="flag" />
-                    Study in UK
-                  </NavLink>
-                  <NavLink
-                    to="/study-abroad/germany"
-                    onClick={() => {
-                      setIsStudyAbroadOpen(!isStudyAbroadOpen);
-                      setIsServicesOpen(false);
-                      isOpen(false);
-                    }}
-                    className="text-[14px] hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-2 text-gray-800 hover:bg-gray-50 transition-colors"
-                  >
-                    <img src={flag2} alt="flag" />
-                    Study in Germany
-                  </NavLink>
-                  <NavLink
-                    to="/study-abroad/austria"
-                    onClick={() => {
-                      setIsStudyAbroadOpen(!isStudyAbroadOpen);
-                      setIsServicesOpen(false);
-                      isOpen(false);
-                    }}
-                    className="text-[14px] hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-2 text-gray-800 hover:bg-gray-50 transition-colors"
-                  >
-                    <img src={flag3} alt="flag" />
-                    Study in Austria
-                  </NavLink>
-                  <NavLink
-                    to="/study-abroad/dubai"
-                    onClick={() => {
-                      setIsStudyAbroadOpen(!isStudyAbroadOpen);
-                      setIsServicesOpen(false);
-                      isOpen(false);
-                    }}
-                    className="text-[14px] hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-2 text-gray-800 hover:bg-gray-50 transition-colors"
-                  >
-                    <img src={flag4} alt="flag" />
-                    Study in Dubai
-                  </NavLink>
-                  <NavLink
-                    to="/study-abroad/malta"
-                    onClick={() => {
-                      setIsStudyAbroadOpen(!isStudyAbroadOpen);
-                      setIsServicesOpen(false);
-                      isOpen(false);
-                    }}
-                    className="text-[14px] hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-2 text-gray-800 hover:bg-gray-50 transition-colors"
-                  >
-                    <img src={flag5} alt="flag" />
-                    Study in Malta
-                  </NavLink>
+                  {isLoadingStudyAbroad ? (
+                    <div className="flex items-center justify-center py-8">
+                      <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-primary"></div>
+                    </div>
+                  ) : (
+                    studyAbroadItems.map((item, index) => (
+                      <NavLink
+                        key={index}
+                        to={item.link}
+                        onClick={() => {
+                          setIsStudyAbroadOpen(!isStudyAbroadOpen);
+                          setIsServicesOpen(false);
+                          setIsOpen(false);
+                        }}
+                        className="text-[14px] hover:bg-primary/20 flex items-center gap-5 my-2 px-4 py-2 text-gray-800 hover:bg-gray-50 transition-colors"
+                      >
+                        <img
+                          src={item.flag}
+                          alt={`${item.countryName} flag`}
+                          className="w-6 h-4 object-cover rounded-sm"
+                        />
+                        {item.name}
+                      </NavLink>
+                    ))
+                  )}
                 </div>
               )}
             </div>

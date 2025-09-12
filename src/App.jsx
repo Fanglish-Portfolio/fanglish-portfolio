@@ -19,6 +19,7 @@ import BlogDetailPage from "./pages/BlogDetailPage";
 import LanguageClass from "./pages/LanguageClass";
 import PrivicyPolicy from "./pages/PrivicyPolicy";
 import Package from "./pages/Package";
+import ContactUs from "./pages/ContactUs";
 
 function App() {
   return (
@@ -132,6 +133,14 @@ function App() {
               element={
                 <PageTransition>
                   <Package />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/contact"
+              element={
+                <PageTransition>
+                  <ContactUs />
                 </PageTransition>
               }
             />

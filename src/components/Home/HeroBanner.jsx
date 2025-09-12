@@ -57,7 +57,7 @@ const HeroBanner = () => {
                   <img
                     src={imageSrc}
                     alt="hero"
-                    className="h-[500px] md:w-full md:h-full object-cover"
+                    className="h-[500px] md:w-full lg:h-[700px]"
                     onLoadCapture={() => setIsImageLoaded(true)}
                     onError={() => setIsImageLoaded(true)}
                   />
@@ -79,34 +79,36 @@ const HeroBanner = () => {
                 </div>
               </SwiperSlide>
             ))}
-            {banner.map((banner) => (
-              <SwiperSlide key={banner._id}>
-                <div className="relative h-[500px] md:h-full">
-                  <img
-                    src={banner.imageUrl}
-                    alt={banner.title}
-                    className="h-[500px] md:w-full md:h-[700px] object-cover"
-                    onLoadCapture={() => setIsImageLoaded(true)}
-                    onError={() => setIsImageLoaded(true)}
-                  />
-                  <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-0"></div>
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 md:w-[60%] w-[80%]">
-                    <div className="flex flex-col items-center justify-center gap-4">
-                      <h1 className="banner-text text-center libre">
-                        We Empower learners of all levels to expand their skills
-                        , reach their goals and steps onto global stage.
-                      </h1>
-                      <button
-                        onClick={() => navigate("/booking ")}
-                        className="button mt-5"
-                      >
-                        Meet Our Counselors
-                      </button>
+            {banner.length > 0 &&
+              banner.map((banner) => (
+                <SwiperSlide key={banner._id}>
+                  <div className="relative h-[500px] md:h-full">
+                    <img
+                      src={banner.imageUrl}
+                      alt={banner.title}
+                      className="h-[500px] md:w-full lg:h-[700px] object-cover"
+                      onLoadCapture={() => setIsImageLoaded(true)}
+                      onError={() => setIsImageLoaded(true)}
+                    />
+                    <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-0"></div>
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 md:w-[60%] w-[80%]">
+                      <div className="flex flex-col items-center justify-center gap-4">
+                        <h1 className="banner-text text-center libre">
+                          We Empower learners of all levels to expand their
+                          skills , reach their goals and steps onto global
+                          stage.
+                        </h1>
+                        <button
+                          onClick={() => navigate("/booking ")}
+                          className="button mt-5"
+                        >
+                          Meet Our Counselors
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            ))}
+                </SwiperSlide>
+              ))}
           </Swiper>
         </div>
       </div>

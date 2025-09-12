@@ -252,16 +252,16 @@ function University({ country }) {
                     className="bg-[#161616]/20 rounded-2xl p-6 overflow-hidden border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105"
                   >
                     {/* Card Image */}
-                    <div className="relative flex items-center justify-center h-40">
+                    <div className="relative flex items-center justify-center h-[300px]">
                       {!university.logo && (
-                        <div className="w-full h-40 bg-gray-700 rounded-xl animate-pulse" />
+                        <div className="w-full h-[300px] bg-gray-700 rounded-xl animate-pulse" />
                       )}
                       {university.logo && (
                         <img
                           src={university.logo}
                           alt={university.name}
                           loading="lazy"
-                          className="max-h-40 object-contain"
+                          className="h-[300px] object-cover rounded-xl"
                           onError={(e) => {
                             e.target.style.display = "none";
                             e.target.nextSibling.style.display = "block";
@@ -275,7 +275,7 @@ function University({ country }) {
                     <div className="mt-6">
                       <div className="flex items-center gap-3 mb-4">
                         <div className="text-white">{university.icon}</div>
-                        <h3 className="text-white md:h-[50px] mb-2 text-[14px] md:text-[16px] lg:text-[18px] font-semibold">
+                        <h3 className="text-white md:h-[50px] text-[14px] md:text-[16px] lg:text-[18px] font-semibold">
                           {university.name}
                         </h3>
                       </div>
