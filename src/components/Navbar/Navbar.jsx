@@ -129,7 +129,7 @@ const Navbar = () => {
     fetchStudyAbroad();
   }, []);
 
-  console.log(servicesItems);
+  // console.log(servicesItems);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -142,7 +142,7 @@ const Navbar = () => {
         <Link to="/" className="">
           <div className="flex items-center gap-2">
             <img src={logo} alt="logo" width={32} height={32} />
-            <p className="text-[16px] libre font-medium text-primary">
+            <p className="lg:text-[12px] libre font-medium text-primary">
               FuNglish Global Max
             </p>
           </div>
@@ -318,7 +318,7 @@ const Navbar = () => {
           >
             Package
           </NavLink>
-          {/* <NavLink
+          <NavLink
             to="/contact"
             className={({ isActive }) =>
               isActive
@@ -327,7 +327,7 @@ const Navbar = () => {
             }
           >
             Contact Us
-          </NavLink> */}
+          </NavLink>
         </div>
 
         {/* Meet Our Counselors */}
@@ -409,21 +409,38 @@ const Navbar = () => {
                       <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-primary"></div>
                     </div>
                   ) : (
-                    servicesItems.map((item, index) => (
-                      <NavLink
-                        key={index}
-                        to={item.link}
-                        onClick={() => {
-                          setIsServicesOpen(false);
-                          setIsStudyAbroadOpen(false);
-                          setIsOpen(false);
-                        }}
-                        className="flex text-[14px] items-center my-2 space-x-2 px-4 py-2 text-gray-800 hover:bg-primary/20 transition-colors"
-                      >
-                        <span className="text-lg">{item.icon}</span>
-                        <span className="font-medium">{item.name}</span>
-                      </NavLink>
-                    ))
+                    <div>
+                      {defaultServices.map((item, index) => (
+                        <NavLink
+                          key={index}
+                          to={item.link}
+                          onClick={() => {
+                            setIsServicesOpen(false);
+                            setIsStudyAbroadOpen(false);
+                            setIsOpen(false);
+                          }}
+                          className="flex text-[14px] items-center my-2 space-x-2 px-4 py-2 text-gray-800 hover:bg-primary/20 transition-colors"
+                        >
+                          {/* <span className="text-lg">{item.icon}</span> */}
+                          <span className="font-medium">{item.name}</span>
+                        </NavLink>
+                      ))}
+                      {servicesItems.map((item, index) => (
+                        <NavLink
+                          key={index}
+                          to={"/detail/" + item._id}
+                          onClick={() => {
+                            setIsServicesOpen(false);
+                            setIsStudyAbroadOpen(false);
+                            setIsOpen(false);
+                          }}
+                          className="flex text-[14px] items-center my-2 space-x-2 px-4 py-2 text-gray-800 hover:bg-primary/20 transition-colors"
+                        >
+                          {/* <span className="text-lg">{item.icon}</span> */}
+                          <span className="font-medium">{item.title}</span>
+                        </NavLink>
+                      ))}
+                    </div>
                   )}
                 </div>
               )}

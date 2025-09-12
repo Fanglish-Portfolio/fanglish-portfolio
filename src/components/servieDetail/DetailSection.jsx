@@ -425,7 +425,7 @@ function DetailSection({ id }) {
     setLoading(true);
     const fetchService = async () => {
       const response = await getACategory(id);
-      console.log("detail section", response);
+      // console.log("detail section", response);
       setService(response.data);
       setLoading(false);
     };

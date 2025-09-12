@@ -86,7 +86,7 @@ export default function Testimonials() {
   const [testimonials, setTestimonials] = useState([]);
   const getTestimonials = async () => {
     const response = await getAllTestmonial();
-    console.log(response);
+    // console.log(response);
     setTestimonials(response.data);
   };
   useEffect(() => {

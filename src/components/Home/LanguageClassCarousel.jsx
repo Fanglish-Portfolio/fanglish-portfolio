@@ -75,7 +75,7 @@ export default function LanguageClassCarousel({ id }) {
     fetchClasses();
   }, []);
 
-  console.log(classes);
+  // console.log(classes);
 
   const filteredClasses = classes.filter(
     (service) => service.language === activeType

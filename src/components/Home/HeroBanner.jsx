@@ -25,7 +25,7 @@ const HeroBanner = () => {
     getBanner();
   }, []);
 
-  console.log(banner);
+  // console.log(banner);
 
   return (
     <div

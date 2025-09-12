@@ -237,8 +237,6 @@ const ContactUs = () => {
                     className="w-full px-4 py-3 bg-[#1a1a1a] border border-gray-600 rounded-lg focus:border-primary focus:outline-none transition-colors"
                   >
                     <option value="request">Request</option>
-                    <option value="inquiry">Inquiry</option>
-                    <option value="support">Support</option>
                     <option value="feedback">Feedback</option>
                   </select>
                 </div>
