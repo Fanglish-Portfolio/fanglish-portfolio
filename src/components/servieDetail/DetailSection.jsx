@@ -469,7 +469,7 @@ function DetailSection({ id }) {
           </div>
         </div>
 
-        <div className=" leading-[40px] containers">
+        <div className="">
           {service?.youtubeLink && (
             <div className="flex justify-center mb-8">
               <iframe
@@ -490,9 +490,17 @@ function DetailSection({ id }) {
               ></iframe>
             </div>
           )}
-          <div>
-            {service?.text ? parse(service.text) : <p>No content available</p>}
-          </div>
+          {service?.text && (
+            <div
+              className="prose prose-lg max-w-none leading-[40px] containers [&_h1]:text-[28px] [&_h1]:md:text-[32px] [&_h1]:lg:text-[36px] [&_h1]:font-bold [&_h1]:text-primary [&_h1]:mb-6 [&_h1]:mt-8 [&_h2]:text-[20px] [&_h2]:md:text-[24px] [&_h2]:lg:text-[28px] [&_h2]:font-semibold [&_h2]:text-white [&_h2]:mb-4 [&_h2]:mt-6 [&_h3]:text-[18px] [&_h3]:md:text-[20px] [&_h3]:lg:text-[22px] [&_h3]:font-semibold [&_h3]:text-white [&_h3]:mb-3 [&_h3]:mt-4 [&_p]:text-[14px] [&_p]:md:text-[16px] [&_p]:lg:text-[18px] [&_p]:text-gray-300 [&_p]:mb-4 [&_ul]:text-[14px] [&_ul]:md:text-[16px] [&_ul]:lg:text-[18px] [&_ul]:text-gray-300 [&_ul]:mb-4 [&_li]:mb-2"
+              dangerouslySetInnerHTML={{ __html: service.text }}
+            />
+          )}
+          {!service?.text && (
+            <div>
+              <p>No content available</p>
+            </div>
+          )}
         </div>
       </div>
       {/* <ServicesSection id={id} /> */}
