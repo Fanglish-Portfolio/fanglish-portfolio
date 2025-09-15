@@ -469,7 +469,7 @@ function DetailSection({ id }) {
           </div>
         </div>
 
-        <div className="mt-20 leading-[3.5] containers">
+        <div className=" leading-[40px] containers">
           {service?.youtubeLink && (
             <div className="flex justify-center mb-8">
               <iframe
@@ -490,12 +490,7 @@ function DetailSection({ id }) {
               ></iframe>
             </div>
           )}
-          <div
-            className="prose prose-lg max-w-none [&_h1]:text-lg [&_h1]:lg:text-xl [&_h1]:font-bold [&_h1]:mb-4 
-                     [&_h2]:text-lg [&_h2]:mt-8 [&_h2]:mb-3 [&_h2]:font-bold
-                     [&_h3]:text-lg [&_h3]:mt-8 [&_h3]:mb-3 [&_h3]:font-bold
-                     [&_p]:mb-4 [&_ul]:list-disc [&_ul]:pl-6 [&_li]:mb-2"
-          >
+          <div>
             {service?.text ? parse(service.text) : <p>No content available</p>}
           </div>
         </div>
