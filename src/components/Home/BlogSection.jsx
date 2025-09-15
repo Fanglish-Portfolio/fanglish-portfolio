@@ -54,11 +54,16 @@ const BlogSection = ({ id }) => {
             >
               {/* Card Image */}
               <div className={`flex items-center justify-center`}>
-                <img
-                  src={service.image?.imageUrl}
-                  alt={service.title}
-                  className="w-full h-full md:w-[350px] md:h-[345px] object-cover rounded-xl"
-                />
+                {!service?.image?.imageUrl && (
+                  <div className="w-full h-full md:w-[350px] md:h-[345px] bg-gray-700 rounded-xl animate-pulse" />
+                )}
+                {service?.image?.imageUrl && (
+                  <img
+                    src={service.image?.imageUrl}
+                    alt={service.title}
+                    className="w-full h-full md:w-[350px] md:h-[345px] object-cover rounded-xl"
+                  />
+                )}
               </div>
 
               {/* Card Content */}

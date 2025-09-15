@@ -83,11 +83,16 @@ const ServicesSection = ({ id }) => {
             >
               {/* Card Image */}
               <div className={`relative flex items-center justify-center`}>
-                <img
-                  src={service?.image}
-                  alt={service.title}
-                  className="w-full h-full object-cover rounded-xl"
-                />
+                {!service?.image && (
+                  <div className="w-full h-full md:w-[350px] md:h-[345px] bg-gray-700 rounded-xl animate-pulse" />
+                )}
+                {service?.image && (
+                  <img
+                    src={service?.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover rounded-xl"
+                  />
+                )}
                 <div className="absolute inset-0 bg-black bg-opacity-20 rounded-lg"></div>
               </div>
 

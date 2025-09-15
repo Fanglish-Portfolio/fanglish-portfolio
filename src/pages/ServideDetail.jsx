@@ -1,5 +1,5 @@
 import DetailSection from "../components/servieDetail/DetailSection";
-import ServiceSection from "../components/Home/ServiceSection";
+// import ServiceSection from "../components/Home/ServiceSection";
 import MiddleSection from "../components/Home/MiddleSection";
 import { useParams } from "react-router-dom";
 function ServideDetail() {
@@ -8,7 +8,7 @@ function ServideDetail() {
   return (
     <div>
       <DetailSection id={id} />
-      <ServiceSection id={id} />
+      {/* <ServiceSection id={id} /> */}
       <MiddleSection />
     </div>
   );

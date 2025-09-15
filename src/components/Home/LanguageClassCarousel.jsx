@@ -185,17 +185,22 @@ export default function LanguageClassCarousel({ id }) {
               )}
               {filteredClasses.length > 0 &&
                 filteredClasses.map((service) => (
-                  <SwiperSlide key={service.id}>
+                  <SwiperSlide key={service._id}>
                     <div className="bg-[#161616]/20 rounded-2xl p-6 overflow-hidden border border-gray-700 hover:border-gray-600 transition-all duration-300">
                       {/* Card Image */}
                       <div
                         className={`relative flex items-center justify-center`}
                       >
-                        <img
-                          src={service.image?.imageUrl}
-                          alt={service.title}
-                          className="w-full h-full md:w-[350px] md:h-[345px] object-cover rounded-xl "
-                        />
+                        {!service?.image?.imageUrl && (
+                          <div className="w-full h-full md:w-[350px] md:h-[345px] bg-gray-700 rounded-xl animate-pulse" />
+                        )}
+                        {service?.image?.imageUrl && (
+                          <img
+                            src={service.image?.imageUrl}
+                            alt={service.title}
+                            className="w-full h-full md:w-[350px] md:h-[345px] object-cover rounded-xl"
+                          />
+                        )}
                         <div className="absolute inset-0 bg-black bg-opacity-20 rounded-lg"></div>
                       </div>
 
