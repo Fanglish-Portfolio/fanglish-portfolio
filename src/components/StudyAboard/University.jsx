@@ -17,7 +17,7 @@ function University({ country }) {
         setLoading(true);
         const response = await getStudyAbroad();
         setStudyAbroadData(response.data);
-        setError(null);
+        -setError(null);
       } catch (err) {
         setError("Failed to load study abroad data");
         console.error("Error fetching study abroad data:", err);
@@ -53,6 +53,8 @@ function University({ country }) {
           if (apiCountry === "north korea" && countryName === "north korea")
             return true;
 
+          if (apiCountry === "UAE" && countryName === "dubai") return true;
+
           return false;
         });
 
@@ -75,7 +77,37 @@ function University({ country }) {
         link: item.url,
       });
     });
-    return Object.values(countryMap);
+
+    // Custom sorting: UAE and Malta always last, others alphabetically
+    const countryArray = Object.values(countryMap);
+    return countryArray.sort((a, b) => {
+      const aCountry = a.countryName.toLowerCase();
+      const bCountry = b.countryName.toLowerCase();
+
+      // Countries that should always be last
+      const lastCountries = ["uae", "malta", "dubai"];
+
+      const aIsLast = lastCountries.includes(aCountry);
+      const bIsLast = lastCountries.includes(bCountry);
+
+      // If both are in last countries, sort them alphabetically
+      if (aIsLast && bIsLast) {
+        return aCountry.localeCompare(bCountry);
+      }
+
+      // If only a is in last countries, a comes after b
+      if (aIsLast && !bIsLast) {
+        return 1;
+      }
+
+      // If only b is in last countries, b comes after a
+      if (!aIsLast && bIsLast) {
+        return -1;
+      }
+
+      // If neither is in last countries, sort alphabetically
+      return aCountry.localeCompare(bCountry);
+    });
   }, [studyAbroadData]);
 
   const currentCountry = countries.find(
@@ -285,9 +317,11 @@ function University({ country }) {
                           university.link &&
                           window.open(university.link, "_blank")
                         }
-                        disabled={!university.link}
+                        disabled={
+                          !university.link || !university.link.includes("https")
+                        }
                         className={`bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium transition-all duration-300 ${
-                          !university.link
+                          !university.link || !university.link.includes("https")
                             ? "opacity-50 cursor-not-allowed"
                             : "hover:bg-primary hover:text-black"
                         }`}
