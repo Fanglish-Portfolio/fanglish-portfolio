@@ -63,10 +63,13 @@ export default function PackageCarousel({ id }) {
   useEffect(() => {
     const fetchPackages = async () => {
       const response = await getAllCategory("packages");
-      const filteredPackages = response.filter(
-        (packages) => packages._id != id
-      );
-      setPackages(filteredPackages);
+      if (response.success === true) {
+        const filteredPackages = response.filter(
+          (packages) => packages._id != id
+        );
+        setPackages(filteredPackages);
+      }
+      setPackages([]);
     };
     fetchPackages();
   }, []);
@@ -86,6 +89,10 @@ export default function PackageCarousel({ id }) {
       swiperRef.current.swiper.slideNext();
     }
   };
+
+  if (packages.length === 0) {
+    return null;
+  }
 
   return (
     <section>

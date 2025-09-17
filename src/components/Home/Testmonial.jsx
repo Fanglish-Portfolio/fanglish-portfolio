@@ -87,11 +87,16 @@ export default function Testimonials() {
   const getTestimonials = async () => {
     const response = await getAllTestmonial();
     // console.log(response);
-    setTestimonials(response.data);
+    if (response.success === true) {
+      setTestimonials(response.data);
+    }
+    setTestimonials([]);
   };
   useEffect(() => {
     getTestimonials();
   }, []);
+
+  // console.log(testimonials);
 
   // Custom previous button click handler
   const handlePrev = () => {

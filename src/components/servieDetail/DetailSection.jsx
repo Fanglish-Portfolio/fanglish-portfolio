@@ -431,10 +431,16 @@ function DetailSection({ id }) {
     fetchService();
   }, [id]);
 
-  console.log("type", type);
+  // console.log("type", type);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="text-center header-text">
+        <div className="my-8 flex justify-center items-center">
+          <div className="w-full h-full md:w-[350px] md:h-[345px] bg-gray-700 rounded-xl animate-pulse" />
+        </div>
+      </div>
+    );
   }
 
   // const service = serviceData.find((service) => service.id == id);
@@ -471,7 +477,7 @@ function DetailSection({ id }) {
 
         <div className="">
           {service?.youtubeLink && (
-            <div className="flex justify-center mb-8">
+            <div className="flex justify-center my-8">
               <iframe
                 width="560"
                 height="315"

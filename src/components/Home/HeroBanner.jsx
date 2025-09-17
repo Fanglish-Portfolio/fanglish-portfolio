@@ -17,15 +17,18 @@ const HeroBanner = () => {
 
   const getBanner = async () => {
     const response = await getAllbanner();
-    // console.log(response.data);
-    setBanner(response.data);
+    console.log(response);
+    if (response.success === true) {
+      setBanner(response.data);
+    }
+    setBanner([]);
   };
 
   useEffect(() => {
     getBanner();
   }, []);
 
-  // console.log(banner);
+  console.log(banner);
 
   return (
     <div

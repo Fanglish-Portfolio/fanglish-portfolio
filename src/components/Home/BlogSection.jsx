@@ -34,6 +34,11 @@ const BlogSection = ({ id }) => {
     };
     fetchServices();
   }, []);
+
+  if (blogs.length === 0) {
+    return null;
+  }
+
   return (
     <section>
       <div className="containers">

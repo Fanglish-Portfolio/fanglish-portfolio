@@ -247,63 +247,65 @@ const Navbar = () => {
             )}
           </div>
           {/* Study Abroad Dropdown */}
-          <div className="relative">
-            <button
-              className="libre text-[14px] flex items-center space-x-1 hover:text-yellow-500 transition-colors"
-              onClick={() => {
-                setIsStudyAbroadOpen(!isStudyAbroadOpen);
-                setIsServicesOpen(false);
-              }}
-            >
-              <span>Study Abroad</span>
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+          {studyAbroadItems.length > 0 && (
+            <div className="relative">
+              <button
+                className="libre text-[14px] flex items-center space-x-1 hover:text-yellow-500 transition-colors"
+                onClick={() => {
+                  setIsStudyAbroadOpen(!isStudyAbroadOpen);
+                  setIsServicesOpen(false);
+                }}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
+                <span>Study Abroad</span>
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
 
-            {isStudyAbroadOpen && (
-              <div
-                onMouseEnter={() => setIsStudyAbroadOpen(true)}
-                onMouseLeave={() => setIsStudyAbroadOpen(false)}
-                className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 z-50"
-              >
-                <div className="absolute -top-2 left-6 w-4 h-4 bg-white transform rotate-45"></div>
-                {isLoadingStudyAbroad ? (
-                  <div className="flex items-center justify-center py-8">
-                    <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-primary"></div>
-                  </div>
-                ) : (
-                  studyAbroadItems.map((item, index) => (
-                    <NavLink
-                      key={index}
-                      to={item.link}
-                      onClick={() => setIsStudyAbroadOpen(!isStudyAbroadOpen)}
-                      className={`flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-primary/20 transition-colors ${
-                        location.pathname === item.link ? "bg-primary/20" : ""
-                      }`}
-                    >
-                      <img
-                        src={item.flag}
-                        alt={`${item.countryName} flag`}
-                        className="w-6 h-4 object-cover rounded-sm"
-                      />
-                      {item.name}
-                    </NavLink>
-                  ))
-                )}
-              </div>
-            )}
-          </div>
+              {isStudyAbroadOpen && (
+                <div
+                  onMouseEnter={() => setIsStudyAbroadOpen(true)}
+                  onMouseLeave={() => setIsStudyAbroadOpen(false)}
+                  className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 z-50"
+                >
+                  <div className="absolute -top-2 left-6 w-4 h-4 bg-white transform rotate-45"></div>
+                  {isLoadingStudyAbroad ? (
+                    <div className="flex items-center justify-center py-8">
+                      <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-primary"></div>
+                    </div>
+                  ) : (
+                    studyAbroadItems.map((item, index) => (
+                      <NavLink
+                        key={index}
+                        to={item.link}
+                        onClick={() => setIsStudyAbroadOpen(!isStudyAbroadOpen)}
+                        className={`flex items-center gap-5 my-2 px-4 py-5 text-gray-800 hover:bg-primary/20 transition-colors ${
+                          location.pathname === item.link ? "bg-primary/20" : ""
+                        }`}
+                      >
+                        <img
+                          src={item.flag}
+                          alt={`${item.countryName} flag`}
+                          className="w-6 h-4 object-cover rounded-sm"
+                        />
+                        {item.name}
+                      </NavLink>
+                    ))
+                  )}
+                </div>
+              )}
+            </div>
+          )}
           <NavLink
             to="/package"
             onClick={() => [
