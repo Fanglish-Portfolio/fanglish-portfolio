@@ -89,8 +89,9 @@ export default function Testimonials() {
     // console.log(response);
     if (response.success === true) {
       setTestimonials(response.data);
+    } else {
+      setTestimonials([]);
     }
-    setTestimonials([]);
   };
   useEffect(() => {
     getTestimonials();

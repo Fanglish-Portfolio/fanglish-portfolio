@@ -58,9 +58,15 @@ function University({ country }) {
           return false;
         });
 
+        const isComingSoon = ["uae", "malta", "dubai", "canada"].includes(
+          item.country.toLowerCase()
+        );
+
         countryMap[item.country] = {
           id: item.country.toLowerCase(),
-          name: `Study in ${item.country}`,
+          name: `Study in ${item.country}${
+            isComingSoon ? " (Coming Soon)" : ""
+          }`,
           countryName: item.country,
           flag:
             countryInfo?.flag ||
@@ -84,8 +90,8 @@ function University({ country }) {
       const aCountry = a.countryName.toLowerCase();
       const bCountry = b.countryName.toLowerCase();
 
-      // Countries that should always be last
-      const lastCountries = ["uae", "malta", "dubai"];
+      // Countries that should always be last (including coming soon countries)
+      const lastCountries = ["uae", "malta", "dubai", "canada"];
 
       const aIsLast = lastCountries.includes(aCountry);
       const bIsLast = lastCountries.includes(bCountry);

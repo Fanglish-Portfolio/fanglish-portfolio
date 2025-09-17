@@ -63,13 +63,11 @@ export default function PackageCarousel({ id }) {
   useEffect(() => {
     const fetchPackages = async () => {
       const response = await getAllCategory("packages");
-      if (response.success === true) {
-        const filteredPackages = response.filter(
-          (packages) => packages._id != id
-        );
-        setPackages(filteredPackages);
-      }
-      setPackages([]);
+      console.log(response);
+      const filteredPackages = response.filter(
+        (packages) => packages._id != id
+      );
+      setPackages(filteredPackages);
     };
     fetchPackages();
   }, []);
