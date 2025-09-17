@@ -320,7 +320,7 @@ function University({ country }) {
                         disabled={
                           !university.link || !university.link.includes("https")
                         }
-                        className={`bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-2xl font-medium transition-all duration-300 ${
+                        className={`w-full bg-transparent border-2 border-primary text-primary py-3 px-4 rounded-2xl font-medium transition-all duration-300 ${
                           !university.link || !university.link.includes("https")
                             ? "opacity-50 cursor-not-allowed"
                             : "hover:bg-primary hover:text-black"
