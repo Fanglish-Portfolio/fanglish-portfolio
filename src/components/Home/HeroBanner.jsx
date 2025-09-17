@@ -20,8 +20,10 @@ const HeroBanner = () => {
     console.log(response);
     if (response.success === true) {
       setBanner(response.data);
+    } else {
+      setBanner([]);
     }
-    setBanner([]);
+    // setBanner([]);
   };
 
   useEffect(() => {
