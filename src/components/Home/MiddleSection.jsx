@@ -23,13 +23,13 @@ function MiddleSection() {
             Consult with our experts to achieve your <br /> dream of studying
             abroad.
           </p>
-          <button
+          {/* <button
             className="button"
             onClick={() => navigate("/booking")}
             style={{ backgroundColor: "#161616", color: "white" }}
           >
             Meet Our Counselors
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
