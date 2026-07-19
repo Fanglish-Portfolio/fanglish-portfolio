@@ -333,11 +333,11 @@ const Navbar = () => {
         </div>
 
         {/* Meet Our Counselors */}
-        <div className="hidden lg:flex gap-8 items-center">
+        {/* <div className="hidden lg:flex gap-8 items-center">
           <button onClick={() => navigate("/booking")} className="button">
             Meet Our Counselors
           </button>
-        </div>
+        </div> */}
 
         {/* Mobile Menu Button */}
         <div className="lg:hidden flex items-center">
@@ -526,11 +526,11 @@ const Navbar = () => {
               Contact Us
             </NavLink> */}
           </div>
-          <div className="px-4">
+          {/* <div className="px-4">
             <button onClick={() => navigate("/booking")} className="button">
               Meet Our Counselors
             </button>
-          </div>
+          </div> */}
         </div>
       )}
     </nav>

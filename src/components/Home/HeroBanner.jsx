@@ -73,12 +73,12 @@ const HeroBanner = () => {
                         We Empower learners of all levels to expand their skills
                         , reach their goals and steps onto global stage.
                       </h1>
-                      <button
+                      {/* <button
                         onClick={() => navigate("/booking ")}
                         className="button mt-5"
                       >
                         Meet Our Counselors
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 </div>
@@ -103,12 +103,12 @@ const HeroBanner = () => {
                           skills , reach their goals and steps onto global
                           stage.
                         </h1>
-                        <button
+                        {/* <button
                           onClick={() => navigate("/booking ")}
                           className="button mt-5"
                         >
                           Meet Our Counselors
-                        </button>
+                        </button> */}
                       </div>
                     </div>
                   </div>
